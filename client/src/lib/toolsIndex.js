@@ -583,6 +583,12 @@ export function getToolBySlug(category, slug) {
   return tools.find(tool => tool.slug === slug);
 }
 
+// Get related tools for a specific tool
+export function getRelatedTools(category, currentSlug) {
+  const categoryTools = TOOLS_REGISTRY[category.toLowerCase().replace(' tools', '')] || [];
+  return categoryTools.filter(tool => tool.slug !== currentSlug);
+}
+
 // Category metadata
 export const CATEGORIES = {
   pdf: {

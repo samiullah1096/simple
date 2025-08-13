@@ -28,6 +28,12 @@ import ImageCropper from './tools/image/ImageCropper';
 import ImageFilters from './tools/image/ImageFilters';
 import ImageWatermark from './tools/image/ImageWatermark';
 import ImageUpscaler from './tools/image/ImageUpscaler';
+import PhotoFrameStudio from './tools/image/PhotoFrameStudio';
+import ImageExifRemover from './tools/image/ImageExifRemover';
+import ImageBlurTool from './tools/image/ImageBlurTool';
+import ImageCollageMaker from './tools/image/ImageCollageMaker';
+import QRCodeGenerator from './tools/image/QRCodeGenerator';
+import BatchImageProcessor from './tools/image/BatchImageProcessor';
 
 // Text Tools
 import WordCounter from './tools/text/WordCounter';
@@ -67,6 +73,12 @@ const TOOL_COMPONENTS = {
   'image/filters': ImageFilters,
   'image/watermark': ImageWatermark,
   'image/upscale': ImageUpscaler,
+  'image/frames': PhotoFrameStudio,
+  'image/remove-exif': ImageExifRemover,
+  'image/blur': ImageBlurTool,
+  'image/collage': ImageCollageMaker,
+  'image/qr-generator': QRCodeGenerator,
+  'image/batch-process': BatchImageProcessor,
   
   // Text Tools
   'text/word-counter': WordCounter,
