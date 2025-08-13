@@ -15,6 +15,9 @@ import PDFPasswordProtector from './tools/pdf/PDFPasswordProtector';
 import PDFWatermark from './tools/pdf/PDFWatermark';
 import PDFPageOrganizer from './tools/pdf/PDFPageOrganizer';
 import PDFTextExtractor from './tools/pdf/PDFTextExtractor';
+import PDFMetadataEditor from './tools/pdf/PDFMetadataEditor';
+import PDFFormFiller from './tools/pdf/PDFFormFiller';
+import PDFSignature from './tools/pdf/PDFSignature';
 
 // Image Tools
 import BackgroundRemover from './tools/image/BackgroundRemover';
@@ -51,6 +54,9 @@ const TOOL_COMPONENTS = {
   'pdf/watermark': PDFWatermark,
   'pdf/organize': PDFPageOrganizer,
   'pdf/extract-text': PDFTextExtractor,
+  'pdf/metadata': PDFMetadataEditor,
+  'pdf/form-filler': PDFFormFiller,
+  'pdf/signature': PDFSignature,
   
   // Image Tools
   'image/remove-background': BackgroundRemover,
