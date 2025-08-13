@@ -5,8 +5,8 @@ export const TOOLS_REGISTRY = {
       name: 'PDF Merger',
       slug: 'merge',
       path: '/pdf/merge',
-      description: 'Combine multiple PDF files into one document with custom ordering',
-      keywords: 'pdf merge, combine pdf, join pdf files, pdf joiner',
+      description: 'Combine multiple PDF files into one document with custom ordering and advanced merge options',
+      keywords: 'pdf merge, combine pdf, join pdf files, pdf joiner, merge documents',
       icon: 'fas fa-object-group',
       color: 'text-red-400',
       category: 'PDF Tools',
@@ -23,28 +23,30 @@ export const TOOLS_REGISTRY = {
       name: 'PDF Splitter',
       slug: 'split',
       path: '/pdf/split',
-      description: 'Split PDF files into individual pages or custom ranges',
-      keywords: 'pdf split, separate pdf, extract pdf pages, pdf divider',
+      description: 'Split PDF files into individual pages or custom ranges with precise page extraction',
+      keywords: 'pdf split, separate pdf, extract pdf pages, pdf divider, page extractor',
       icon: 'fas fa-cut',
       color: 'text-red-400',
-      category: 'PDF Tools'
+      category: 'PDF Tools',
+      featured: true
     },
     {
       name: 'PDF Compressor',
       slug: 'compress',
       path: '/pdf/compress',
-      description: 'Reduce PDF file size while maintaining quality',
-      keywords: 'pdf compress, reduce pdf size, optimize pdf, pdf optimizer',
+      description: 'Reduce PDF file size while maintaining quality with advanced compression algorithms',
+      keywords: 'pdf compress, reduce pdf size, optimize pdf, pdf optimizer, file size reducer',
       icon: 'fas fa-compress-arrows-alt',
       color: 'text-red-400',
-      category: 'PDF Tools'
+      category: 'PDF Tools',
+      featured: true
     },
     {
       name: 'PDF to Word',
       slug: 'to-word',
       path: '/pdf/to-word',
-      description: 'Convert PDF documents to editable Word files',
-      keywords: 'pdf to word, pdf to docx, convert pdf, pdf converter',
+      description: 'Convert PDF documents to editable Word files with preserved formatting',
+      keywords: 'pdf to word, pdf to docx, convert pdf, pdf converter, document conversion',
       icon: 'fas fa-file-word',
       color: 'text-red-400',
       category: 'PDF Tools'
@@ -53,62 +55,284 @@ export const TOOLS_REGISTRY = {
       name: 'Word to PDF',
       slug: 'word-to-pdf',
       path: '/pdf/word-to-pdf',
-      description: 'Convert Word documents to PDF format',
-      keywords: 'word to pdf, docx to pdf, document converter',
+      description: 'Convert Word documents to PDF format with professional quality output',
+      keywords: 'word to pdf, docx to pdf, document converter, office to pdf',
       icon: 'fas fa-file-pdf',
+      color: 'text-red-400',
+      category: 'PDF Tools'
+    },
+    {
+      name: 'PDF to JPG',
+      slug: 'to-jpg',
+      path: '/pdf/to-jpg',
+      description: 'Convert PDF pages to high-quality JPG images with custom resolution',
+      keywords: 'pdf to jpg, pdf to image, convert pdf pages, pdf image converter',
+      icon: 'fas fa-file-image',
+      color: 'text-red-400',
+      category: 'PDF Tools'
+    },
+    {
+      name: 'JPG to PDF',
+      slug: 'jpg-to-pdf',
+      path: '/pdf/jpg-to-pdf',
+      description: 'Convert JPG images to PDF documents with multiple layout options',
+      keywords: 'jpg to pdf, image to pdf, photo to pdf, picture converter',
+      icon: 'fas fa-images',
+      color: 'text-red-400',
+      category: 'PDF Tools'
+    },
+    {
+      name: 'PDF Password Remover',
+      slug: 'remove-password',
+      path: '/pdf/remove-password',
+      description: 'Remove password protection from PDF files securely',
+      keywords: 'remove pdf password, unlock pdf, pdf password remover, decrypt pdf',
+      icon: 'fas fa-unlock',
+      color: 'text-red-400',
+      category: 'PDF Tools'
+    },
+    {
+      name: 'PDF Password Protector',
+      slug: 'add-password',
+      path: '/pdf/add-password',
+      description: 'Add password protection to PDF files with encryption',
+      keywords: 'pdf password, protect pdf, encrypt pdf, secure pdf, pdf security',
+      icon: 'fas fa-lock',
+      color: 'text-red-400',
+      category: 'PDF Tools'
+    },
+    {
+      name: 'PDF Watermark',
+      slug: 'watermark',
+      path: '/pdf/watermark',
+      description: 'Add text or image watermarks to PDF documents',
+      keywords: 'pdf watermark, add watermark, pdf branding, document watermark',
+      icon: 'fas fa-stamp',
+      color: 'text-red-400',
+      category: 'PDF Tools'
+    },
+    {
+      name: 'PDF Page Organizer',
+      slug: 'organize',
+      path: '/pdf/organize',
+      description: 'Reorder, rotate, and organize PDF pages with drag-and-drop interface',
+      keywords: 'pdf organize, reorder pages, rotate pdf, pdf page manager',
+      icon: 'fas fa-sort',
+      color: 'text-red-400',
+      category: 'PDF Tools'
+    },
+    {
+      name: 'PDF Text Extractor',
+      slug: 'extract-text',
+      path: '/pdf/extract-text',
+      description: 'Extract text content from PDF documents with OCR support',
+      keywords: 'extract pdf text, pdf text extractor, pdf ocr, read pdf text',
+      icon: 'fas fa-file-alt',
+      color: 'text-red-400',
+      category: 'PDF Tools'
+    },
+    {
+      name: 'PDF Form Filler',
+      slug: 'form-filler',
+      path: '/pdf/form-filler',
+      description: 'Fill PDF forms digitally with text, checkboxes, and signatures',
+      keywords: 'pdf form filler, fill pdf, pdf forms, digital forms',
+      icon: 'fas fa-edit',
+      color: 'text-red-400',
+      category: 'PDF Tools'
+    },
+    {
+      name: 'PDF Signature',
+      slug: 'signature',
+      path: '/pdf/signature',
+      description: 'Add digital signatures to PDF documents securely',
+      keywords: 'pdf signature, digital signature, sign pdf, e-signature',
+      icon: 'fas fa-signature',
+      color: 'text-red-400',
+      category: 'PDF Tools'
+    },
+    {
+      name: 'PDF Metadata Editor',
+      slug: 'metadata',
+      path: '/pdf/metadata',
+      description: 'Edit PDF metadata including title, author, and properties',
+      keywords: 'pdf metadata, edit pdf properties, pdf information, document properties',
+      icon: 'fas fa-info-circle',
       color: 'text-red-400',
       category: 'PDF Tools'
     }
   ],
   image: [
     {
-      name: 'Background Remover',
+      name: 'AI Background Remover',
       slug: 'remove-background',
       path: '/image/remove-background',
-      description: 'Remove image backgrounds automatically using AI',
-      keywords: 'remove background, background remover, transparent background, ai background removal',
+      description: 'Remove image backgrounds automatically using advanced AI with perfect edge detection',
+      keywords: 'remove background, background remover, transparent background, ai background removal, cutout tool',
       icon: 'fas fa-magic',
       color: 'text-green-400',
       category: 'Image Tools',
       featured: true
     },
     {
-      name: 'Image Resizer',
+      name: 'Smart Image Resizer',
       slug: 'resize',
       path: '/image/resize',
-      description: 'Resize images to specific dimensions or percentages',
-      keywords: 'image resize, resize photo, image dimensions, scale image',
+      description: 'Resize images to specific dimensions or percentages with quality preservation',
+      keywords: 'image resize, resize photo, image dimensions, scale image, photo resizer',
       icon: 'fas fa-expand-arrows-alt',
       color: 'text-green-400',
-      category: 'Image Tools'
+      category: 'Image Tools',
+      featured: true
     },
     {
-      name: 'Image Compressor',
+      name: 'Image Compressor Pro',
       slug: 'compress',
       path: '/image/compress',
-      description: 'Reduce image file size while maintaining quality',
-      keywords: 'image compress, optimize image, reduce image size, image optimizer',
+      description: 'Reduce image file size up to 90% while maintaining visual quality',
+      keywords: 'image compress, optimize image, reduce image size, image optimizer, photo compressor',
       icon: 'fas fa-compress',
       color: 'text-green-400',
-      category: 'Image Tools'
+      category: 'Image Tools',
+      featured: true
     },
     {
-      name: 'Image Converter',
+      name: 'Universal Image Converter',
       slug: 'convert',
       path: '/image/convert',
-      description: 'Convert images between different formats (PNG, JPG, WebP)',
-      keywords: 'image converter, png to jpg, format converter, image format',
+      description: 'Convert images between 20+ formats including PNG, JPG, WebP, HEIC, and more',
+      keywords: 'image converter, png to jpg, webp converter, format converter, image format, heic converter',
       icon: 'fas fa-exchange-alt',
       color: 'text-green-400',
       category: 'Image Tools'
     },
     {
-      name: 'Image Cropper',
+      name: 'Precision Image Cropper',
       slug: 'crop',
       path: '/image/crop',
-      description: 'Crop images to specific dimensions or aspect ratios',
-      keywords: 'image crop, crop photo, image cutter, trim image',
+      description: 'Crop images with pixel-perfect precision and popular aspect ratios',
+      keywords: 'image crop, crop photo, image cutter, trim image, aspect ratio cropper',
       icon: 'fas fa-crop',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'Image Filter Studio',
+      slug: 'filters',
+      path: '/image/filters',
+      description: 'Apply professional filters and effects to enhance your images',
+      keywords: 'image filters, photo effects, image enhancement, vintage filters, photo studio',
+      icon: 'fas fa-adjust',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'Watermark Maker',
+      slug: 'watermark',
+      path: '/image/watermark',
+      description: 'Add text or logo watermarks to protect your images and photos',
+      keywords: 'image watermark, photo watermark, logo watermark, copyright protection',
+      icon: 'fas fa-stamp',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'Photo Upscaler AI',
+      slug: 'upscale',
+      path: '/image/upscale',
+      description: 'Upscale images up to 4x resolution using artificial intelligence',
+      keywords: 'image upscaler, photo enlarger, ai upscale, enhance resolution, image enhancer',
+      icon: 'fas fa-search-plus',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'EXIF Data Remover',
+      slug: 'remove-exif',
+      path: '/image/remove-exif',
+      description: 'Remove EXIF metadata from images to protect your privacy',
+      keywords: 'remove exif, exif remover, image metadata, privacy protection, clean exif',
+      icon: 'fas fa-user-secret',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'Color Palette Generator',
+      slug: 'color-palette',
+      path: '/image/color-palette',
+      description: 'Extract beautiful color palettes from any image for design projects',
+      keywords: 'color palette, extract colors, image colors, color picker, design colors',
+      icon: 'fas fa-palette',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'Image Rotator',
+      slug: 'rotate',
+      path: '/image/rotate',
+      description: 'Rotate and flip images with precise angle control and auto-straightening',
+      keywords: 'image rotate, rotate photo, flip image, straighten image, image orientation',
+      icon: 'fas fa-undo',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'Batch Image Processor',
+      slug: 'batch-process',
+      path: '/image/batch-process',
+      description: 'Process multiple images at once with resize, convert, and compress options',
+      keywords: 'batch image processing, bulk image converter, mass image resize, batch photo editor',
+      icon: 'fas fa-layer-group',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'Meme Generator',
+      slug: 'meme-generator',
+      path: '/image/meme-generator',
+      description: 'Create viral memes with customizable text, fonts, and layouts',
+      keywords: 'meme generator, create memes, meme maker, funny images, viral content',
+      icon: 'fas fa-laugh',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'Image Blur Tool',
+      slug: 'blur',
+      path: '/image/blur',
+      description: 'Apply blur effects with gaussian, motion, and selective blur options',
+      keywords: 'image blur, blur photo, gaussian blur, motion blur, selective blur',
+      icon: 'fas fa-eye-slash',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'Image Collage Maker',
+      slug: 'collage',
+      path: '/image/collage',
+      description: 'Create stunning photo collages with multiple layout templates',
+      keywords: 'photo collage, collage maker, image mosaic, photo grid, picture collage',
+      icon: 'fas fa-th',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'QR Code Generator',
+      slug: 'qr-generator',
+      path: '/image/qr-generator',
+      description: 'Generate custom QR codes with logos, colors, and various formats',
+      keywords: 'qr code generator, create qr code, custom qr code, qr maker, barcode generator',
+      icon: 'fas fa-qrcode',
+      color: 'text-green-400',
+      category: 'Image Tools'
+    },
+    {
+      name: 'Photo Frame Studio',
+      slug: 'frames',
+      path: '/image/frames',
+      description: 'Add beautiful frames and borders to your photos with various styles',
+      keywords: 'photo frames, image borders, picture frames, photo editor, decorative frames',
+      icon: 'fas fa-border-style',
       color: 'text-green-400',
       category: 'Image Tools'
     }
