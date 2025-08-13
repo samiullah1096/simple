@@ -1,0 +1,2489 @@
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universe Tools - All-in-One Online Tools | Fast, Free, Secure</title>
+    <meta name="description" content="60+ professional online tools for PDF, Image, Audio, Text, and Productivity tasks. Fully client-side processing, free forever, and lightning fast.">
+    <meta name="keywords" content="online tools, PDF tools, image converter, audio editor, text tools, productivity tools, free online tools, client-side processing">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://universe-tools.github.io/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Universe Tools - All-in-One Online Tools">
+    <meta property="og:description" content="60+ professional online tools for PDF, Image, Audio, Text, and Productivity tasks. Fully client-side processing, free forever.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://universe-tools.github.io/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Universe Tools - All-in-One Online Tools">
+    <meta name="twitter:description" content="60+ professional online tools for PDF, Image, Audio, Text, and Productivity tasks.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/index.js" type="module"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'scale-in': 'scaleIn 0.4s ease-out',
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(34, 211, 238, 0.4)',
+                        'glow-purple': '0 0 20px rgba(168, 85, 247, 0.4)',
+                    }
+                }
+            }
+        };
+    </script>
+    
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(34, 211, 238, 0.8); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        
+        .glass-nav {
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #22D3EE, #A855F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tool-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Ad Slot Styles */
+        .ad-slot {
+            min-height: 250px;
+            background: rgba(30, 41, 59, 0.3);
+            border: 2px dashed rgba(148, 163, 184, 0.3);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(148, 163, 184, 0.6);
+            font-size: 14px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, 
+                rgba(2, 6, 23, 1) 0%, 
+                rgba(15, 23, 42, 0.95) 25%, 
+                rgba(30, 41, 59, 0.9) 50%, 
+                rgba(15, 23, 42, 0.95) 75%, 
+                rgba(2, 6, 23, 1) 100%
+            );
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Universe Tools",
+        "description": "All-in-One Online Tools for PDF, Image, Audio, Text, and Productivity tasks",
+        "url": "https://universe-tools.github.io/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://universe-tools.github.io/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Universe Tools",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://universe-tools.github.io/logo.png"
+            }
+        }
+    }
+    </script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100 font-sans overflow-x-hidden">
+    <!-- Skip to Content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-lg font-medium z-50">
+        Skip to main content
+    </a>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center shadow-glow">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">Universe Tools</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8" aria-label="Main navigation">
+                    <a href="#home" class="text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium">Home</a>
+                    <div class="relative group">
+                        <button class="text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-1">
+                            <span>Tools</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown would be implemented here -->
+                    </div>
+                    <a href="#about" class="text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium">About</a>
+                    <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium">Contact</a>
+                </nav>
+
+                <!-- Search & Theme Toggle -->
+                <div class="flex items-center space-x-4">
+                    <!-- Search Button -->
+                    <button class="p-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200" aria-label="Search tools">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button class="p-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200" aria-label="Toggle theme">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden p-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200" aria-label="Open menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="pt-16">
+        <!-- Top Ad Slot (Hidden during approval pending) -->
+        <!-- @COMPONENT: AdSlot { id: "home-top", position: "top" } -->
+        <div class="ad-slot mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" style="display: none;" data-mock="true">
+            <div>
+                <p class="font-medium mb-2">Advertisement Slot - Top</p>
+                <p class="text-sm">Google AdSense Auto Ads + Manual Slot</p>
+                <p class="text-xs mt-1">Hidden during approval pending mode</p>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: AdSlot -->
+
+        <!-- Hero Section -->
+        <section class="relative hero-gradient overflow-hidden py-20 lg:py-32" id="home">
+            <!-- Hero Background Animation -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-400/20 rounded-full blur-3xl animate-float"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style="animation-delay: 1.5s;"></div>
+            </div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center animate-fade-in">
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black mb-6">
+                        <span class="gradient-text">Universe Tools</span><br>
+                        <span class="text-slate-100">All-in-One Platform</span>
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                        60+ professional online tools for PDF, Image, Audio, Text, and Productivity tasks. 
+                        <span class="text-cyan-400 font-semibold">100% client-side processing</span> - your data never leaves your device.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-slide-up">
+                        <button class="bg-gradient-to-r from-cyan-400 to-purple-500 hover:from-cyan-300 hover:to-purple-400 text-white font-semibold px-8 py-4 rounded-2xl shadow-glow transform transition-all duration-300 hover:scale-105 hover:shadow-glow-purple">
+                            Explore All Tools
+                        </button>
+                        <button class="glass-card hover:bg-slate-700/50 text-slate-100 font-semibold px-8 py-4 rounded-2xl transform transition-all duration-300 hover:scale-105 border-slate-600">
+                            Watch Demo
+                        </button>
+                    </div>
+
+                    <!-- Hero Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto animate-scale-in">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-cyan-400 mb-1">60+</div>
+                            <div class="text-slate-400 text-sm">Tools Available</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-400 mb-1">100%</div>
+                            <div class="text-slate-400 text-sm">Client-Side</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-400 mb-1">0$</div>
+                            <div class="text-slate-400 text-sm">Forever Free</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-400 mb-1">⚡</div>
+                            <div class="text-slate-400 text-sm">Lightning Fast</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tool Categories Grid -->
+        <section class="py-20 bg-gradient-to-b from-slate-950/50 to-slate-900/50" id="categories">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16 animate-fade-in">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Tool Categories</span>
+                    </h2>
+                    <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                        Discover our comprehensive collection of professional-grade online tools, 
+                        each category containing 10-15 specialized utilities for your workflow.
+                    </p>
+                </div>
+
+                <!-- Categories Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- PDF Tools Category -->
+                    <div class="tool-card glass-card rounded-2xl p-8 group cursor-pointer animate-scale-in">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-100 group-hover:text-cyan-400 transition-colors duration-300">
+                            PDF Tools
+                        </h3>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Complete PDF manipulation suite with merge, split, compress, convert, password protection, and OCR capabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-red-400/20 text-red-300 rounded-full text-sm">Merge</span>
+                            <span class="px-3 py-1 bg-red-400/20 text-red-300 rounded-full text-sm">Split</span>
+                            <span class="px-3 py-1 bg-red-400/20 text-red-300 rounded-full text-sm">Compress</span>
+                            <span class="px-3 py-1 bg-red-400/20 text-red-300 rounded-full text-sm">+12 more</span>
+                        </div>
+                        <div class="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                            <span class="font-semibold">Explore PDF Tools</span>
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Image Tools Category -->
+                    <div class="tool-card glass-card rounded-2xl p-8 group cursor-pointer animate-scale-in" style="animation-delay: 0.1s;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-100 group-hover:text-cyan-400 transition-colors duration-300">
+                            Image Tools
+                        </h3>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Advanced image processing with format conversion, resize, crop, compress, background removal, and AI enhancement.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-green-400/20 text-green-300 rounded-full text-sm">Convert</span>
+                            <span class="px-3 py-1 bg-green-400/20 text-green-300 rounded-full text-sm">Resize</span>
+                            <span class="px-3 py-1 bg-green-400/20 text-green-300 rounded-full text-sm">Remove BG</span>
+                            <span class="px-3 py-1 bg-green-400/20 text-green-300 rounded-full text-sm">+12 more</span>
+                        </div>
+                        <div class="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                            <span class="font-semibold">Explore Image Tools</span>
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Audio Tools Category -->
+                    <div class="tool-card glass-card rounded-2xl p-8 group cursor-pointer animate-scale-in" style="animation-delay: 0.2s;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M9 12a3 3 0 106 0 3 3 0 00-6 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-100 group-hover:text-cyan-400 transition-colors duration-300">
+                            Audio Tools
+                        </h3>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Professional audio editing with format conversion, cutting, joining, voice recording, TTS, and transcription.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-purple-400/20 text-purple-300 rounded-full text-sm">Convert</span>
+                            <span class="px-3 py-1 bg-purple-400/20 text-purple-300 rounded-full text-sm">Cut/Join</span>
+                            <span class="px-3 py-1 bg-purple-400/20 text-purple-300 rounded-full text-sm">Record</span>
+                            <span class="px-3 py-1 bg-purple-400/20 text-purple-300 rounded-full text-sm">+12 more</span>
+                        </div>
+                        <div class="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                            <span class="font-semibold">Explore Audio Tools</span>
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Text Tools Category -->
+                    <div class="tool-card glass-card rounded-2xl p-8 group cursor-pointer animate-scale-in" style="animation-delay: 0.3s;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-100 group-hover:text-cyan-400 transition-colors duration-300">
+                            Text Tools
+                        </h3>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Comprehensive text processing with word counting, case conversion, find/replace, encoding, and JSON manipulation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-400/20 text-blue-300 rounded-full text-sm">Word Count</span>
+                            <span class="px-3 py-1 bg-blue-400/20 text-blue-300 rounded-full text-sm">Convert Case</span>
+                            <span class="px-3 py-1 bg-blue-400/20 text-blue-300 rounded-full text-sm">Encode</span>
+                            <span class="px-3 py-1 bg-blue-400/20 text-blue-300 rounded-full text-sm">+12 more</span>
+                        </div>
+                        <div class="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                            <span class="font-semibold">Explore Text Tools</span>
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Productivity Tools Category -->
+                    <div class="tool-card glass-card rounded-2xl p-8 group cursor-pointer animate-scale-in" style="animation-delay: 0.4s;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-100 group-hover:text-cyan-400 transition-colors duration-300">
+                            Productivity Tools
+                        </h3>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Essential productivity utilities including calculators, unit converters, notes, todos, and time management tools.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-yellow-400/20 text-yellow-300 rounded-full text-sm">Calculator</span>
+                            <span class="px-3 py-1 bg-yellow-400/20 text-yellow-300 rounded-full text-sm">Notes</span>
+                            <span class="px-3 py-1 bg-yellow-400/20 text-yellow-300 rounded-full text-sm">Todo</span>
+                            <span class="px-3 py-1 bg-yellow-400/20 text-yellow-300 rounded-full text-sm">+12 more</span>
+                        </div>
+                        <div class="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                            <span class="font-semibold">Explore Productivity</span>
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Finance Tools Category -->
+                    <div class="tool-card glass-card rounded-2xl p-8 group cursor-pointer animate-scale-in" style="animation-delay: 0.5s;">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-100 group-hover:text-cyan-400 transition-colors duration-300">
+                            Finance Tools
+                        </h3>
+                        <p class="text-slate-400 mb-6 leading-relaxed">
+                            Financial calculators and tools for loan EMI, SIP, compound interest, currency conversion, and investment planning.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-emerald-400/20 text-emerald-300 rounded-full text-sm">Loan EMI</span>
+                            <span class="px-3 py-1 bg-emerald-400/20 text-emerald-300 rounded-full text-sm">SIP</span>
+                            <span class="px-3 py-1 bg-emerald-400/20 text-emerald-300 rounded-full text-sm">Currency</span>
+                            <span class="px-3 py-1 bg-emerald-400/20 text-emerald-300 rounded-full text-sm">+12 more</span>
+                        </div>
+                        <div class="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                            <span class="font-semibold">Explore Finance Tools</span>
+                            <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inline Ad Slot -->
+        <!-- @COMPONENT: AdSlot { id: "home-mid", position: "inline" } -->
+        <div class="ad-slot mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" style="display: none;" data-mock="true">
+            <div>
+                <p class="font-medium mb-2">Advertisement Slot - Inline</p>
+                <p class="text-sm">Responsive manual ad placement</p>
+                <p class="text-xs mt-1">Media.net / Propeller fallback available</p>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: AdSlot -->
+
+        <!-- Featured Tools Showcase -->
+        <section class="py-20 bg-gradient-to-b from-slate-900/50 to-slate-950/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Trending Tools</span>
+                    </h2>
+                    <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                        Most popular tools used by professionals worldwide. Each tool is optimized for speed, accuracy, and ease of use.
+                    </p>
+                </div>
+
+                <!-- Tools Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- PDF Merger Tool -->
+                    <div class="tool-card glass-card rounded-2xl p-6 hover:bg-slate-700/30 cursor-pointer group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 group-hover:text-cyan-400 transition-colors duration-300">PDF Merger</h3>
+                        <p class="text-slate-400 text-sm mb-4">Combine multiple PDF files into one document with custom ordering.</p>
+                        <div class="flex items-center text-cyan-400 text-sm">
+                            <span>Try Now</span>
+                            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Image Background Remover -->
+                    <div class="tool-card glass-card rounded-2xl p-6 hover:bg-slate-700/30 cursor-pointer group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 group-hover:text-cyan-400 transition-colors duration-300">Remove Background</h3>
+                        <p class="text-slate-400 text-sm mb-4">AI-powered background removal for professional image editing.</p>
+                        <div class="flex items-center text-cyan-400 text-sm">
+                            <span>Try Now</span>
+                            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Word Counter -->
+                    <div class="tool-card glass-card rounded-2xl p-6 hover:bg-slate-700/30 cursor-pointer group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 group-hover:text-cyan-400 transition-colors duration-300">Word Counter</h3>
+                        <p class="text-slate-400 text-sm mb-4">Count words, characters, paragraphs, and reading time instantly.</p>
+                        <div class="flex items-center text-cyan-400 text-sm">
+                            <span>Try Now</span>
+                            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- EMI Calculator -->
+                    <div class="tool-card glass-card rounded-2xl p-6 hover:bg-slate-700/30 cursor-pointer group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 group-hover:text-cyan-400 transition-colors duration-300">EMI Calculator</h3>
+                        <p class="text-slate-400 text-sm mb-4">Calculate monthly EMI, total interest, and repayment schedule.</p>
+                        <div class="flex items-center text-cyan-400 text-sm">
+                            <span>Try Now</span>
+                            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tool Shell Demo Section -->
+        <section class="py-20 bg-gradient-to-b from-slate-950/50 to-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Universal Tool Interface</span>
+                    </h2>
+                    <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                        Every tool follows our signature UX design with consistent layout, SEO optimization, and integrated ad system.
+                    </p>
+                </div>
+
+                <!-- Demo Tool Shell -->
+                <!-- @COMPONENT: ToolShell { slug: "demo-word-counter", category: "text" } -->
+                <div class="glass-card rounded-2xl overflow-hidden max-w-4xl mx-auto">
+                    <!-- Tool Header -->
+                    <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-b border-slate-700/50 p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h1 class="text-3xl font-bold text-slate-100 mb-2">Word Counter Tool</h1>
+                                <p class="text-slate-400">Count words, characters, paragraphs, and analyze text readability in real-time. Perfect for content creators, students, and professionals.</p>
+                            </div>
+                        </div>
+
+                        <!-- Breadcrumbs -->
+                        <nav class="flex text-sm text-slate-400" aria-label="Breadcrumb">
+                            <a href="#" class="hover:text-cyan-400 transition-colors duration-200">Home</a>
+                            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                            <a href="#" class="hover:text-cyan-400 transition-colors duration-200">Text Tools</a>
+                            <svg class="w-4 h-4 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                            <span class="text-slate-300">Word Counter</span>
+                        </nav>
+                    </div>
+
+                    <!-- Top Ad Slot (Inside Tool) -->
+                    <div class="ad-slot" style="display: none; min-height: 100px;" data-mock="true">
+                        <div>
+                            <p class="font-medium mb-1">Tool Ad Slot - Top</p>
+                            <p class="text-xs">Limited to 2 slots per tool page</p>
+                        </div>
+                    </div>
+
+                    <!-- Tool Content -->
+                    <div class="p-8">
+                        <!-- Input Panel -->
+                        <div class="grid md:grid-cols-2 gap-8 mb-8">
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4 text-slate-100">Input Text</h3>
+                                <textarea 
+                                    class="w-full h-64 bg-slate-800/50 border border-slate-600 rounded-xl p-4 text-slate-100 placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                                    placeholder="Paste or type your text here to analyze..."
+                                    data-mock="true"
+                                ></textarea>
+                                <div class="flex justify-between items-center mt-4">
+                                    <button class="glass-card px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-colors duration-200">
+                                        Clear Text
+                                    </button>
+                                    <button class="bg-gradient-to-r from-cyan-400 to-purple-500 hover:from-cyan-300 hover:to-purple-400 text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300">
+                                        Analyze Text
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Output Panel -->
+                            <div>
+                                <h3 class="text-xl font-semibold mb-4 text-slate-100">Analysis Results</h3>
+                                <div class="grid grid-cols-2 gap-4 mb-6">
+                                    <div class="glass-card p-4 rounded-xl text-center">
+                                        <div class="text-2xl font-bold text-cyan-400 mb-1" data-bind="wordCount">247</div>
+                                        <div class="text-slate-400 text-sm">Words</div>
+                                    </div>
+                                    <div class="glass-card p-4 rounded-xl text-center">
+                                        <div class="text-2xl font-bold text-purple-400 mb-1" data-bind="charCount">1,456</div>
+                                        <div class="text-slate-400 text-sm">Characters</div>
+                                    </div>
+                                    <div class="glass-card p-4 rounded-xl text-center">
+                                        <div class="text-2xl font-bold text-green-400 mb-1" data-bind="sentenceCount">18</div>
+                                        <div class="text-slate-400 text-sm">Sentences</div>
+                                    </div>
+                                    <div class="glass-card p-4 rounded-xl text-center">
+                                        <div class="text-2xl font-bold text-yellow-400 mb-1" data-bind="paragraphCount">3</div>
+                                        <div class="text-slate-400 text-sm">Paragraphs</div>
+                                    </div>
+                                </div>
+
+                                <div class="glass-card p-4 rounded-xl">
+                                    <h4 class="font-semibold text-slate-100 mb-3">Readability Metrics</h4>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between">
+                                            <span class="text-slate-400">Reading Time:</span>
+                                            <span class="text-slate-100" data-bind="readingTime">1 min 30 sec</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-slate-400">Avg. Words/Sentence:</span>
+                                            <span class="text-slate-100" data-bind="avgWordsPerSentence">13.7</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-slate-400">Readability Score:</span>
+                                            <span class="text-green-400" data-bind="readabilityScore">Good</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- How It Works Section -->
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-semibold mb-4 text-slate-100">How to Use</h3>
+                            <div class="grid md:grid-cols-3 gap-4">
+                                <div class="glass-card p-6 rounded-xl">
+                                    <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg flex items-center justify-center mb-4 text-white font-bold">1</div>
+                                    <h4 class="font-semibold text-slate-100 mb-2">Paste Your Text</h4>
+                                    <p class="text-slate-400 text-sm">Copy and paste your text into the input area, or type directly.</p>
+                                </div>
+                                <div class="glass-card p-6 rounded-xl">
+                                    <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mb-4 text-white font-bold">2</div>
+                                    <h4 class="font-semibold text-slate-100 mb-2">Get Instant Results</h4>
+                                    <p class="text-slate-400 text-sm">View real-time analysis of word count, character count, and readability.</p>
+                                </div>
+                                <div class="glass-card p-6 rounded-xl">
+                                    <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center mb-4 text-white font-bold">3</div>
+                                    <h4 class="font-semibold text-slate-100 mb-2">Export Results</h4>
+                                    <p class="text-slate-400 text-sm">Copy results or export as PDF for your records and reports.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefits Section -->
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-semibold mb-4 text-slate-100">Why Use Our Word Counter?</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <ul class="space-y-3 text-slate-300">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Real-time analysis as you type</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Comprehensive readability metrics</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>100% client-side processing</span>
+                                    </li>
+                                </ul>
+                                <ul class="space-y-3 text-slate-300">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Export and sharing options</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>No registration required</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Mobile-friendly interface</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Ad Slot (Inside Tool) -->
+                    <div class="ad-slot" style="display: none; min-height: 100px;" data-mock="true">
+                        <div>
+                            <p class="font-medium mb-1">Tool Ad Slot - Bottom</p>
+                            <p class="text-xs">Safe spacing from content to avoid accidental clicks</p>
+                        </div>
+                    </div>
+
+                    <!-- SEO Section -->
+                    <div class="bg-slate-900/50 border-t border-slate-700/50 p-8">
+                        <h3 class="text-2xl font-semibold mb-6 text-slate-100">Frequently Asked Questions</h3>
+                        <!-- @FUNCTIONALITY: FAQPage schema would be implemented here for SEO -->
+                        <div class="space-y-4">
+                            <details class="glass-card p-4 rounded-xl group">
+                                <summary class="font-semibold text-slate-100 cursor-pointer list-none flex items-center justify-between">
+                                    <span>Is my text data stored on your servers?</span>
+                                    <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </summary>
+                                <p class="text-slate-400 mt-4 text-sm">No, all text analysis happens directly in your browser. Your data never leaves your device, ensuring complete privacy and security.</p>
+                            </details>
+                            
+                            <details class="glass-card p-4 rounded-xl group">
+                                <summary class="font-semibold text-slate-100 cursor-pointer list-none flex items-center justify-between">
+                                    <span>What file formats can I analyze?</span>
+                                    <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </summary>
+                                <p class="text-slate-400 mt-4 text-sm">You can paste plain text directly into the tool. For document files, copy the text content from your document and paste it here.</p>
+                            </details>
+                            
+                            <details class="glass-card p-4 rounded-xl group">
+                                <summary class="font-semibold text-slate-100 cursor-pointer list-none flex items-center justify-between">
+                                    <span>Is there a limit to text length?</span>
+                                    <svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </summary>
+                                <p class="text-slate-400 mt-4 text-sm">Our tool can handle large texts efficiently. However, for optimal performance, we recommend texts under 100,000 characters.</p>
+                            </details>
+                        </div>
+
+                        <!-- Related Tools -->
+                        <div class="mt-8">
+                            <h4 class="text-xl font-semibold mb-4 text-slate-100">Related Tools</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <a href="#" class="glass-card p-4 rounded-xl hover:bg-slate-700/30 transition-colors duration-200 text-center group">
+                                    <div class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-slate-300 group-hover:text-cyan-400 transition-colors duration-200">Case Converter</span>
+                                </a>
+                                
+                                <a href="#" class="glass-card p-4 rounded-xl hover:bg-slate-700/30 transition-colors duration-200 text-center group">
+                                    <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-slate-300 group-hover:text-cyan-400 transition-colors duration-200">Find & Replace</span>
+                                </a>
+                                
+                                <a href="#" class="glass-card p-4 rounded-xl hover:bg-slate-700/30 transition-colors duration-200 text-center group">
+                                    <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-slate-300 group-hover:text-cyan-400 transition-colors duration-200">JSON Formatter</span>
+                                </a>
+                                
+                                <a href="#" class="glass-card p-4 rounded-xl hover:bg-slate-700/30 transition-colors duration-200 text-center group">
+                                    <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-sm text-slate-300 group-hover:text-cyan-400 transition-colors duration-200">Hash Generator</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: ToolShell -->
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-20 bg-gradient-to-b from-slate-900/50 to-slate-950/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Why Choose Universe Tools?</span>
+                    </h2>
+                    <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                        Built with cutting-edge technology and user privacy in mind. Every tool is optimized for performance, security, and ease of use.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card rounded-2xl p-8 text-center group hover:bg-slate-700/30 transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-glow">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">100% Privacy</h3>
+                        <p class="text-slate-400 leading-relaxed">All processing happens in your browser. Your files and data never leave your device, ensuring complete privacy and security.</p>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-8 text-center group hover:bg-slate-700/30 transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-glow-purple">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Lightning Fast</h3>
+                        <p class="text-slate-400 leading-relaxed">Optimized algorithms and client-side processing ensure instant results without waiting for server responses or uploads.</p>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-8 text-center group hover:bg-slate-700/30 transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Forever Free</h3>
+                        <p class="text-slate-400 leading-relaxed">All tools are completely free to use with no hidden fees, registration requirements, or usage limits.</p>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-8 text-center group hover:bg-slate-700/30 transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Mobile Optimized</h3>
+                        <p class="text-slate-400 leading-relaxed">Responsive design ensures all tools work perfectly on mobile devices, tablets, and desktops.</p>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-8 text-center group hover:bg-slate-700/30 transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">No Registration</h3>
+                        <p class="text-slate-400 leading-relaxed">Start using any tool immediately without creating accounts, providing personal information, or email verification.</p>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-8 text-center group hover:bg-slate-700/30 transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-slate-100">Open Source</h3>
+                        <p class="text-slate-400 leading-relaxed">Built with transparency in mind. Source code is available for review, ensuring trust and continuous improvement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-gradient-to-b from-slate-950/50 to-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        <span class="gradient-text">What Users Say</span>
+                    </h2>
+                    <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                        Trusted by professionals, students, and creators worldwide for their daily workflow optimization.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card rounded-2xl p-8 hover:bg-slate-700/30 transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <!-- Professional workspace image for credibility -->
+                            <img src="https://pixabay.com/get/g262d742917b096c827e8c76265c4277df8b48ab50edec31806275c4baab2f0c7e9946dfd54d0a20ece2896b107cf12dd241915536a51109a073c04ef0de49928_1280.jpg" alt="Sarah Chen, Content Manager" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold text-slate-100">Sarah Chen</h4>
+                                <p class="text-slate-400 text-sm">Content Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed mb-4">"The word counter and text tools have become essential in my daily workflow. Love how everything works offline and keeps my content private."</p>
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-8 hover:bg-slate-700/30 transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <!-- Modern digital workspace image -->
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" alt="Mike Rodriguez, Freelancer" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold text-slate-100">Mike Rodriguez</h4>
+                                <p class="text-slate-400 text-sm">Freelance Designer</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed mb-4">"PDF merger and image tools are lifesavers for client projects. Fast, reliable, and the interface is incredibly intuitive. Highly recommended!"</p>
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-8 hover:bg-slate-700/30 transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <!-- Technology icons related professional image -->
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" alt="Emily Johnson, Student" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <h4 class="font-semibold text-slate-100">Emily Johnson</h4>
+                                <p class="text-slate-400 text-sm">Graduate Student</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed mb-4">"Perfect for academic work! The privacy-first approach means I can work on sensitive documents without worrying about data security."</p>
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-gradient-to-b from-slate-900/50 to-slate-950/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Frequently Asked Questions</span>
+                    </h2>
+                    <p class="text-xl text-slate-400">
+                        Everything you need to know about Universe Tools and our privacy-first approach.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <details class="glass-card p-6 rounded-2xl group">
+                        <summary class="font-semibold text-slate-100 cursor-pointer list-none flex items-center justify-between text-lg">
+                            <span>Are my files stored on your servers?</span>
+                            <svg class="w-6 h-6 text-slate-400 group-open:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="mt-6 text-slate-400 leading-relaxed">
+                            <p>No, absolutely not. All file processing happens directly in your web browser using client-side JavaScript. Your files never leave your device, never touch our servers, and are never transmitted over the internet. This ensures complete privacy and security for your sensitive documents.</p>
+                        </div>
+                    </details>
+
+                    <details class="glass-card p-6 rounded-2xl group">
+                        <summary class="font-semibold text-slate-100 cursor-pointer list-none flex items-center justify-between text-lg">
+                            <span>Do I need to create an account to use the tools?</span>
+                            <svg class="w-6 h-6 text-slate-400 group-open:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="mt-6 text-slate-400 leading-relaxed">
+                            <p>No registration is required. All 60+ tools are available immediately without creating an account, providing email addresses, or any form of sign-up process. Simply visit the tool you need and start using it right away.</p>
+                        </div>
+                    </details>
+
+                    <details class="glass-card p-6 rounded-2xl group">
+                        <summary class="font-semibold text-slate-100 cursor-pointer list-none flex items-center justify-between text-lg">
+                            <span>Is there a limit on file sizes or usage?</span>
+                            <svg class="w-6 h-6 text-slate-400 group-open:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="mt-6 text-slate-400 leading-relaxed">
+                            <p>File size limits are determined by your device's available memory since processing happens locally. For optimal performance, we recommend files under 100MB for most tools. There are no daily usage limits, account restrictions, or premium tiers - everything is completely free forever.</p>
+                        </div>
+                    </details>
+
+                    <details class="glass-card p-6 rounded-2xl group">
+                        <summary class="font-semibold text-slate-100 cursor-pointer list-none flex items-center justify-between text-lg">
+                            <span>Do the tools work offline?</span>
+                            <svg class="w-6 h-6 text-slate-400 group-open:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="mt-6 text-slate-400 leading-relaxed">
+                            <p>Yes! Once a tool page is loaded, most functions work completely offline. This is possible because all processing happens in your browser using Web APIs and JavaScript libraries. You only need an internet connection to initially load the tool interface.</p>
+                        </div>
+                    </details>
+
+                    <details class="glass-card p-6 rounded-2xl group">
+                        <summary class="font-semibold text-slate-100 cursor-pointer list-none flex items-center justify-between text-lg">
+                            <span>Are the tools mobile-friendly?</span>
+                            <svg class="w-6 h-6 text-slate-400 group-open:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="mt-6 text-slate-400 leading-relaxed">
+                            <p>Absolutely! All tools are designed with a mobile-first approach and work seamlessly on smartphones, tablets, and desktop computers. The interface adapts to your screen size and touch inputs for optimal usability across all devices.</p>
+                        </div>
+                    </details>
+
+                    <details class="glass-card p-6 rounded-2xl group">
+                        <summary class="font-semibold text-slate-100 cursor-pointer list-none flex items-center justify-between text-lg">
+                            <span>How can I support the project?</span>
+                            <svg class="w-6 h-6 text-slate-400 group-open:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </summary>
+                        <div class="mt-6 text-slate-400 leading-relaxed">
+                            <p>The best way to support Universe Tools is by sharing it with others who might find it useful, providing feedback for improvements, and contributing to our open-source codebase on GitHub. Ad revenue from ethical advertising helps keep the service free and servers running.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Ad Slot (Hidden during approval pending) -->
+        <!-- @COMPONENT: AdSlot { id: "home-bottom", position: "bottom" } -->
+        <div class="ad-slot mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" style="display: none;" data-mock="true">
+            <div>
+                <p class="font-medium mb-2">Advertisement Slot - Bottom</p>
+                <p class="text-sm">Final ad placement before footer</p>
+                <p class="text-xs mt-1">Respects intrusive threshold guidelines</p>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: AdSlot -->
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-b from-slate-950/50 to-slate-900/50">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-12">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        <span class="gradient-text">Ready to Get Started?</span>
+                    </h2>
+                    <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+                        Join thousands of professionals who trust Universe Tools for their daily workflow. 
+                        Start using any of our 60+ tools right now - no registration required.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="bg-gradient-to-r from-cyan-400 to-purple-500 hover:from-cyan-300 hover:to-purple-400 text-white font-semibold px-8 py-4 rounded-2xl shadow-glow transform transition-all duration-300 hover:scale-105">
+                            Browse All Tools
+                        </button>
+                        <button class="glass-card hover:bg-slate-700/50 text-slate-100 font-semibold px-8 py-4 rounded-2xl transform transition-all duration-300 hover:scale-105">
+                            View Categories
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-800 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand Column -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center shadow-glow">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold gradient-text">Universe Tools</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        The ultimate collection of online tools for professionals, students, and creators. Privacy-first, lightning-fast, and forever free.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 glass-card rounded-lg flex items-center justify-center hover:bg-slate-700/50 transition-colors duration-200" aria-label="GitHub">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 glass-card rounded-lg flex items-center justify-center hover:bg-slate-700/50 transition-colors duration-200" aria-label="Twitter">
+                            <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tools Column -->
+                <div>
+                    <h4 class="text-slate-100 font-semibold mb-6">Tool Categories</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">PDF Tools</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Image Tools</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Audio Tools</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Text Tools</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Productivity</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Finance Tools</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div>
+                    <h4 class="text-slate-100 font-semibold mb-6">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Getting Started</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">API Documentation</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Tutorials</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Blog</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Changelog</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Column -->
+                <div>
+                    <h4 class="text-slate-100 font-semibold mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Privacy Policy</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Terms of Service</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Cookie Policy</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Disclaimer</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Contact</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-slate-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-slate-400 text-sm mb-4 md:mb-0">
+                        © 2024 Universe Tools. All rights reserved. Made with ❤️ for productivity.
+                    </div>
+                    <div class="text-slate-400 text-sm">
+                        Last updated: <span data-bind="lastUpdated">December 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner (Hidden by default, shown via JavaScript) -->
+    <div<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolsUniverse - All-in-One Online Tools | Fast, Free, Secure</title>
+    <meta name="description" content="60+ professional online tools for PDF, Image, Audio, Text, and Finance. Fully client-side processing, privacy-focused, and production-ready. Free forever.">
+    <meta name="keywords" content="online tools, PDF tools, image converter, audio editor, text tools, finance calculator, free tools, productivity">
+    <link rel="canonical" href="https://toolsuniverse.github.io/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ToolsUniverse - All-in-One Online Tools">
+    <meta property="og:description" content="60+ professional online tools for PDF, Image, Audio, Text, and Finance. Free, secure, and privacy-focused.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolsuniverse.github.io/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ToolsUniverse - All-in-One Online Tools">
+    <meta name="twitter:description" content="60+ professional online tools. Free, secure, privacy-focused.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ToolsUniverse",
+      "url": "https://toolsuniverse.github.io/",
+      "description": "Professional online tools for PDF, Image, Audio, Text, and Finance operations",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://toolsuniverse.github.io/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    'sans': ['Inter', 'system-ui', 'sans-serif'],
+                },
+                animation: {
+                    'fade-in': 'fadeIn 0.5s ease-in-out',
+                    'slide-up': 'slideUp 0.6s ease-out',
+                    'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+                    'glow': 'glow 2s ease-in-out infinite alternate',
+                },
+                backdropBlur: {
+                    'xs': '2px',
+                },
+                colors: {
+                    'primary': {
+                        50: '#eff6ff',
+                        500: '#3b82f6',
+                        600: '#2563eb',
+                        700: '#1d4ed8',
+                    }
+                }
+            }
+        }
+    };
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes bounceGentle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+            to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
+        }
+        
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glassmorphism-dark {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .tool-card {
+            transition: all 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100 font-sans">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-600 text-white px-4 py-2 rounded-lg z-50">
+        Skip to main content
+    </a>
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-slate-800 glassmorphism-dark rounded-2xl p-4 z-50 animate-slide-up">
+        <div class="flex items-start space-x-3">
+            <i class="fas fa-cookie-bite text-yellow-400 text-xl mt-1"></i>
+            <div class="flex-1">
+                <p class="text-sm text-slate-300 mb-3">
+                    We use cookies to enhance your experience and show relevant ads. By continuing, you agree to our cookie policy.
+                </p>
+                <div class="flex space-x-2">
+                    <button onclick="acceptCookies()" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                        Accept
+                    </button>
+                    <button onclick="declineCookies()" class="bg-slate-700 hover:bg-slate-600 text-slate-300 px-4 py-2 rounded-lg text-sm transition-colors">
+                        Decline
+                    </button>
+                </div>
+            </div>
+            <button onclick="closeCookieBanner()" class="text-slate-400 hover:text-white">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-purple-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-tools text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">ToolsUniverse</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-primary-400 transition-colors">Home</a>
+                    <div class="relative group">
+                        <button class="hover:text-primary-400 transition-colors flex items-center space-x-1">
+                            <span>Tools</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-slate-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="p-2">
+                                <a href="#pdf-tools" class="block px-4 py-2 hover:bg-slate-700 rounded-lg transition-colors">
+                                    <i class="fas fa-file-pdf text-red-400 mr-2"></i>PDF Tools
+                                </a>
+                                <a href="#image-tools" class="block px-4 py-2 hover:bg-slate-700 rounded-lg transition-colors">
+                                    <i class="fas fa-image text-green-400 mr-2"></i>Image Tools
+                                </a>
+                                <a href="#audio-tools" class="block px-4 py-2 hover:bg-slate-700 rounded-lg transition-colors">
+                                    <i class="fas fa-music text-purple-400 mr-2"></i>Audio Tools
+                                </a>
+                                <a href="#text-tools" class="block px-4 py-2 hover:bg-slate-700 rounded-lg transition-colors">
+                                    <i class="fas fa-font text-blue-400 mr-2"></i>Text Tools
+                                </a>
+                                <a href="#productivity-tools" class="block px-4 py-2 hover:bg-slate-700 rounded-lg transition-colors">
+                                    <i class="fas fa-calculator text-yellow-400 mr-2"></i>Productivity
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#about" class="hover:text-primary-400 transition-colors">About</a>
+                    <a href="#contact" class="hover:text-primary-400 transition-colors">Contact</a>
+                </div>
+                
+                <!-- Search & Theme Toggle -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" id="global-search" placeholder="Search tools..." 
+                               class="bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 pl-10 w-64 focus:outline-none focus:border-primary-500 transition-colors">
+                        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400"></i>
+                    </div>
+                    <button id="theme-toggle" class="p-2 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="md:hidden p-2 bg-slate-800 rounded-xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Ad Slot - Top -->
+        <!-- @COMPONENT: AdSlot [position="top", id="home-top"] -->
+        <div data-ad-slot="home-top" class="max-w-7xl mx-auto px-4 py-4">
+            <div class="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-6 text-center">
+                <div class="text-slate-400 text-sm mb-2">Advertisement</div>
+                <div class="bg-slate-600 rounded-xl h-24 flex items-center justify-center">
+                    <span class="text-slate-400">Ad Space (728x90)</span>
+                </div>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: AdSlot -->
+        
+        <!-- Hero Section -->
+        <section id="home" class="relative overflow-hidden py-20">
+            <!-- Background decoration -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute -top-40 -right-32 w-80 h-80 bg-primary-600/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-40 -left-32 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl"></div>
+            </div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center animate-fade-in">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                        <span class="gradient-text">Universe of Tools</span>
+                        <br>
+                        <span class="text-white">at Your Fingertips</span>
+                    </h1>
+                    <p class="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+                        60+ professional-grade online tools for PDF, Image, Audio, Text, and Finance operations. 
+                        100% client-side processing ensures your privacy and security.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                        <button class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 animate-glow">
+                            <i class="fas fa-rocket mr-2"></i>
+                            Explore Tools
+                        </button>
+                        <button class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 glassmorphism">
+                            <i class="fas fa-play mr-2"></i>
+                            Watch Demo
+                        </button>
+                    </div>
+                    
+                    <!-- Features badges -->
+                    <div class="flex flex-wrap justify-center gap-4 mb-16">
+                        <div class="glassmorphism rounded-full px-6 py-3 text-sm">
+                            <i class="fas fa-shield-alt text-green-400 mr-2"></i>
+                            100% Private
+                        </div>
+                        <div class="glassmorphism rounded-full px-6 py-3 text-sm">
+                            <i class="fas fa-lightning-bolt text-yellow-400 mr-2"></i>
+                            Lightning Fast
+                        </div>
+                        <div class="glassmorphism rounded-full px-6 py-3 text-sm">
+                            <i class="fas fa-mobile-alt text-blue-400 mr-2"></i>
+                            Mobile Friendly
+                        </div>
+                        <div class="glassmorphism rounded-full px-6 py-3 text-sm">
+                            <i class="fas fa-dollar-sign text-green-400 mr-2"></i>
+                            Free Forever
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero showcase -->
+                <!-- Modern laptop displaying tool interface -->
+                <div class="relative mx-auto max-w-4xl animate-slide-up">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=600" 
+                         alt="Modern workspace with laptop showing digital tools interface" 
+                         class="w-full h-auto rounded-3xl shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent rounded-3xl"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="py-16 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-primary-400 mb-2">60+</div>
+                        <div class="text-slate-300">Tools Available</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-green-400 mb-2">1M+</div>
+                        <div class="text-slate-300">Files Processed</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-yellow-400 mb-2">100%</div>
+                        <div class="text-slate-300">Privacy Protected</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-400 mb-2">24/7</div>
+                        <div class="text-slate-300">Available</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Categories Grid -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Tool Categories</h2>
+                    <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                        Professional-grade tools organized by category for maximum productivity
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- PDF Tools Category -->
+                    <div class="group tool-card glassmorphism-dark rounded-3xl p-8 cursor-pointer">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-red-500/30 transition-colors">
+                                <i class="fas fa-file-pdf text-3xl text-red-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">PDF Tools</h3>
+                            <p class="text-slate-300 mb-6">
+                                Merge, split, compress, convert, and edit PDF files with advanced features
+                            </p>
+                            <div class="space-y-2 mb-6 text-sm text-slate-400">
+                                <div>• PDF Merger & Splitter</div>
+                                <div>• PDF to Word/Image Converter</div>
+                                <div>• Password Protection</div>
+                                <div>• Watermark & OCR</div>
+                            </div>
+                            <button class="w-full bg-red-500/20 hover:bg-red-500/30 text-red-400 py-3 rounded-xl transition-colors">
+                                15 Tools Available
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Image Tools Category -->
+                    <div class="group tool-card glassmorphism-dark rounded-3xl p-8 cursor-pointer">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-500/30 transition-colors">
+                                <i class="fas fa-image text-3xl text-green-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Image Tools</h3>
+                            <p class="text-slate-300 mb-6">
+                                Convert, resize, compress, and enhance images with professional quality
+                            </p>
+                            <div class="space-y-2 mb-6 text-sm text-slate-400">
+                                <div>• Format Conversion</div>
+                                <div>• Background Removal</div>
+                                <div>• Image Compression</div>
+                                <div>• AI Enhancement</div>
+                            </div>
+                            <button class="w-full bg-green-500/20 hover:bg-green-500/30 text-green-400 py-3 rounded-xl transition-colors">
+                                15 Tools Available
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Audio Tools Category -->
+                    <div class="group tool-card glassmorphism-dark rounded-3xl p-8 cursor-pointer">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-500/30 transition-colors">
+                                <i class="fas fa-music text-3xl text-purple-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Audio Tools</h3>
+                            <p class="text-slate-300 mb-6">
+                                Edit, convert, and enhance audio files with studio-quality processing
+                            </p>
+                            <div class="space-y-2 mb-6 text-sm text-slate-400">
+                                <div>• Audio Format Converter</div>
+                                <div>• Voice Recording</div>
+                                <div>• Audio Cutter/Joiner</div>
+                                <div>• Text-to-Speech</div>
+                            </div>
+                            <button class="w-full bg-purple-500/20 hover:bg-purple-500/30 text-purple-400 py-3 rounded-xl transition-colors">
+                                15 Tools Available
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Text Tools Category -->
+                    <div class="group tool-card glassmorphism-dark rounded-3xl p-8 cursor-pointer">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-500/30 transition-colors">
+                                <i class="fas fa-font text-3xl text-blue-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Text Tools</h3>
+                            <p class="text-slate-300 mb-6">
+                                Powerful text processing, encoding, and formatting utilities
+                            </p>
+                            <div class="space-y-2 mb-6 text-sm text-slate-400">
+                                <div>• Word Counter & Analysis</div>
+                                <div>• Text Transformation</div>
+                                <div>• Encoding/Decoding</div>
+                                <div>• JSON & CSV Tools</div>
+                            </div>
+                            <button class="w-full bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 py-3 rounded-xl transition-colors">
+                                15 Tools Available
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Productivity Tools Category -->
+                    <div class="group tool-card glassmorphism-dark rounded-3xl p-8 cursor-pointer">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-yellow-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-yellow-500/30 transition-colors">
+                                <i class="fas fa-calculator text-3xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Productivity</h3>
+                            <p class="text-slate-300 mb-6">
+                                Essential calculators and utilities for daily productivity tasks
+                            </p>
+                            <div class="space-y-2 mb-6 text-sm text-slate-400">
+                                <div>• Financial Calculators</div>
+                                <div>• Unit Converters</div>
+                                <div>• Date & Time Tools</div>
+                                <div>• Health Calculators</div>
+                            </div>
+                            <button class="w-full bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-400 py-3 rounded-xl transition-colors">
+                                15 Tools Available
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Finance Tools Category -->
+                    <div class="group tool-card glassmorphism-dark rounded-3xl p-8 cursor-pointer">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-500/30 transition-colors">
+                                <i class="fas fa-chart-line text-3xl text-emerald-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Finance</h3>
+                            <p class="text-slate-300 mb-6">
+                                Professional financial calculators for investment and planning
+                            </p>
+                            <div class="space-y-2 mb-6 text-sm text-slate-400">
+                                <div>• Loan & EMI Calculator</div>
+                                <div>• Investment Planning</div>
+                                <div>• Currency Converter</div>
+                                <div>• Compound Interest</div>
+                            </div>
+                            <button class="w-full bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 py-3 rounded-xl transition-colors">
+                                15 Tools Available
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ad Slot - Inline -->
+        <!-- @COMPONENT: AdSlot [position="inline", id="home-mid"] -->
+        <div data-ad-slot="home-mid" class="max-w-7xl mx-auto px-4 py-8">
+            <div class="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-6 text-center">
+                <div class="text-slate-400 text-sm mb-2">Advertisement</div>
+                <div class="bg-slate-600 rounded-xl h-32 flex items-center justify-center">
+                    <span class="text-slate-400">Ad Space (970x250)</span>
+                </div>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: AdSlot -->
+        
+        <!-- Trending Tools Section -->
+        <section class="py-20 bg-slate-900/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Trending Tools</h2>
+                    <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                        Most popular tools used by our community this week
+                    </p>
+                </div>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- PDF Merge Tool -->
+                    <div class="tool-card glassmorphism-dark rounded-2xl p-6 cursor-pointer">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-file-pdf text-red-400 text-xl"></i>
+                            </div>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">Hot</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">PDF Merger</h3>
+                        <p class="text-sm text-slate-400 mb-4">Combine multiple PDF files into one document</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-500">2.3M uses</span>
+                            <i class="fas fa-arrow-right text-slate-400"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Image Background Remover -->
+                    <div class="tool-card glassmorphism-dark rounded-2xl p-6 cursor-pointer">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-magic text-green-400 text-xl"></i>
+                            </div>
+                            <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">AI</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">BG Remover</h3>
+                        <p class="text-sm text-slate-400 mb-4">Remove image backgrounds instantly with AI</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-500">1.8M uses</span>
+                            <i class="fas fa-arrow-right text-slate-400"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Word Counter -->
+                    <div class="tool-card glassmorphism-dark rounded-2xl p-6 cursor-pointer">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-font text-blue-400 text-xl"></i>
+                            </div>
+                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded-full">Popular</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">Word Counter</h3>
+                        <p class="text-sm text-slate-400 mb-4">Count words, characters, and analyze text</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-500">3.1M uses</span>
+                            <i class="fas fa-arrow-right text-slate-400"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- EMI Calculator -->
+                    <div class="tool-card glassmorphism-dark rounded-2xl p-6 cursor-pointer">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-calculator text-yellow-400 text-xl"></i>
+                            </div>
+                            <span class="text-xs bg-orange-500/20 text-orange-400 px-2 py-1 rounded-full">New</span>
+                        </div>
+                        <h3 class="font-semibold mb-2">EMI Calculator</h3>
+                        <p class="text-sm text-slate-400 mb-4">Calculate loan EMI and repayment schedule</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-slate-500">890K uses</span>
+                            <i class="fas fa-arrow-right text-slate-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sample Tool Page (PDF Merge) -->
+        <section id="pdf-merge-tool" class="py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- @COMPONENT: ToolShell [category="PDF", toolName="PDF Merger"] -->
+                <div class="glassmorphism-dark rounded-3xl p-8">
+                    <!-- Tool Header -->
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-file-pdf text-4xl text-red-400"></i>
+                        </div>
+                        <h1 class="text-4xl font-bold mb-4">PDF Merger</h1>
+                        <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+                            Combine multiple PDF files into one document quickly and securely. 
+                            All processing happens in your browser - no file uploads required.
+                        </p>
+                    </div>
+                    
+                    <!-- Breadcrumbs -->
+                    <nav class="flex mb-8 text-sm">
+                        <a href="#home" class="text-slate-400 hover:text-white">Home</a>
+                        <span class="text-slate-500 mx-2">/</span>
+                        <a href="#pdf-tools" class="text-slate-400 hover:text-white">PDF Tools</a>
+                        <span class="text-slate-500 mx-2">/</span>
+                        <span class="text-white">PDF Merger</span>
+                    </nav>
+                    
+                    <!-- Ad Slot - Tool Top -->
+                    <!-- @COMPONENT: AdSlot [position="top", id="pdf-merge-top"] -->
+                    <div data-ad-slot="pdf-merge-top" class="mb-8">
+                        <div class="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-4 text-center">
+                            <div class="text-slate-400 text-xs mb-2">Advertisement</div>
+                            <div class="bg-slate-600 rounded-xl h-16 flex items-center justify-center">
+                                <span class="text-slate-400 text-sm">Ad Space (728x90)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @END_COMPONENT: AdSlot -->
+                    
+                    <!-- Tool Interface -->
+                    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                        <!-- Input Panel -->
+                        <div class="space-y-6">
+                            <h2 class="text-2xl font-bold">Upload PDF Files</h2>
+                            
+                            <!-- File Upload Area -->
+                            <div class="border-2 border-dashed border-slate-600 rounded-2xl p-8 text-center hover:border-primary-500 transition-colors cursor-pointer">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-slate-400 mb-4"></i>
+                                <p class="text-lg mb-2">Drag and drop PDF files here</p>
+                                <p class="text-slate-400 mb-4">or click to browse</p>
+                                <button class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-xl transition-colors">
+                                    Choose Files
+                                </button>
+                                <input type="file" multiple accept=".pdf" class="hidden" data-implementation="File upload handler needed">
+                            </div>
+                            
+                            <!-- Uploaded Files List -->
+                            <div class="space-y-3" data-mock="true">
+                                <div class="bg-slate-800 rounded-xl p-4 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-file-pdf text-red-400"></i>
+                                        <div>
+                                            <div class="font-medium">document1.pdf</div>
+                                            <div class="text-sm text-slate-400">2.3 MB</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="text-slate-400 hover:text-white p-2">
+                                            <i class="fas fa-arrows-alt"></i>
+                                        </button>
+                                        <button class="text-red-400 hover:text-red-300 p-2">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-slate-800 rounded-xl p-4 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-file-pdf text-red-400"></i>
+                                        <div>
+                                            <div class="font-medium">report.pdf</div>
+                                            <div class="text-sm text-slate-400">1.8 MB</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="text-slate-400 hover:text-white p-2">
+                                            <i class="fas fa-arrows-alt"></i>
+                                        </button>
+                                        <button class="text-red-400 hover:text-red-300 p-2">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Merge Options -->
+                            <div class="bg-slate-800 rounded-2xl p-6">
+                                <h3 class="text-lg font-semibold mb-4">Merge Options</h3>
+                                <div class="space-y-4">
+                                    <label class="flex items-center space-x-3">
+                                        <input type="checkbox" class="w-4 h-4 text-primary-600 bg-slate-700 border-slate-600 rounded focus:ring-primary-500">
+                                        <span>Add page numbers</span>
+                                    </label>
+                                    <label class="flex items-center space-x-3">
+                                        <input type="checkbox" class="w-4 h-4 text-primary-600 bg-slate-700 border-slate-600 rounded focus:ring-primary-500">
+                                        <span>Add table of contents</span>
+                                    </label>
+                                    <div class="flex items-center space-x-3">
+                                        <label class="text-sm">Output filename:</label>
+                                        <input type="text" value="merged-document.pdf" 
+                                               class="flex-1 bg-slate-700 border border-slate-600 rounded-lg px-3 py-2 focus:outline-none focus:border-primary-500">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Action Button -->
+                            <button class="w-full bg-primary-600 hover:bg-primary-700 text-white py-4 rounded-2xl text-lg font-semibold transition-colors" 
+                                    data-event="click:mergePDFs" data-implementation="PDF merge functionality using PDF-lib">
+                                <i class="fas fa-magic mr-2"></i>
+                                Merge PDFs
+                            </button>
+                        </div>
+                        
+                        <!-- Output Panel -->
+                        <div class="space-y-6">
+                            <h2 class="text-2xl font-bold">Preview & Download</h2>
+                            
+                            <!-- Preview Area -->
+                            <div class="bg-slate-800 rounded-2xl p-6 h-96 flex items-center justify-center">
+                                <div class="text-center text-slate-400">
+                                    <i class="fas fa-file-pdf text-6xl mb-4"></i>
+                                    <p>Merged PDF preview will appear here</p>
+                                    <p class="text-sm mt-2">Upload files and click merge to start</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Download Section -->
+                            <div class="bg-green-500/20 border border-green-500/30 rounded-2xl p-6 text-center" style="display: none;" data-implementation="Show after successful merge">
+                                <i class="fas fa-check-circle text-green-400 text-3xl mb-4"></i>
+                                <h3 class="text-xl font-semibold mb-2">PDF Merged Successfully!</h3>
+                                <p class="text-slate-300 mb-6">Your merged PDF is ready for download</p>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl transition-colors">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Download PDF
+                                    </button>
+                                    <button class="bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-xl transition-colors">
+                                        <i class="fas fa-share mr-2"></i>
+                                        Share Link
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- File Info -->
+                            <div class="bg-slate-800 rounded-2xl p-6">
+                                <h3 class="text-lg font-semibold mb-4">File Information</h3>
+                                <div class="space-y-3 text-sm">
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Total files:</span>
+                                        <span data-bind="fileCount">2</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Total pages:</span>
+                                        <span data-bind="totalPages">12</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Combined size:</span>
+                                        <span data-bind="totalSize">4.1 MB</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Processing time:</span>
+                                        <span data-bind="processingTime">< 1 second</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- How It Works Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold mb-8 text-center">How to Merge PDFs</h2>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-primary-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-primary-400">1</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Upload Files</h3>
+                                <p class="text-slate-300">Select multiple PDF files from your device or drag and drop them into the upload area.</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-primary-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-primary-400">2</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Arrange & Configure</h3>
+                                <p class="text-slate-300">Reorder files by dragging and set merge options like page numbers and filename.</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-primary-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl font-bold text-primary-400">3</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Download Result</h3>
+                                <p class="text-slate-300">Click merge, preview the result, and download your combined PDF file instantly.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefits Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold mb-8 text-center">Why Use Our PDF Merger?</h2>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="bg-slate-800 rounded-2xl p-6 text-center">
+                                <i class="fas fa-shield-alt text-3xl text-green-400 mb-4"></i>
+                                <h3 class="font-semibold mb-2">100% Secure</h3>
+                                <p class="text-sm text-slate-400">All processing happens locally in your browser. No files uploaded to servers.</p>
+                            </div>
+                            <div class="bg-slate-800 rounded-2xl p-6 text-center">
+                                <i class="fas fa-lightning-bolt text-3xl text-yellow-400 mb-4"></i>
+                                <h3 class="font-semibold mb-2">Lightning Fast</h3>
+                                <p class="text-sm text-slate-400">Merge PDFs instantly without waiting for server processing or uploads.</p>
+                            </div>
+                            <div class="bg-slate-800 rounded-2xl p-6 text-center">
+                                <i class="fas fa-mobile-alt text-3xl text-blue-400 mb-4"></i>
+                                <h3 class="font-semibold mb-2">Works Anywhere</h3>
+                                <p class="text-sm text-slate-400">Use on any device - desktop, tablet, or mobile. No installation required.</p>
+                            </div>
+                            <div class="bg-slate-800 rounded-2xl p-6 text-center">
+                                <i class="fas fa-dollar-sign text-3xl text-green-400 mb-4"></i>
+                                <h3 class="font-semibold mb-2">Free Forever</h3>
+                                <p class="text-sm text-slate-400">No hidden costs, no subscriptions. Merge unlimited PDFs completely free.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Use Cases Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold mb-8 text-center">Common Use Cases</h2>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="bg-slate-800 rounded-2xl p-6">
+                                <i class="fas fa-briefcase text-2xl text-blue-400 mb-4"></i>
+                                <h3 class="font-semibold mb-2">Business Reports</h3>
+                                <p class="text-slate-400">Combine quarterly reports, financial statements, and business documents into single files for easy sharing.</p>
+                            </div>
+                            <div class="bg-slate-800 rounded-2xl p-6">
+                                <i class="fas fa-graduation-cap text-2xl text-purple-400 mb-4"></i>
+                                <h3 class="font-semibold mb-2">Academic Papers</h3>
+                                <p class="text-slate-400">Merge research papers, assignments, and academic documents for submission or archival purposes.</p>
+                            </div>
+                            <div class="bg-slate-800 rounded-2xl p-6">
+                                <i class="fas fa-home text-2xl text-green-400 mb-4"></i>
+                                <h3 class="font-semibold mb-2">Personal Documents</h3>
+                                <p class="text-slate-400">Organize personal documents, contracts, and important papers into consolidated files.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQs Section -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+                        <div class="space-y-4 max-w-3xl mx-auto">
+                            <details class="bg-slate-800 rounded-2xl p-6">
+                                <summary class="font-semibold cursor-pointer">Is it safe to merge PDFs online?</summary>
+                                <p class="text-slate-400 mt-4">Yes, our PDF merger is completely safe. All processing happens in your browser locally - no files are uploaded to our servers or stored anywhere.</p>
+                            </details>
+                            <details class="bg-slate-800 rounded-2xl p-6">
+                                <summary class="font-semibold cursor-pointer">What's the maximum file size I can merge?</summary>
+                                <p class="text-slate-400 mt-4">The only limit is your device's memory. Since processing happens locally, larger files may take longer but there's no arbitrary size restriction.</p>
+                            </details>
+                            <details class="bg-slate-800 rounded-2xl p-6">
+                                <summary class="font-semibold cursor-pointer">How many PDFs can I merge at once?</summary>
+                                <p class="text-slate-400 mt-4">You can merge unlimited PDF files in a single operation. The tool handles any number of files your browser can process.</p>
+                            </details>
+                            <details class="bg-slate-800 rounded-2xl p-6">
+                                <summary class="font-semibold cursor-pointer">Do I need to install any software?</summary>
+                                <p class="text-slate-400 mt-4">No installation required. This is a web-based tool that works directly in your browser on any device with internet access.</p>
+                            </details>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Tools -->
+                    <div class="mb-8">
+                        <h2 class="text-3xl font-bold mb-8 text-center">Related PDF Tools</h2>
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <a href="#pdf-split" class="tool-card glassmorphism rounded-2xl p-6 block hover:scale-105 transition-transform">
+                                <i class="fas fa-cut text-2xl text-red-400 mb-3"></i>
+                                <h3 class="font-semibold mb-2">PDF Splitter</h3>
+                                <p class="text-sm text-slate-400">Split PDF into individual pages or custom ranges</p>
+                            </a>
+                            <a href="#pdf-compress" class="tool-card glassmorphism rounded-2xl p-6 block hover:scale-105 transition-transform">
+                                <i class="fas fa-compress text-2xl text-red-400 mb-3"></i>
+                                <h3 class="font-semibold mb-2">PDF Compressor</h3>
+                                <p class="text-sm text-slate-400">Reduce PDF file size while maintaining quality</p>
+                            </a>
+                            <a href="#pdf-to-word" class="tool-card glassmorphism rounded-2xl p-6 block hover:scale-105 transition-transform">
+                                <i class="fas fa-file-word text-2xl text-red-400 mb-3"></i>
+                                <h3 class="font-semibold mb-2">PDF to Word</h3>
+                                <p class="text-sm text-slate-400">Convert PDF documents to editable Word files</p>
+                            </a>
+                            <a href="#pdf-password" class="tool-card glassmorphism rounded-2xl p-6 block hover:scale-105 transition-transform">
+                                <i class="fas fa-lock text-2xl text-red-400 mb-3"></i>
+                                <h3 class="font-semibold mb-2">PDF Password</h3>
+                                <p class="text-sm text-slate-400">Add or remove password protection from PDFs</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Ad Slot - Tool Bottom -->
+                    <!-- @COMPONENT: AdSlot [position="bottom", id="pdf-merge-bottom"] -->
+                    <div data-ad-slot="pdf-merge-bottom">
+                        <div class="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-4 text-center">
+                            <div class="text-slate-400 text-xs mb-2">Advertisement</div>
+                            <div class="bg-slate-600 rounded-xl h-16 flex items-center justify-center">
+                                <span class="text-slate-400 text-sm">Ad Space (728x90)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @END_COMPONENT: AdSlot -->
+                </div>
+                <!-- @END_COMPONENT: ToolShell -->
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-slate-900/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">What Our Users Say</h2>
+                    <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                        Join millions of satisfied users who trust ToolsUniverse for their daily productivity needs
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glassmorphism-dark rounded-2xl p-8">
+                        <!-- Professional businesswoman using laptop in modern office -->
+                        <img src="https://pixabay.com/get/g298abf1b5d6acb0611f2426ec5c9b4ba91e6a4dfd2e311a5d1db8347485c3f743bbe29719dafd917add44222ad16eec6484e06b4d65606b4cf181ecf20a09930_1280.jpg" 
+                             alt="Professional businesswoman testimonial" 
+                             class="w-16 h-16 rounded-full mb-4 object-cover">
+                        <p class="text-slate-300 mb-4">
+                            "ToolsUniverse has revolutionized my workflow. The PDF tools alone save me hours every week. 
+                            Fast, reliable, and completely secure."
+                        </p>
+                        <div>
+                            <div class="font-semibold">Sarah Johnson</div>
+                            <div class="text-sm text-slate-400">Marketing Manager</div>
+                        </div>
+                    </div>
+                    
+                    <div class="glassmorphism-dark rounded-2xl p-8">
+                        <!-- Professional businessman working with documents -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200" 
+                             alt="Professional businessman testimonial" 
+                             class="w-16 h-16 rounded-full mb-4 object-cover">
+                        <p class="text-slate-300 mb-4">
+                            "As a freelance designer, I need reliable tools that work anywhere. These image and PDF tools 
+                            are exactly what I needed - professional quality, no installation required."
+                        </p>
+                        <div>
+                            <div class="font-semibold">Michael Chen</div>
+                            <div class="text-sm text-slate-400">Freelance Designer</div>
+                        </div>
+                    </div>
+                    
+                    <div class="glassmorphism-dark rounded-2xl p-8">
+                        <!-- Professional woman working on laptop -->
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200" 
+                             alt="Professional woman testimonial" 
+                             class="w-16 h-16 rounded-full mb-4 object-cover">
+                        <p class="text-slate-300 mb-4">
+                            "The financial calculators are incredibly accurate and easy to use. I use the EMI calculator 
+                            regularly for client consultations. Highly recommended!"
+                        </p>
+                        <div>
+                            <div class="font-semibold">Emily Rodriguez</div>
+                            <div class="text-sm text-slate-400">Financial Advisor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ad Slot - Bottom -->
+        <!-- @COMPONENT: AdSlot [position="bottom", id="home-bottom"] -->
+        <div data-ad-slot="home-bottom" class="max-w-7xl mx-auto px-4 py-8">
+            <div class="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-6 text-center">
+                <div class="text-slate-400 text-sm mb-2">Advertisement</div>
+                <div class="bg-slate-600 rounded-xl h-32 flex items-center justify-center">
+                    <span class="text-slate-400">Ad Space (970x250)</span>
+                </div>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: AdSlot -->
+        
+        <!-- CTA Section -->
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-4">Ready to boost your productivity?</h2>
+                <p class="text-xl text-slate-300 mb-8">
+                    Join millions of users and start using professional-grade tools for free today
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-tools mr-2"></i>
+                        Explore All Tools
+                    </button>
+                    <button class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 glassmorphism">
+                        <i class="fas fa-bookmark mr-2"></i>
+                        Bookmark This Site
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-tools text-white text-sm"></i>
+                        </div>
+                        <span class="text-lg font-bold gradient-text">ToolsUniverse</span>
+                    </div>
+                    <p class="text-slate-400 mb-6">
+                        Professional online tools for PDF, Image, Audio, Text, and Finance operations. 
+                        Fast, secure, and completely free.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Tools -->
+                <div>
+                    <h3 class="font-semibold mb-6">Popular Tools</h3>
+                    <div class="space-y-3">
+                        <a href="#pdf-merge" class="block text-slate-400 hover:text-white transition-colors">PDF Merger</a>
+                        <a href="#image-bg-remove" class="block text-slate-400 hover:text-white transition-colors">Background Remover</a>
+                        <a href="#word-counter" class="block text-slate-400 hover:text-white transition-colors">Word Counter</a>
+                        <a href="#emi-calculator" class="block text-slate-400 hover:text-white transition-colors">EMI Calculator</a>
+                        <a href="#audio-converter" class="block text-slate-400 hover:text-white transition-colors">Audio Converter</a>
+                    </div>
+                </div>
+                
+                <!-- Categories -->
+                <div>
+                    <h3 class="font-semibold mb-6">Categories</h3>
+                    <div class="space-y-3">
+                        <a href="#pdf-tools" class="block text-slate-400 hover:text-white transition-colors">PDF Tools</a>
+                        <a href="#image-tools" class="block text-slate-400 hover:text-white transition-colors">Image Tools</a>
+                        <a href="#audio-tools" class="block text-slate-400 hover:text-white transition-colors">Audio Tools</a>
+                        <a href="#text-tools" class="block text-slate-400 hover:text-white transition-colors">Text Tools</a>
+                        <a href="#productivity-tools" class="block text-slate-400 hover:text-white transition-colors">Productivity</a>
+                    </div>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h3 class="font-semibold mb-6">Legal</h3>
+                    <div class="space-y-3">
+                        <a href="#privacy" class="block text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#terms" class="block text-slate-400 hover:text-white transition-colors">Terms of Service</a>
+                        <a href="#disclaimer" class="block text-slate-400 hover:text-white transition-colors">Disclaimer</a>
+                        <a href="#about" class="block text-slate-400 hover:text-white transition-colors">About Us</a>
+                        <a href="#contact" class="block text-slate-400 hover:text-white transition-colors">Contact</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 text-sm">
+                    © 2024 ToolsUniverse. All rights reserved. Made with ❤️ for productivity.
+                </p>
+                <p class="text-slate-400 text-sm mt-4 md:mt-0">
+                    Last updated: January 2024 | Version 1.0
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+    (function() {
+        // Theme Management
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        themeToggle.addEventListener('click', function() {
+            body.classList.toggle('light-mode');
+            const isLight = body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            themeToggle.innerHTML = isLight ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+        
+        // Global Search Functionality
+        const searchInput = document.getElementById('global-search');
+        const tools = [
+            {name: 'PDF Merger', category: 'PDF', url: '#pdf-merge', keywords: 'combine join pdf files'},
+            {name: 'PDF Splitter', category: 'PDF', url: '#pdf-split', keywords: 'split separate pdf pages'},
+            {name: 'Image Background Remover', category: 'Image', url: '#bg-remove', keywords: 'remove background transparent'},
+            {name: 'Word Counter', category: 'Text', url: '#word-counter', keywords: 'count words characters'},
+            {name: 'EMI Calculator', category: 'Finance', url: '#emi-calc', keywords: 'loan calculator emi'},
+            // TODO: Add all 60+ tools here
+        ];
+        
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            if (query.length < 2) return;
+            
+            const results = tools.filter(tool => 
+                tool.name.toLowerCase().includes(query) ||
+                tool.category.toLowerCase().includes(query) ||
+                tool.keywords.toLowerCase().includes(query)
+            );
+            
+            // TODO: Implement search results dropdown
+            console.log('Search results:', results);
+        });
+        
+        // Cookie Consent Management
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            closeCookieBanner();
+            // TODO: Initialize analytics and ad scripts
+        }
+        
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            closeCookieBanner();
+        }
+        
+        function closeCookieBanner() {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        
+        // Check if consent already given
+        if (localStorage.getItem('cookieConsent')) {
+            closeCookieBanner();
+        }
+        
+        // Make functions global for onclick handlers
+        window.acceptCookies = acceptCookies;
+        window.declineCookies = declineCookies;
+        window.closeCookieBanner = closeCookieBanner;
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.tool-card, .glassmorphism-dark').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        
+        // Ad Slot Management (Mock implementation)
+        function initializeAds() {
+            // TODO: Implement actual ad loading logic based on environment variables
+            const adSlots = document.querySelectorAll('[data-ad-slot]');
+            const approvalPending = false; // Read from NEXT_PUBLIC_APPROVAL_PENDING
+            
+            if (approvalPending) {
+                adSlots.forEach(slot => slot.style.display = 'none');
+            } else {
+                // TODO: Load appropriate ad provider scripts
+                console.log('Ads would be loaded here');
+            }
+        }
+        
+        // Initialize ads after DOM loaded
+        initializeAds();
+        
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            // TODO: Implement Core Web Vitals monitoring
+            console.log('Page loaded - monitor LCP, CLS, INP');
+        });
+        
+    })();
+    </script>
+    
+    <!-- Structured Data for Homepage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ToolsUniverse",
+      "url": "https://toolsuniverse.github.io/",
+      "description": "Professional online tools for PDF, Image, Audio, Text, and Finance operations",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "PDF Merge and Split",
+        "Image Background Removal",
+        "Audio Format Conversion", 
+        "Text Processing Tools",
+        "Financial Calculators",
+        "Privacy-focused Processing"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data for FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it safe to merge PDFs online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our PDF merger is completely safe. All processing happens in your browser locally - no files are uploaded to our servers or stored anywhere."
+          }
+        },
+        {
+          "@type": "Question", 
+          "name": "What's the maximum file size I can merge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The only limit is your device's memory. Since processing happens locally, larger files may take longer but there's no arbitrary size restriction."
+          }
+        }
+      ]
+    }
+    </script>
+</body>
+</html>

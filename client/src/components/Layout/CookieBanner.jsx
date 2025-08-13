@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'wouter';
 
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
