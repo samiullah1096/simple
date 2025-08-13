@@ -1,22 +1,76 @@
 import { useParams } from 'wouter';
 import { getToolBySlug } from '../lib/toolsIndex';
-import PDFMerger from './tools/pdf/PDFMerger';
-import WordCounter from './tools/text/WordCounter';
-import BackgroundRemover from './tools/image/BackgroundRemover';
-import EMICalculator from './tools/finance/EMICalculator';
 import NotFound from './not-found';
+
+// PDF Tools
+import PDFMerger from './tools/pdf/PDFMerger';
+import PDFSplitter from './tools/pdf/PDFSplitter';
+import PDFCompressor from './tools/pdf/PDFCompressor';
+import PDFToWord from './tools/pdf/PDFToWord';
+import WordToPDF from './tools/pdf/WordToPDF';
+import PDFToJPG from './tools/pdf/PDFToJPG';
+import JPGToPDF from './tools/pdf/JPGToPDF';
+import PDFPasswordRemover from './tools/pdf/PDFPasswordRemover';
+import PDFPasswordProtector from './tools/pdf/PDFPasswordProtector';
+import PDFWatermark from './tools/pdf/PDFWatermark';
+import PDFPageOrganizer from './tools/pdf/PDFPageOrganizer';
+import PDFTextExtractor from './tools/pdf/PDFTextExtractor';
+
+// Image Tools
+import BackgroundRemover from './tools/image/BackgroundRemover';
+import ImageResizer from './tools/image/ImageResizer';
+import ImageCompressor from './tools/image/ImageCompressor';
+import ImageConverter from './tools/image/ImageConverter';
+import ImageCropper from './tools/image/ImageCropper';
+import ImageFilters from './tools/image/ImageFilters';
+import ImageWatermark from './tools/image/ImageWatermark';
+import ImageUpscaler from './tools/image/ImageUpscaler';
+
+// Text Tools
+import WordCounter from './tools/text/WordCounter';
+import CaseConverter from './tools/text/CaseConverter';
+
+// Audio Tools
+import AudioConverter from './tools/audio/AudioConverter';
+
+// Finance Tools
+import EMICalculator from './tools/finance/EMICalculator';
 
 // Tool component mapping
 const TOOL_COMPONENTS = {
+  // PDF Tools
   'pdf/merge': PDFMerger,
-  'pdf/split': () => <div>PDF Splitter - Coming Soon</div>,
-  'pdf/compress': () => <div>PDF Compressor - Coming Soon</div>,
-  'text/word-counter': WordCounter,
-  'text/case-converter': () => <div>Case Converter - Coming Soon</div>,
+  'pdf/split': PDFSplitter,
+  'pdf/compress': PDFCompressor,
+  'pdf/to-word': PDFToWord,
+  'pdf/word-to-pdf': WordToPDF,
+  'pdf/to-jpg': PDFToJPG,
+  'pdf/jpg-to-pdf': JPGToPDF,
+  'pdf/remove-password': PDFPasswordRemover,
+  'pdf/add-password': PDFPasswordProtector,
+  'pdf/watermark': PDFWatermark,
+  'pdf/organize': PDFPageOrganizer,
+  'pdf/extract-text': PDFTextExtractor,
+  
+  // Image Tools
   'image/remove-background': BackgroundRemover,
-  'image/resize': () => <div>Image Resizer - Coming Soon</div>,
+  'image/resize': ImageResizer,
+  'image/compress': ImageCompressor,
+  'image/convert': ImageConverter,
+  'image/crop': ImageCropper,
+  'image/filters': ImageFilters,
+  'image/watermark': ImageWatermark,
+  'image/upscale': ImageUpscaler,
+  
+  // Text Tools
+  'text/word-counter': WordCounter,
+  'text/case-converter': CaseConverter,
+  
+  // Audio Tools
+  'audio/convert': AudioConverter,
+  
+  // Finance Tools
   'finance/emi-calculator': EMICalculator,
-  'finance/sip-calculator': () => <div>SIP Calculator - Coming Soon</div>,
 };
 
 export default function ToolPage() {
