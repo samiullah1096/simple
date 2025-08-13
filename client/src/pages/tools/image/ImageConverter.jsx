@@ -7,8 +7,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Slider } from '@/components/ui/slider';
 import { useToast } from '@/hooks/use-toast';
 import { saveAs } from 'file-saver';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { getToolBySlug } from '../../../lib/toolsIndex';
 
 export default function ImageConverter() {
+  const tool = getToolBySlug('image', 'convert');
   const [images, setImages] = useState([]);
   const [converting, setConverting] = useState(false);
   const [outputFormat, setOutputFormat] = useState('jpeg');
@@ -181,8 +184,8 @@ export default function ImageConverter() {
     }
   };
 
-  return (
-    <div className="max-w-4xl mx-auto space-y-8">
+  const toolContent = (
+    <div className="space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -481,5 +484,51 @@ export default function ImageConverter() {
         </CardContent>
       </Card>
     </div>
+  );
+
+  const howToSteps = [
+    {
+      title: 'Upload Images',
+      description: 'Select one or multiple images in any format'
+    },
+    {
+      title: 'Choose Format',
+      description: 'Pick your desired output format (JPEG, PNG, WebP, etc.)'
+    },
+    {
+      title: 'Adjust Quality',
+      description: 'Set quality and compression settings for optimal results'
+    },
+    {
+      title: 'Download Converted',
+      description: 'Get your converted images automatically'
+    }
+  ];
+
+  const benefits = [
+    'Convert between all major image formats',
+    'Batch processing for multiple images',
+    'Quality control and optimization',
+    'No format restrictions',
+    'Instant conversion results'
+  ];
+
+  const useCases = [
+    'Format compatibility for different platforms',
+    'Optimizing images for web use',
+    'Converting legacy formats to modern ones',
+    'Preparing images for specific applications',
+    'Batch converting photo collections'
+  ];
+
+  return (
+    <ToolShell 
+      tool={tool} 
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      {toolContent}
+    </ToolShell>
   );
 }

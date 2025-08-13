@@ -7,8 +7,11 @@ import { Slider } from '@/components/ui/slider';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 import { saveAs } from 'file-saver';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { getToolBySlug } from '../../../lib/toolsIndex';
 
 export default function ImageFilters() {
+  const tool = getToolBySlug('image', 'filters');
   const [image, setImage] = useState(null);
   const [processing, setProcessing] = useState(false);
   

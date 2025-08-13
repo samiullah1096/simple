@@ -6,8 +6,11 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { getToolBySlug } from '../../../lib/toolsIndex';
 
 export default function PDFCompressor() {
+  const tool = getToolBySlug('pdf', 'compress');
   const [file, setFile] = useState(null);
   const [quality, setQuality] = useState('medium');
   const [processing, setProcessing] = useState(false);
@@ -123,20 +126,8 @@ export default function PDFCompressor() {
     return ((originalSize - compressedFile.size) / originalSize * 100).toFixed(1);
   };
 
-  return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-red-500/10 mb-6">
-          <i className="fas fa-compress-arrows-alt text-2xl text-red-400"></i>
-        </div>
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-          PDF Compressor
-        </h1>
-        <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-          Reduce PDF file size while maintaining quality. Process files entirely in your browser.
-        </p>
-      </div>
+  const toolContent = (
+    <div className="space-y-8">
 
       {/* Main Tool */}
       <Card className="glassmorphism">
@@ -294,5 +285,51 @@ export default function PDFCompressor() {
         </div>
       </div>
     </div>
+  );
+
+  const howToSteps = [
+    {
+      title: 'Upload PDF',
+      description: 'Select the PDF file you want to compress'
+    },
+    {
+      title: 'Choose Quality',
+      description: 'Pick compression level based on your needs'
+    },
+    {
+      title: 'Compress File',
+      description: 'Process the PDF with advanced compression algorithms'
+    },
+    {
+      title: 'Download Result',
+      description: 'Save your compressed PDF with reduced file size'
+    }
+  ];
+
+  const benefits = [
+    'Significantly reduce PDF file sizes',
+    'Maintain document quality and readability',
+    'Privacy-first browser-based processing',
+    'Multiple compression levels',
+    'Instant compression results'
+  ];
+
+  const useCases = [
+    'Email attachment size limits',
+    'Storage space optimization',
+    'Faster upload and download times',
+    'Web optimization for faster loading',
+    'Archive management and organization'
+  ];
+
+  return (
+    <ToolShell 
+      tool={tool} 
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      {toolContent}
+    </ToolShell>
   );
 }

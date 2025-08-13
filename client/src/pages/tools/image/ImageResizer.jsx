@@ -6,8 +6,11 @@ import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { getToolBySlug } from '../../../lib/toolsIndex';
 
 export default function ImageResizer() {
+  const tool = getToolBySlug('image', 'resize');
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState('');
   const [width, setWidth] = useState('');
@@ -156,20 +159,8 @@ export default function ImageResizer() {
     { name: 'Email Header', width: 600, height: 200 }
   ];
 
-  return (
-    <div className="max-w-6xl mx-auto space-y-8">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-green-500/10 mb-6">
-          <i className="fas fa-expand-arrows-alt text-2xl text-green-400"></i>
-        </div>
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-          Image Resizer
-        </h1>
-        <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-          Resize images to specific dimensions or percentages. Maintain aspect ratio for perfect results.
-        </p>
-      </div>
+  const toolContent = (
+    <div className="space-y-8">
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Controls */}
@@ -416,5 +407,51 @@ export default function ImageResizer() {
         </div>
       </div>
     </div>
+  );
+
+  const howToSteps = [
+    {
+      title: 'Upload Image',
+      description: 'Select the image file you want to resize'
+    },
+    {
+      title: 'Choose Method',
+      description: 'Pick custom dimensions, percentage, or social media presets'
+    },
+    {
+      title: 'Set Dimensions',
+      description: 'Enter your desired width and height, or select a preset'
+    },
+    {
+      title: 'Download',
+      description: 'Get your perfectly resized image instantly'
+    }
+  ];
+
+  const benefits = [
+    'Maintain aspect ratio automatically',
+    'Social media preset sizes',
+    'High-quality resizing algorithm',
+    'Instant processing',
+    'Multiple resize methods'
+  ];
+
+  const useCases = [
+    'Social media posts and stories',
+    'Website optimization',
+    'Email newsletters',
+    'Print materials',
+    'Profile pictures and avatars'
+  ];
+
+  return (
+    <ToolShell 
+      tool={tool} 
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      {toolContent}
+    </ToolShell>
   );
 }

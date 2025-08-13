@@ -5,8 +5,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { getToolBySlug } from '../../../lib/toolsIndex';
 
 export default function PDFSplitter() {
+  const tool = getToolBySlug('pdf', 'split');
   const [file, setFile] = useState(null);
   const [splitType, setSplitType] = useState('pages'); // 'pages' or 'ranges'
   const [pageRanges, setPageRanges] = useState('');
@@ -139,20 +142,8 @@ export default function PDFSplitter() {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-red-500/10 mb-6">
-          <i className="fas fa-cut text-2xl text-red-400"></i>
-        </div>
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
-          PDF Splitter
-        </h1>
-        <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-          Split PDF files into individual pages or custom ranges. Process files entirely in your browser.
-        </p>
-      </div>
+  const toolContent = (
+    <div className="space-y-8">
 
       {/* Main Tool */}
       <Card className="glassmorphism">
@@ -345,5 +336,51 @@ export default function PDFSplitter() {
         </div>
       </div>
     </div>
+  );
+
+  const howToSteps = [
+    {
+      title: 'Upload PDF',
+      description: 'Select the PDF file you want to split'
+    },
+    {
+      title: 'Choose Split Method',
+      description: 'Split by individual pages or custom page ranges'
+    },
+    {
+      title: 'Set Options',
+      description: 'Specify page ranges if using custom split method'
+    },
+    {
+      title: 'Download Files',
+      description: 'Get individual PDF files or download all at once'
+    }
+  ];
+
+  const benefits = [
+    'Split PDFs into individual pages',
+    'Custom page range extraction',
+    'Browser-based processing',
+    'No file size limitations',
+    'Instant results'
+  ];
+
+  const useCases = [
+    'Extract specific pages from documents',
+    'Share individual pages from reports',
+    'Create smaller files from large PDFs',
+    'Organize document sections',
+    'Prepare pages for editing'
+  ];
+
+  return (
+    <ToolShell 
+      tool={tool} 
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      {toolContent}
+    </ToolShell>
   );
 }

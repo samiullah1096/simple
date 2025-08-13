@@ -8,8 +8,11 @@ import { Slider } from '@/components/ui/slider';
 import { Progress } from '@/components/ui/progress';
 import { useToast } from '@/hooks/use-toast';
 import { saveAs } from 'file-saver';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { getToolBySlug } from '../../../lib/toolsIndex';
 
 export default function ImageCompressor() {
+  const tool = getToolBySlug('image', 'compress');
   const [images, setImages] = useState([]);
   const [compressing, setCompressing] = useState(false);
   const [quality, setQuality] = useState([80]);
@@ -260,8 +263,8 @@ export default function ImageCompressor() {
 
   const totalSavings = calculateTotalSavings();
 
-  return (
-    <div className="max-w-6xl mx-auto space-y-8">
+  const toolContent = (
+    <div className="space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -616,5 +619,51 @@ export default function ImageCompressor() {
         </CardContent>
       </Card>
     </div>
+  );
+
+  const howToSteps = [
+    {
+      title: 'Upload Images',
+      description: 'Select one or multiple images for compression'
+    },
+    {
+      title: 'Adjust Settings',
+      description: 'Set quality level and output format preferences'
+    },
+    {
+      title: 'Compress Images',
+      description: 'Process all images with optimized compression'
+    },
+    {
+      title: 'Download Results',
+      description: 'Save compressed images individually or all at once'
+    }
+  ];
+
+  const benefits = [
+    'Reduce file sizes significantly',
+    'Batch processing for multiple images',
+    'Maintain quality while compressing',
+    'Multiple output formats supported',
+    'Instant compression results'
+  ];
+
+  const useCases = [
+    'Website optimization',
+    'Email attachments',
+    'Social media uploads',
+    'Storage space management',
+    'Faster loading times'
+  ];
+
+  return (
+    <ToolShell 
+      tool={tool} 
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      {toolContent}
+    </ToolShell>
   );
 }

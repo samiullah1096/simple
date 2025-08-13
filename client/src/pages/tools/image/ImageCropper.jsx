@@ -7,8 +7,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 import { saveAs } from 'file-saver';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { getToolBySlug } from '../../../lib/toolsIndex';
 
 export default function ImageCropper() {
+  const tool = getToolBySlug('image', 'crop');
   const [image, setImage] = useState(null);
   const [croppedImage, setCroppedImage] = useState(null);
   const [cropping, setCropping] = useState(false);
