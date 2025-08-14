@@ -19,6 +19,7 @@ import PDFMetadataEditor from './tools/pdf/PDFMetadataEditor';
 import PDFFormFiller from './tools/pdf/PDFFormFiller';
 import PDFSignature from './tools/pdf/PDFSignature';
 
+
 // Image Tools
 import BackgroundRemover from './tools/image/BackgroundRemover';
 import ImageResizer from './tools/image/ImageResizer';
@@ -93,6 +94,11 @@ import TabManager from './tools/productivity/TabManager';
 import TextToQR from './tools/productivity/TextToQR';
 import UnitConverter from './tools/productivity/UnitConverter';
 import WorldClock from './tools/productivity/WorldClock';
+import CSSMinifier from './tools/productivity/CSSMinifier';
+import JSMinifier from './tools/productivity/JSMinifier';
+import MarkdownPreview from './tools/productivity/MarkdownPreview';
+import ScreenCapture from './tools/productivity/ScreenCapture';
+import URLShortener from './tools/productivity/URLShortener';
 
 // Finance Tools
 import EMICalculator from './tools/finance/EMICalculator';
@@ -190,6 +196,11 @@ const TOOL_COMPONENTS = {
   'productivity/tab-manager': TabManager,
   'productivity/pomodoro-timer': PomodoroTimer,
   'productivity/note-taking': NoteApp,
+  'productivity/css-minifier': CSSMinifier,
+  'productivity/js-minifier': JSMinifier,
+  'productivity/markdown-preview': MarkdownPreview,
+  'productivity/screen-capture': ScreenCapture,
+  'productivity/url-shortener': URLShortener,
   
   // Finance Tools
   'finance/emi-calculator': EMICalculator,
