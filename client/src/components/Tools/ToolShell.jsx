@@ -18,7 +18,7 @@ export default function ToolShell({
   const defaultFaqs = [
     {
       question: `Is the ${tool.name} tool free to use?`,
-      answer: 'Yes, this tool is completely free to use with no registration required. All processing happens in your browser for complete privacy.'
+      answer: 'Yes, this tool is completely free to use with no registration required. All processing happens in your browser for complete privacy and security.'
     },
     {
       question: 'Is my data secure when using this tool?',
