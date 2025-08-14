@@ -440,6 +440,106 @@ export const TOOLS_REGISTRY = {
       icon: 'fas fa-code',
       color: 'text-blue-400',
       category: 'Text Tools'
+    },
+    {
+      name: 'URL Encoder/Decoder',
+      slug: 'url-encoder',
+      path: '/text/url-encoder',
+      description: 'Encode and decode URLs for web usage',
+      keywords: 'url encoder, url decoder, percent encoding, uri encoding',
+      icon: 'fas fa-link',
+      color: 'text-blue-400',
+      category: 'Text Tools'
+    },
+    {
+      name: 'HTML Encoder',
+      slug: 'html-encoder',
+      path: '/text/html-encoder',
+      description: 'Encode and decode HTML entities',
+      keywords: 'html encoder, html entities, html escape, html decode',
+      icon: 'fab fa-html5',
+      color: 'text-blue-400',
+      category: 'Text Tools'
+    },
+    {
+      name: 'JSON Formatter',
+      slug: 'json-formatter',
+      path: '/text/json-formatter',
+      description: 'Format, validate, and minify JSON data',
+      keywords: 'json formatter, json validator, json minify, json pretty print',
+      icon: 'fas fa-brackets-curly',
+      color: 'text-blue-400',
+      category: 'Text Tools'
+    },
+    {
+      name: 'Lorem Ipsum Generator',
+      slug: 'lorem-ipsum',
+      path: '/text/lorem-ipsum',
+      description: 'Generate placeholder text for design and development',
+      keywords: 'lorem ipsum, placeholder text, dummy text, filler text',
+      icon: 'fas fa-paragraph',
+      color: 'text-blue-400',
+      category: 'Text Tools'
+    },
+    {
+      name: 'Text Difference Checker',
+      slug: 'text-diff',
+      path: '/text/text-diff',
+      description: 'Compare two texts and highlight differences',
+      keywords: 'text diff, text compare, compare text, text difference',
+      icon: 'fas fa-not-equal',
+      color: 'text-blue-400',
+      category: 'Text Tools'
+    },
+    {
+      name: 'Duplicate Line Remover',
+      slug: 'remove-duplicates',
+      path: '/text/remove-duplicates',
+      description: 'Remove duplicate lines from text',
+      keywords: 'remove duplicates, duplicate lines, unique lines, text cleaner',
+      icon: 'fas fa-copy',
+      color: 'text-blue-400',
+      category: 'Text Tools'
+    },
+    {
+      name: 'Text Reverser',
+      slug: 'text-reverser',
+      path: '/text/text-reverser',
+      description: 'Reverse text, words, or lines',
+      keywords: 'reverse text, text reverser, backwards text, flip text',
+      icon: 'fas fa-undo',
+      color: 'text-blue-400',
+      category: 'Text Tools'
+    },
+    {
+      name: 'Hash Generator',
+      slug: 'hash-generator',
+      path: '/text/hash-generator',
+      description: 'Generate MD5, SHA-1, SHA-256 hashes of text',
+      keywords: 'hash generator, md5, sha1, sha256, text hash',
+      icon: 'fas fa-hashtag',
+      color: 'text-blue-400',
+      category: 'Text Tools'
+    },
+    {
+      name: 'Password Generator',
+      slug: 'password-generator',
+      path: '/text/password-generator',
+      description: 'Generate secure passwords with custom options',
+      keywords: 'password generator, secure password, random password, strong password',
+      icon: 'fas fa-key',
+      color: 'text-blue-400',
+      category: 'Text Tools'
+    },
+    {
+      name: 'Text Statistics',
+      slug: 'text-statistics',
+      path: '/text/text-statistics',
+      description: 'Advanced text analysis with readability scores',
+      keywords: 'text statistics, readability, text analysis, writing stats',
+      icon: 'fas fa-chart-bar',
+      color: 'text-blue-400',
+      category: 'Text Tools'
     }
   ],
   productivity: [
@@ -451,7 +551,8 @@ export const TOOLS_REGISTRY = {
       keywords: 'unit converter, measurement converter, length converter, weight converter',
       icon: 'fas fa-balance-scale',
       color: 'text-yellow-400',
-      category: 'Productivity Tools'
+      category: 'Productivity Tools',
+      featured: true
     },
     {
       name: 'Age Calculator',
@@ -490,6 +591,156 @@ export const TOOLS_REGISTRY = {
       description: 'Calculate date differences and add/subtract dates',
       keywords: 'date calculator, date difference, date math, calendar calculator',
       icon: 'fas fa-calendar',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'QR Code Generator',
+      slug: 'qr-generator',
+      path: '/productivity/qr-generator',
+      description: 'Generate QR codes for text, URLs, and more',
+      keywords: 'qr code generator, qr code, barcode, qr creator',
+      icon: 'fas fa-qrcode',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'Color Picker',
+      slug: 'color-picker',
+      path: '/productivity/color-picker',
+      description: 'Pick colors and get hex, RGB, HSL values',
+      keywords: 'color picker, color palette, hex color, rgb color',
+      icon: 'fas fa-palette',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'Random Number Generator',
+      slug: 'random-number',
+      path: '/productivity/random-number',
+      description: 'Generate random numbers with custom ranges',
+      keywords: 'random number generator, random numbers, number generator, lottery numbers',
+      icon: 'fas fa-dice',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'Stopwatch & Timer',
+      slug: 'stopwatch-timer',
+      path: '/productivity/stopwatch-timer',
+      description: 'Precision stopwatch and countdown timer',
+      keywords: 'stopwatch, timer, countdown, time tracker, chronometer',
+      icon: 'fas fa-stopwatch',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'World Clock',
+      slug: 'world-clock',
+      path: '/productivity/world-clock',
+      description: 'View time in different time zones worldwide',
+      keywords: 'world clock, time zones, global time, international time',
+      icon: 'fas fa-globe',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'Text to QR Code',
+      slug: 'text-to-qr',
+      path: '/productivity/text-to-qr',
+      description: 'Convert any text into a QR code instantly',
+      keywords: 'text to qr, qr code generator, text qr, message qr',
+      icon: 'fas fa-qrcode',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'Markdown Preview',
+      slug: 'markdown-preview',
+      path: '/productivity/markdown-preview',
+      description: 'Preview markdown text with live rendering',
+      keywords: 'markdown preview, markdown editor, md preview, markdown to html',
+      icon: 'fab fa-markdown',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'CSS Minifier',
+      slug: 'css-minifier',
+      path: '/productivity/css-minifier',
+      description: 'Minify and compress CSS code',
+      keywords: 'css minifier, css compressor, minify css, compress css',
+      icon: 'fab fa-css3-alt',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'JavaScript Minifier',
+      slug: 'js-minifier',
+      path: '/productivity/js-minifier',
+      description: 'Minify and compress JavaScript code',
+      keywords: 'javascript minifier, js minifier, minify javascript, compress js',
+      icon: 'fab fa-js-square',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'URL Shortener',
+      slug: 'url-shortener',
+      path: '/productivity/url-shortener',
+      description: 'Create short URLs and track clicks',
+      keywords: 'url shortener, short url, link shortener, tiny url',
+      icon: 'fas fa-link',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'Screen Capture Tool',
+      slug: 'screen-capture',
+      path: '/productivity/screen-capture',
+      description: 'Capture screenshots directly from browser',
+      keywords: 'screen capture, screenshot, screen recorder, capture tool',
+      icon: 'fas fa-camera',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'Regular Expression Tester',
+      slug: 'regex-tester',
+      path: '/productivity/regex-tester',
+      description: 'Test and validate regular expressions',
+      keywords: 'regex tester, regular expression, regex validator, pattern matching',
+      icon: 'fas fa-code',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'Tab Manager',
+      slug: 'tab-manager',
+      path: '/productivity/tab-manager',
+      description: 'Organize and manage browser tabs efficiently',
+      keywords: 'tab manager, browser tabs, tab organizer, productivity tool',
+      icon: 'fas fa-window-restore',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'Pomodoro Timer',
+      slug: 'pomodoro-timer',
+      path: '/productivity/pomodoro-timer',
+      description: 'Focus timer using the Pomodoro Technique',
+      keywords: 'pomodoro timer, focus timer, productivity timer, work timer',
+      icon: 'fas fa-clock',
+      color: 'text-yellow-400',
+      category: 'Productivity Tools'
+    },
+    {
+      name: 'Note Taking App',
+      slug: 'note-taking',
+      path: '/productivity/note-taking',
+      description: 'Quick note taking with local storage',
+      keywords: 'note taking, notes app, quick notes, note pad',
+      icon: 'fas fa-sticky-note',
       color: 'text-yellow-400',
       category: 'Productivity Tools'
     }

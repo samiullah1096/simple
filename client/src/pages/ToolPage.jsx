@@ -38,6 +38,19 @@ import BatchImageProcessor from './tools/image/BatchImageProcessor';
 // Text Tools
 import WordCounter from './tools/text/WordCounter';
 import CaseConverter from './tools/text/CaseConverter';
+import TextFormatter from './tools/text/TextFormatter';
+import FindReplace from './tools/text/FindReplace';
+import Base64Encoder from './tools/text/Base64Encoder';
+import URLEncoder from './tools/text/URLEncoder';
+import HTMLEncoder from './tools/text/HTMLEncoder';
+import JSONFormatter from './tools/text/JSONFormatter';
+import LoremIpsumGenerator from './tools/text/LoremIpsumGenerator';
+import PasswordGenerator from './tools/text/PasswordGenerator';
+import TextDiff from './tools/text/TextDiff';
+import RemoveDuplicates from './tools/text/RemoveDuplicates';
+import TextReverser from './tools/text/TextReverser';
+import HashGenerator from './tools/text/HashGenerator';
+import TextStatistics from './tools/text/TextStatistics';
 
 // Audio Tools
 import AudioConverter from './tools/audio/AudioConverter';
@@ -83,6 +96,19 @@ const TOOL_COMPONENTS = {
   // Text Tools
   'text/word-counter': WordCounter,
   'text/case-converter': CaseConverter,
+  'text/formatter': TextFormatter,
+  'text/find-replace': FindReplace,
+  'text/base64': Base64Encoder,
+  'text/url-encoder': URLEncoder,
+  'text/html-encoder': HTMLEncoder,
+  'text/json-formatter': JSONFormatter,
+  'text/lorem-ipsum': LoremIpsumGenerator,
+  'text/password-generator': PasswordGenerator,
+  'text/text-diff': TextDiff,
+  'text/remove-duplicates': RemoveDuplicates,
+  'text/text-reverser': TextReverser,
+  'text/hash-generator': HashGenerator,
+  'text/text-statistics': TextStatistics,
   
   // Audio Tools
   'audio/convert': AudioConverter,
