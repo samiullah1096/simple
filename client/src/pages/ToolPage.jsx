@@ -34,6 +34,9 @@ import ImageBlurTool from './tools/image/ImageBlurTool';
 import ImageCollageMaker from './tools/image/ImageCollageMaker';
 import QRCodeGenerator from './tools/image/QRCodeGenerator';
 import BatchImageProcessor from './tools/image/BatchImageProcessor';
+import ColorPaletteGenerator from './tools/image/ColorPaletteGenerator';
+import MemeGenerator from './tools/image/MemeGenerator';
+import ImageRotator from './tools/image/ImageRotator';
 
 // Text Tools
 import WordCounter from './tools/text/WordCounter';
@@ -67,6 +70,12 @@ import NoiseReducer from './tools/audio/NoiseReducer';
 import SpeechToText from './tools/audio/SpeechToText';
 import AudioReverb from './tools/audio/AudioReverb';
 import AudioSpectrumAnalyzer from './tools/audio/AudioSpectrumAnalyzer';
+import AudioLoopCreator from './tools/audio/AudioLoopCreator';
+import AudioFadeEditor from './tools/audio/AudioFadeEditor';
+import AudioChannelMixer from './tools/audio/AudioChannelMixer';
+import AudioBeatDetector from './tools/audio/AudioBeatDetector';
+import AudioSilenceRemover from './tools/audio/AudioSilenceRemover';
+import AudioMetadataEditor from './tools/audio/AudioMetadataEditor';
 
 // Productivity Tools
 import AgeCalculator from './tools/productivity/AgeCalculator';
@@ -122,6 +131,9 @@ const TOOL_COMPONENTS = {
   'image/collage': ImageCollageMaker,
   'image/qr-generator': QRCodeGenerator,
   'image/batch-process': BatchImageProcessor,
+  'image/color-palette': ColorPaletteGenerator,
+  'image/meme-generator': MemeGenerator,
+  'image/rotate': ImageRotator,
   
   // Text Tools
   'text/word-counter': WordCounter,
@@ -155,6 +167,12 @@ const TOOL_COMPONENTS = {
   'audio/speech-to-text': SpeechToText,
   'audio/reverb': AudioReverb,
   'audio/spectrum-analyzer': AudioSpectrumAnalyzer,
+  'audio/loop-creator': AudioLoopCreator,
+  'audio/fade-editor': AudioFadeEditor,
+  'audio/channel-mixer': AudioChannelMixer,
+  'audio/beat-detector': AudioBeatDetector,
+  'audio/silence-remover': AudioSilenceRemover,
+  'audio/metadata-editor': AudioMetadataEditor,
   
   // Productivity Tools
   'productivity/unit-converter': UnitConverter,
