@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const AudioReverb = () => {
+const AudioReverb = ({ tool }) => {
   const [audioFile, setAudioFile] = useState(null);
   const [reverbType, setReverbType] = useState('hall');
   const [wetness, setWetness] = useState(0.3);
@@ -187,6 +187,7 @@ const AudioReverb = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Audio Reverb & Echo"
       description="Add reverb, echo, and spatial effects to your audio recordings with professional-quality processing"
       category="Audio Tools"

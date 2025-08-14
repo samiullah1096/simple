@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const BMICalculator = () => {
+const BMICalculator = ({ tool }) => {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [unit, setUnit] = useState('metric'); // metric or imperial
@@ -71,9 +71,7 @@ const BMICalculator = () => {
 
   return (
     <ToolShell
-      title="BMI Calculator"
-      description="Calculate your Body Mass Index (BMI) and get health recommendations based on WHO standards"
-      category="Productivity Tools"
+      tool={tool}
       features={[
         "Support for metric and imperial units",
         "WHO standard BMI categories",

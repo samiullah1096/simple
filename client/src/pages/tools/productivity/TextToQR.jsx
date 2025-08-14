@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const TextToQR = () => {
+const TextToQR = ({ tool }) => {
   const [text, setText] = useState('');
   const [qrSize, setQrSize] = useState(200);
   const [qrCode, setQrCode] = useState('');

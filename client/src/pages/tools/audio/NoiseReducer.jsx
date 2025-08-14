@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const NoiseReducer = () => {
+const NoiseReducer = ({ tool }) => {
   const [audioFile, setAudioFile] = useState(null);
   const [noiseLevel, setNoiseLevel] = useState(5);
   const [preserveVoice, setPreserveVoice] = useState(true);
@@ -250,6 +250,7 @@ const NoiseReducer = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Noise Reducer"
       description="Remove background noise and unwanted sounds from audio recordings using advanced spectral processing"
       category="Audio Tools"

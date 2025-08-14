@@ -222,5 +222,5 @@ export default function ToolPage() {
     );
   }
   
-  return <ToolComponent />;
+  return <ToolComponent tool={tool} />;
 }

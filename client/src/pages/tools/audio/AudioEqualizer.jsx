@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const AudioEqualizer = () => {
+const AudioEqualizer = ({ tool }) => {
   const [audioFile, setAudioFile] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -289,6 +289,7 @@ const AudioEqualizer = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Audio Equalizer"
       description="Apply professional EQ filters to enhance your audio with preset curves and custom frequency adjustments"
       category="Audio Tools"

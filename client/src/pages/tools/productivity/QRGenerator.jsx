@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const QRGenerator = () => {
+const QRGenerator = ({ tool }) => {
   const [text, setText] = useState('');
   const [qrSize, setQrSize] = useState(200);
   const [errorLevel, setErrorLevel] = useState('M');

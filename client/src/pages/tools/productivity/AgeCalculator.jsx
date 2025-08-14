@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const AgeCalculator = () => {
+const AgeCalculator = ({ tool }) => {
   const [birthDate, setBirthDate] = useState('');
   const [targetDate, setTargetDate] = useState(new Date().toISOString().split('T')[0]);
   const [result, setResult] = useState(null);
@@ -68,9 +68,7 @@ const AgeCalculator = () => {
 
   return (
     <ToolShell
-      title="Age Calculator"
-      description="Calculate your exact age in years, months, days, and more precise units"
-      category="Productivity Tools"
+      tool={tool}
       features={[
         "Calculate exact age in multiple units",
         "Days until next birthday",

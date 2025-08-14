@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const PercentageCalculator = () => {
+const PercentageCalculator = ({ tool }) => {
   const [calculationType, setCalculationType] = useState('basic');
   const [results, setResults] = useState({});
 
@@ -211,9 +211,7 @@ const PercentageCalculator = () => {
 
   return (
     <ToolShell
-      title="Percentage Calculator"
-      description="Calculate percentages, percentage changes, and solve various percentage problems"
-      category="Productivity Tools"
+      tool={tool}
       features={[
         "Basic percentage calculations",
         "Percentage increase/decrease",

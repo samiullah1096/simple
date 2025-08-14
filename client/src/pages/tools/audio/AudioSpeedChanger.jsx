@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const AudioSpeedChanger = () => {
+const AudioSpeedChanger = ({ tool }) => {
   const [audioFile, setAudioFile] = useState(null);
   const [speed, setSpeed] = useState(1.0);
   const [preservePitch, setPreservePitch] = useState(true);
@@ -207,6 +207,7 @@ const AudioSpeedChanger = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Audio Speed Changer"
       description="Change audio playback speed without affecting pitch quality using advanced time-stretching algorithms"
       category="Audio Tools"

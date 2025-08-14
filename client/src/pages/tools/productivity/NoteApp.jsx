@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const NoteApp = () => {
+const NoteApp = ({ tool }) => {
   const [notes, setNotes] = useState([]);
   const [currentNote, setCurrentNote] = useState({ id: null, title: '', content: '', lastModified: null });
   const [searchTerm, setSearchTerm] = useState('');
@@ -118,9 +118,7 @@ const NoteApp = () => {
 
   return (
     <ToolShell
-      title="Note Taking App"
-      description="Create, edit, and organize your notes with local storage and search functionality"
-      category="Productivity Tools"
+      tool={tool}
       features={[
         "Create and edit notes with rich formatting",
         "Auto-save to browser's local storage",

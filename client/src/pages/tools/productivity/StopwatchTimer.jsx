@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const StopwatchTimer = () => {
+const StopwatchTimer = ({ tool }) => {
   const [mode, setMode] = useState('stopwatch'); // 'stopwatch' or 'timer'
   const [time, setTime] = useState(0); // in milliseconds
   const [timerDuration, setTimerDuration] = useState(300000); // 5 minutes default

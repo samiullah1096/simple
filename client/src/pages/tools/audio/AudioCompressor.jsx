@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const AudioCompressor = () => {
+const AudioCompressor = ({ tool }) => {
   const [audioFile, setAudioFile] = useState(null);
   const [compressionLevel, setCompressionLevel] = useState(5);
   const [outputFormat, setOutputFormat] = useState('mp3');
@@ -138,6 +138,7 @@ const AudioCompressor = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Audio Compressor"
       description="Reduce audio file size while maintaining quality with advanced compression algorithms and customizable settings"
       category="Audio Tools"

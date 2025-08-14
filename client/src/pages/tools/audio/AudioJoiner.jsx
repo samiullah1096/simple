@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const AudioJoiner = () => {
+const AudioJoiner = ({ tool }) => {
   const [audioFiles, setAudioFiles] = useState([]);
   const [isProcessing, setIsProcessing] = useState(false);
   const [crossfadeEnabled, setCrossfadeEnabled] = useState(false);
@@ -230,6 +230,7 @@ const AudioJoiner = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Audio Joiner & Merger"
       description="Combine multiple audio files into one with crossfade effects, gap control, and professional audio merging capabilities"
       category="Audio Tools"

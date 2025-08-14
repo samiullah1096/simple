@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const RandomNumberGenerator = () => {
+const RandomNumberGenerator = ({ tool }) => {
   const [min, setMin] = useState('1');
   const [max, setMax] = useState('100');
   const [count, setCount] = useState('1');

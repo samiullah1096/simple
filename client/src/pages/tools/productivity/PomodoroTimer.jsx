@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const PomodoroTimer = () => {
+const PomodoroTimer = ({ tool }) => {
   const [timeLeft, setTimeLeft] = useState(25 * 60); // 25 minutes in seconds
   const [isActive, setIsActive] = useState(false);
   const [currentPhase, setCurrentPhase] = useState('work'); // 'work', 'shortBreak', 'longBreak'

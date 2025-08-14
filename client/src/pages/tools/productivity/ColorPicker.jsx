@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const ColorPicker = () => {
+const ColorPicker = ({ tool }) => {
   const [selectedColor, setSelectedColor] = useState('#3b82f6');
   const [colorHistory, setColorHistory] = useState([]);
   const [colorFormat, setColorFormat] = useState('hex');

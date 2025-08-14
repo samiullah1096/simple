@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const PitchShifter = () => {
+const PitchShifter = ({ tool }) => {
   const [audioFile, setAudioFile] = useState(null);
   const [pitchShift, setPitchShift] = useState(0);
   const [preserveTiming, setPreserveTiming] = useState(true);
@@ -261,6 +261,7 @@ const PitchShifter = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Pitch Shifter"
       description="Shift audio pitch up or down while preserving timing and quality using advanced audio processing algorithms"
       category="Audio Tools"

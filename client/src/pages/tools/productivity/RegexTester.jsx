@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const RegexTester = () => {
+const RegexTester = ({ tool }) => {
   const [pattern, setPattern] = useState('');
   const [flags, setFlags] = useState('g');
   const [testString, setTestString] = useState('');

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const TabManager = () => {
+const TabManager = ({ tool }) => {
   const [tabs, setTabs] = useState([]);
   const [newTabName, setNewTabName] = useState('');
   const [newTabUrl, setNewTabUrl] = useState('');

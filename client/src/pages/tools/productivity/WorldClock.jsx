@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const WorldClock = () => {
+const WorldClock = ({ tool }) => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [selectedTimezones, setSelectedTimezones] = useState([
     'America/New_York',

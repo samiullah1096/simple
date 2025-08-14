@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const AudioSpectrumAnalyzer = () => {
+const AudioSpectrumAnalyzer = ({ tool }) => {
   const [audioFile, setAudioFile] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -313,6 +313,7 @@ const AudioSpectrumAnalyzer = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Audio Spectrum Analyzer"
       description="Visualize audio frequency spectrum and analyze audio characteristics with professional-grade spectrum analysis"
       category="Audio Tools"

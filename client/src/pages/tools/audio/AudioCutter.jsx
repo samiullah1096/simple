@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const AudioCutter = () => {
+const AudioCutter = ({ tool }) => {
   const [audioFile, setAudioFile] = useState(null);
   const [startTime, setStartTime] = useState(0);
   const [endTime, setEndTime] = useState(30);
@@ -137,6 +137,7 @@ const AudioCutter = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Audio Cutter & Trimmer"
       description="Cut and trim audio files with precision timing and fade effects for professional audio editing"
       category="Audio Tools"

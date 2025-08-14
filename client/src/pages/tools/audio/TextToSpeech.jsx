@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const TextToSpeech = () => {
+const TextToSpeech = ({ tool }) => {
   const [text, setText] = useState('');
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [voices, setVoices] = useState([]);
@@ -147,6 +147,7 @@ const TextToSpeech = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Text to Speech Pro"
       description="Convert text to natural-sounding speech with multiple voices, languages, and professional audio controls"
       category="Audio Tools"

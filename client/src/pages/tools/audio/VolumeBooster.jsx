@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const VolumeBooster = () => {
+const VolumeBooster = ({ tool }) => {
   const [audioFile, setAudioFile] = useState(null);
   const [volumeGain, setVolumeGain] = useState(1.5);
   const [normalizeEnabled, setNormalizeEnabled] = useState(false);
@@ -192,6 +192,7 @@ const VolumeBooster = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Volume Booster & Normalizer"
       description="Boost audio volume safely and normalize audio levels across tracks with professional audio processing"
       category="Audio Tools"

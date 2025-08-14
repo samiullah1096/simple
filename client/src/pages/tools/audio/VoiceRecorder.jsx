@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const VoiceRecorder = () => {
+const VoiceRecorder = ({ tool }) => {
   const [isRecording, setIsRecording] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
@@ -197,6 +197,7 @@ const VoiceRecorder = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Professional Voice Recorder"
       description="Record high-quality audio directly from your microphone with real-time visualization and professional controls"
       category="Audio Tools"

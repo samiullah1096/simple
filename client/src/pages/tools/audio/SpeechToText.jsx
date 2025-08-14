@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const SpeechToText = () => {
+const SpeechToText = ({ tool }) => {
   const [audioFile, setAudioFile] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [transcriptText, setTranscriptText] = useState('');
@@ -245,6 +245,7 @@ const SpeechToText = () => {
 
   return (
     <ToolShell
+      tool={tool}
       title="Speech to Text"
       description="Convert speech from audio files to accurate text transcriptions with support for multiple languages and formats"
       category="Audio Tools"

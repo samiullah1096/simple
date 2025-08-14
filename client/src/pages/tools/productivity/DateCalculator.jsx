@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const DateCalculator = () => {
+const DateCalculator = ({ tool }) => {
   const [calculationType, setCalculationType] = useState('difference');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');

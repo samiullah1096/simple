@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ToolShell from '../../../components/Tools/ToolShell';
 
-const UnitConverter = () => {
+const UnitConverter = ({ tool }) => {
   const [inputValue, setInputValue] = useState('');
   const [fromUnit, setFromUnit] = useState('meters');
   const [toUnit, setToUnit] = useState('feet');
@@ -76,9 +76,7 @@ const UnitConverter = () => {
 
   return (
     <ToolShell
-      title="Unit Converter"
-      description="Convert between different units of measurement including length, weight, and temperature"
-      category="Productivity Tools"
+      tool={tool}
       features={[
         "Support for length, weight, and temperature conversions",
         "High precision calculations",
