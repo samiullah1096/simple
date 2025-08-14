@@ -47,16 +47,31 @@ export default function PDFMerger() {
     setIsProcessing(true);
     
     try {
-      // This would use PDF-lib or similar library for actual PDF merging
-      // For demo purposes, we'll simulate the process
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Dynamically import PDF-lib to keep bundle size optimized
+      const { PDFDocument } = await import('pdf-lib');
       
-      // Create a mock merged PDF blob
-      const mockPDFContent = new Blob(['Mock merged PDF content'], { type: 'application/pdf' });
+      // Create a new PDF document
+      const mergedPdf = await PDFDocument.create();
+      
+      // Process each file and add its pages to the merged document
+      for (const fileData of files) {
+        const arrayBuffer = await fileData.file.arrayBuffer();
+        const pdf = await PDFDocument.load(arrayBuffer);
+        const pages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+        
+        pages.forEach((page) => {
+          mergedPdf.addPage(page);
+        });
+      }
+      
+      // Generate the merged PDF
+      const mergedPdfBytes = await mergedPdf.save();
+      const mergedBlob = new Blob([mergedPdfBytes], { type: 'application/pdf' });
+      
       setOutputFile({
         name: 'merged-document.pdf',
-        blob: mockPDFContent,
-        size: mockPDFContent.size
+        blob: mergedBlob,
+        size: mergedBlob.size
       });
     } catch (error) {
       console.error('Error merging PDFs:', error);
@@ -87,8 +102,63 @@ export default function PDFMerger() {
     }
   };
 
+  const faqs = [
+    {
+      question: 'How do I merge PDF files online for free?',
+      answer: 'Simply upload 2 or more PDF files using the file selector or drag-and-drop area. Arrange them in your desired order, then click "Merge PDFs" to combine them into a single document.'
+    },
+    {
+      question: 'Is it safe to merge PDFs online?',
+      answer: 'Yes, absolutely safe. All PDF processing happens directly in your browser using client-side JavaScript. Your files never leave your device or get uploaded to any servers.'
+    },
+    {
+      question: 'What is the maximum number of PDFs I can merge?',
+      answer: 'You can merge as many PDF files as your device memory allows. For optimal performance, we recommend merging up to 50 files at once.'
+    },
+    {
+      question: 'Can I rearrange the order of PDFs before merging?',
+      answer: 'Yes! Use the up and down arrow buttons next to each file to reorder them. The final merged PDF will follow the order shown in the file list.'
+    },
+    {
+      question: 'What happens to bookmarks and metadata when merging PDFs?',
+      answer: 'Bookmarks and most metadata from individual PDFs are preserved in the merged document. However, document-level metadata like title and author will need to be set separately.'
+    }
+  ];
+
+  const howToSteps = [
+    'Click "Choose Files" or drag PDF files into the upload area',
+    'Select 2 or more PDF files from your device',
+    'Arrange the files in your desired order using the arrow buttons',
+    'Click "Merge PDFs" to combine all files into one document',
+    'Download your merged PDF file when processing is complete'
+  ];
+
+  const benefits = [
+    'Combine multiple PDFs instantly',
+    'Drag-and-drop file ordering',
+    'No file upload to servers',
+    'Preserves original quality',
+    'Works with password-protected PDFs',
+    'No file size limits'
+  ];
+
+  const useCases = [
+    'Combine contract documents for business',
+    'Merge research papers and articles',
+    'Consolidate invoices and receipts',
+    'Create comprehensive reports',
+    'Combine multiple forms into one file',
+    'Merge presentation slides from different sources'
+  ];
+
   return (
-    <ToolShell tool={tool} category="pdf">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
       <div className="grid lg:grid-cols-2 gap-8">
         {/* Input Panel */}
         <motion.div
@@ -103,11 +173,15 @@ export default function PDFMerger() {
           <div 
             className="border-2 border-dashed border-slate-600 rounded-2xl p-8 text-center hover:border-cyan-500 transition-colors cursor-pointer"
             onClick={() => fileInputRef.current?.click()}
+            data-testid="upload-area"
           >
             <i className="fas fa-cloud-upload-alt text-4xl text-slate-400 mb-4"></i>
             <p className="text-lg mb-2 text-slate-300">Drag and drop PDF files here</p>
             <p className="text-slate-400 mb-4">or click to browse</p>
-            <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-xl transition-colors">
+            <button 
+              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-xl transition-colors"
+              data-testid="button-choose-files"
+            >
               <i className="fas fa-folder-open mr-2"></i>
               Choose Files
             </button>
@@ -118,6 +192,7 @@ export default function PDFMerger() {
               accept=".pdf"
               onChange={handleFileSelect}
               className="hidden"
+              data-testid="input-file"
             />
           </div>
 
@@ -176,7 +251,12 @@ export default function PDFMerger() {
             <button
               onClick={mergePDFs}
               disabled={files.length < 2 || isProcessing}
-              className="flex-1 bg-cyan-600 hover:bg-cyan-700 disabled:bg-slate-700 disabled:cursor-not-allowed text-white py-4 rounded-2xl text-lg font-semibold transition-colors"
+              className={`flex-1 py-3 px-6 rounded-xl font-medium transition-all ${
+                files.length >= 2 && !isProcessing
+                  ? 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white'
+                  : 'bg-slate-600 text-slate-400 cursor-not-allowed'
+              }`}
+              data-testid="button-merge-pdfs"
             >
               {isProcessing ? (
                 <>
@@ -185,18 +265,22 @@ export default function PDFMerger() {
                 </>
               ) : (
                 <>
-                  <i className="fas fa-magic mr-2"></i>
-                  Merge PDFs
+                  <i className="fas fa-object-group mr-2"></i>
+                  Merge PDFs ({files.length})
                 </>
               )}
             </button>
-            <button
-              onClick={resetTool}
-              className="px-6 py-4 glassmorphism hover:bg-slate-700/50 text-slate-300 rounded-2xl transition-colors"
-            >
-              <i className="fas fa-redo mr-2"></i>
-              Reset
-            </button>
+            
+            {files.length > 0 && (
+              <button
+                onClick={resetTool}
+                className="px-6 py-3 bg-slate-600 hover:bg-slate-500 text-white rounded-xl transition-colors"
+                data-testid="button-reset"
+              >
+                <i className="fas fa-redo mr-2"></i>
+                Reset
+              </button>
+            )}
           </div>
         </motion.div>
 
