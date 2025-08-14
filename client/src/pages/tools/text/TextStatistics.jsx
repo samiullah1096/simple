@@ -53,7 +53,7 @@ export default function TextStatistics() {
 
     // Character frequency
     const charFrequency = {};
-    for (let char of charactersNoSpaces.toLowerCase()) {
+    for (let char of text.replace(/\s/g, '').toLowerCase()) {
       if (char.match(/[a-z]/)) {
         charFrequency[char] = (charFrequency[char] || 0) + 1;
       }
