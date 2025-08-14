@@ -339,52 +339,205 @@ export const TOOLS_REGISTRY = {
   ],
   audio: [
     {
-      name: 'Audio Converter',
+      name: 'Universal Audio Converter',
       slug: 'convert',
       path: '/audio/convert',
-      description: 'Convert audio files between different formats',
-      keywords: 'audio converter, mp3 converter, audio format, convert audio',
+      description: 'Convert audio files between 20+ formats including MP3, WAV, FLAC, OGG, and more',
+      keywords: 'audio converter, mp3 converter, wav converter, flac converter, audio format, convert audio',
       icon: 'fas fa-exchange-alt',
       color: 'text-purple-400',
-      category: 'Audio Tools'
+      category: 'Audio Tools',
+      featured: true
     },
     {
-      name: 'Audio Cutter',
+      name: 'Audio Cutter & Trimmer',
       slug: 'cut',
       path: '/audio/cut',
-      description: 'Cut and trim audio files to specific durations',
-      keywords: 'audio cutter, trim audio, cut audio, audio trimmer',
+      description: 'Cut and trim audio files with precision timing and fade effects',
+      keywords: 'audio cutter, trim audio, cut audio, audio trimmer, audio splitter',
       icon: 'fas fa-cut',
       color: 'text-purple-400',
-      category: 'Audio Tools'
+      category: 'Audio Tools',
+      featured: true
     },
     {
-      name: 'Voice Recorder',
+      name: 'Professional Voice Recorder',
       slug: 'record',
       path: '/audio/record',
-      description: 'Record audio directly from your microphone',
-      keywords: 'voice recorder, audio recorder, record voice, microphone recorder',
+      description: 'Record high-quality audio directly from your microphone with real-time visualization',
+      keywords: 'voice recorder, audio recorder, record voice, microphone recorder, recording studio',
       icon: 'fas fa-microphone',
       color: 'text-purple-400',
-      category: 'Audio Tools'
+      category: 'Audio Tools',
+      featured: true
     },
     {
-      name: 'Text to Speech',
+      name: 'Text to Speech Pro',
       slug: 'text-to-speech',
       path: '/audio/text-to-speech',
-      description: 'Convert text to natural-sounding speech',
-      keywords: 'text to speech, tts, voice synthesis, speech generator',
+      description: 'Convert text to natural-sounding speech with multiple voices and languages',
+      keywords: 'text to speech, tts, voice synthesis, speech generator, ai voice',
       icon: 'fas fa-volume-up',
       color: 'text-purple-400',
       category: 'Audio Tools'
     },
     {
-      name: 'Audio Joiner',
+      name: 'Audio Joiner & Merger',
       slug: 'join',
       path: '/audio/join',
-      description: 'Combine multiple audio files into one',
-      keywords: 'audio joiner, merge audio, combine audio, audio merger',
+      description: 'Combine multiple audio files into one with crossfade and gap control',
+      keywords: 'audio joiner, merge audio, combine audio, audio merger, audio concatenation',
       icon: 'fas fa-link',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Compressor',
+      slug: 'compress',
+      path: '/audio/compress',
+      description: 'Reduce audio file size while maintaining quality with advanced compression',
+      keywords: 'audio compressor, compress audio, reduce audio size, audio optimization',
+      icon: 'fas fa-compress-arrows-alt',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Volume Booster & Normalizer',
+      slug: 'volume-booster',
+      path: '/audio/volume-booster',
+      description: 'Boost audio volume safely and normalize audio levels across tracks',
+      keywords: 'volume booster, audio amplifier, normalize audio, increase volume, audio enhancer',
+      icon: 'fas fa-volume-up',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Speed Changer',
+      slug: 'speed-changer',
+      path: '/audio/speed-changer',
+      description: 'Change audio playback speed without affecting pitch quality',
+      keywords: 'audio speed, change speed, slow audio, fast audio, tempo changer',
+      icon: 'fas fa-tachometer-alt',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Pitch Shifter',
+      slug: 'pitch-shifter',
+      path: '/audio/pitch-shifter',
+      description: 'Shift audio pitch up or down while preserving timing and quality',
+      keywords: 'pitch shifter, change pitch, audio pitch, tone shifter, pitch changer',
+      icon: 'fas fa-music',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Equalizer',
+      slug: 'equalizer',
+      path: '/audio/equalizer',
+      description: 'Apply professional EQ filters to enhance your audio with preset and custom curves',
+      keywords: 'audio equalizer, eq, audio filter, frequency response, audio enhancement',
+      icon: 'fas fa-sliders-h',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Noise Reducer',
+      slug: 'noise-reducer',
+      path: '/audio/noise-reducer',
+      description: 'Remove background noise and unwanted sounds from audio recordings',
+      keywords: 'noise reduction, denoise audio, clean audio, remove noise, audio cleaner',
+      icon: 'fas fa-filter',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Reverb & Echo',
+      slug: 'reverb',
+      path: '/audio/reverb',
+      description: 'Add reverb, echo, and spatial effects to your audio recordings',
+      keywords: 'audio reverb, echo effect, spatial audio, audio effects, sound effects',
+      icon: 'fas fa-broadcast-tower',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Spectrum Analyzer',
+      slug: 'spectrum-analyzer',
+      path: '/audio/spectrum-analyzer',
+      description: 'Visualize audio frequency spectrum and analyze audio characteristics',
+      keywords: 'spectrum analyzer, audio analysis, frequency analysis, audio visualizer, waveform',
+      icon: 'fas fa-chart-line',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Speech to Text',
+      slug: 'speech-to-text',
+      path: '/audio/speech-to-text',
+      description: 'Convert speech from audio files to accurate text transcriptions',
+      keywords: 'speech to text, audio transcription, voice to text, speech recognition, transcribe audio',
+      icon: 'fas fa-file-alt',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Loop Creator',
+      slug: 'loop-creator',
+      path: '/audio/loop-creator',
+      description: 'Create seamless audio loops for music production and sound design',
+      keywords: 'audio loop, loop creator, seamless loop, music loop, audio repeat',
+      icon: 'fas fa-redo',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Fade Editor',
+      slug: 'fade-editor',
+      path: '/audio/fade-editor',
+      description: 'Add fade in/out effects and crossfades to your audio files',
+      keywords: 'audio fade, fade in out, crossfade, audio transition, fade effect',
+      icon: 'fas fa-adjust',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Channel Mixer',
+      slug: 'channel-mixer',
+      path: '/audio/channel-mixer',
+      description: 'Mix stereo channels, convert mono to stereo, and adjust audio channels',
+      keywords: 'audio mixer, stereo mixer, mono to stereo, channel mixer, audio channels',
+      icon: 'fas fa-random',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Beat Detection',
+      slug: 'beat-detector',
+      path: '/audio/beat-detector',
+      description: 'Detect BPM and beats in audio files for DJ and music production',
+      keywords: 'beat detection, bpm detector, tempo detector, music analysis, rhythm analysis',
+      icon: 'fas fa-heartbeat',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Silence Remover',
+      slug: 'silence-remover',
+      path: '/audio/silence-remover',
+      description: 'Automatically detect and remove silence from audio recordings',
+      keywords: 'silence remover, remove silence, audio trimmer, voice activation, audio cleanup',
+      icon: 'fas fa-volume-mute',
+      color: 'text-purple-400',
+      category: 'Audio Tools'
+    },
+    {
+      name: 'Audio Metadata Editor',
+      slug: 'metadata-editor',
+      path: '/audio/metadata-editor',
+      description: 'Edit audio file metadata including artist, title, album, and cover art',
+      keywords: 'audio metadata, mp3 tags, id3 editor, audio tags, music metadata',
+      icon: 'fas fa-tags',
       color: 'text-purple-400',
       category: 'Audio Tools'
     }

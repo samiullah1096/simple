@@ -54,6 +54,36 @@ import TextStatistics from './tools/text/TextStatistics';
 
 // Audio Tools
 import AudioConverter from './tools/audio/AudioConverter';
+import AudioCutter from './tools/audio/AudioCutter';
+import VoiceRecorder from './tools/audio/VoiceRecorder';
+import TextToSpeech from './tools/audio/TextToSpeech';
+import AudioJoiner from './tools/audio/AudioJoiner';
+import AudioCompressor from './tools/audio/AudioCompressor';
+import VolumeBooster from './tools/audio/VolumeBooster';
+import AudioSpeedChanger from './tools/audio/AudioSpeedChanger';
+import AudioEqualizer from './tools/audio/AudioEqualizer';
+import PitchShifter from './tools/audio/PitchShifter';
+import NoiseReducer from './tools/audio/NoiseReducer';
+import SpeechToText from './tools/audio/SpeechToText';
+import AudioReverb from './tools/audio/AudioReverb';
+import AudioSpectrumAnalyzer from './tools/audio/AudioSpectrumAnalyzer';
+
+// Productivity Tools
+import AgeCalculator from './tools/productivity/AgeCalculator';
+import BMICalculator from './tools/productivity/BMICalculator';
+import ColorPicker from './tools/productivity/ColorPicker';
+import DateCalculator from './tools/productivity/DateCalculator';
+import NoteApp from './tools/productivity/NoteApp';
+import PercentageCalculator from './tools/productivity/PercentageCalculator';
+import PomodoroTimer from './tools/productivity/PomodoroTimer';
+import QRGenerator from './tools/productivity/QRGenerator';
+import RandomNumberGenerator from './tools/productivity/RandomNumberGenerator';
+import RegexTester from './tools/productivity/RegexTester';
+import StopwatchTimer from './tools/productivity/StopwatchTimer';
+import TabManager from './tools/productivity/TabManager';
+import TextToQR from './tools/productivity/TextToQR';
+import UnitConverter from './tools/productivity/UnitConverter';
+import WorldClock from './tools/productivity/WorldClock';
 
 // Finance Tools
 import EMICalculator from './tools/finance/EMICalculator';
@@ -112,6 +142,36 @@ const TOOL_COMPONENTS = {
   
   // Audio Tools
   'audio/convert': AudioConverter,
+  'audio/cut': AudioCutter,
+  'audio/record': VoiceRecorder,
+  'audio/text-to-speech': TextToSpeech,
+  'audio/join': AudioJoiner,
+  'audio/compress': AudioCompressor,
+  'audio/volume-booster': VolumeBooster,
+  'audio/speed-changer': AudioSpeedChanger,
+  'audio/equalizer': AudioEqualizer,
+  'audio/pitch-shifter': PitchShifter,
+  'audio/noise-reducer': NoiseReducer,
+  'audio/speech-to-text': SpeechToText,
+  'audio/reverb': AudioReverb,
+  'audio/spectrum-analyzer': AudioSpectrumAnalyzer,
+  
+  // Productivity Tools
+  'productivity/unit-converter': UnitConverter,
+  'productivity/age-calculator': AgeCalculator,
+  'productivity/bmi-calculator': BMICalculator,
+  'productivity/percentage': PercentageCalculator,
+  'productivity/date-calculator': DateCalculator,
+  'productivity/qr-generator': QRGenerator,
+  'productivity/color-picker': ColorPicker,
+  'productivity/random-number': RandomNumberGenerator,
+  'productivity/stopwatch-timer': StopwatchTimer,
+  'productivity/world-clock': WorldClock,
+  'productivity/text-to-qr': TextToQR,
+  'productivity/regex-tester': RegexTester,
+  'productivity/tab-manager': TabManager,
+  'productivity/pomodoro-timer': PomodoroTimer,
+  'productivity/note-taking': NoteApp,
   
   // Finance Tools
   'finance/emi-calculator': EMICalculator,
