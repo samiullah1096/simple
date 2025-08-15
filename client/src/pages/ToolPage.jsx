@@ -102,6 +102,15 @@ import URLShortener from './tools/productivity/URLShortener';
 
 // Finance Tools
 import EMICalculator from './tools/finance/EMICalculator';
+import SIPCalculator from './tools/finance/SIPCalculator';
+import CompoundInterestCalculator from './tools/finance/CompoundInterestCalculator';
+import CurrencyConverter from './tools/finance/CurrencyConverter';
+import TipCalculator from './tools/finance/TipCalculator';
+import LoanCalculator from './tools/finance/LoanCalculator';
+import MortgageCalculator from './tools/finance/MortgageCalculator';
+import InvestmentReturnCalculator from './tools/finance/InvestmentReturnCalculator';
+import RetirementCalculator from './tools/finance/RetirementCalculator';
+import BudgetCalculator from './tools/finance/BudgetCalculator';
 
 // Tool component mapping
 const TOOL_COMPONENTS = {
@@ -204,6 +213,15 @@ const TOOL_COMPONENTS = {
   
   // Finance Tools
   'finance/emi-calculator': EMICalculator,
+  'finance/sip-calculator': SIPCalculator,
+  'finance/compound-interest': CompoundInterestCalculator,
+  'finance/currency-converter': CurrencyConverter,
+  'finance/tip-calculator': TipCalculator,
+  'finance/loan-calculator': LoanCalculator,
+  'finance/mortgage-calculator': MortgageCalculator,
+  'finance/investment-return': InvestmentReturnCalculator,
+  'finance/retirement-calculator': RetirementCalculator,
+  'finance/budget-calculator': BudgetCalculator,
 };
 
 export default function ToolPage() {

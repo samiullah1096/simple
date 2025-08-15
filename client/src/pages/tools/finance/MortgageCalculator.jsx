@@ -214,7 +214,7 @@ export default function MortgageCalculator() {
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">
                 PMI (Annual $)
-                <span className="text-xs text-gray-400 ml-1">(If down payment < 20%)</span>
+                <span className="text-xs text-gray-400 ml-1">(If down payment &lt; 20%)</span>
               </label>
               <input
                 type="number"
