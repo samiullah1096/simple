@@ -111,10 +111,10 @@ export default function Header() {
                   placeholder="Search tools..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-slate-800/90 dark:bg-slate-800/90 light:bg-white/90 border border-slate-600 dark:border-slate-600 light:border-slate-300 rounded-xl px-4 py-2 pl-10 text-slate-100 dark:text-slate-100 light:text-slate-900 placeholder-slate-400 dark:placeholder-slate-400 light:placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                  className="w-full bg-slate-800/90 border border-slate-600 rounded-xl px-4 py-2 pl-10 text-slate-100 placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                   data-testid="input-search"
                 />
-                <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 dark:text-slate-400 light:text-slate-500"></i>
+                <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400"></i>
                 
                 {/* Search Results */}
                 {searchQuery && searchResults.length > 0 && (
@@ -150,7 +150,7 @@ export default function Header() {
             {/* Theme Toggle */}
             <button 
               onClick={toggleTheme}
-              className="p-2 text-slate-300 hover:text-cyan-400 dark:text-slate-300 light:text-slate-700 dark:hover:text-cyan-400 light:hover:text-cyan-600 transition-colors duration-200"
+              className="p-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200"
               aria-label="Toggle theme"
               data-testid="button-theme-toggle"
             >

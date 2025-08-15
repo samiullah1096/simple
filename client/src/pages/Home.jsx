@@ -99,9 +99,9 @@ export default function Home() {
             >
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black mb-6">
                 <span className="gradient-text">Universe Tools</span><br />
-                <span className="text-slate-100">All-in-One Platform</span>
+                <span className="text-slate-100 dark:text-slate-100">All-in-One Platform</span>
               </h1>
-              <p className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl sm:text-2xl text-slate-300 dark:text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                 60+ professional online tools for PDF, Image, Audio, Text, and Productivity tasks. 
                 <span className="text-cyan-400 font-semibold"> 100% client-side processing</span> - your data never leaves your device.
               </p>
@@ -119,7 +119,7 @@ export default function Home() {
                     Explore All Tools
                   </button>
                 </Link>
-                <button className="glassmorphism hover:bg-slate-700/50 text-slate-100 font-semibold px-8 py-4 rounded-2xl transform transition-all duration-300 hover:scale-105 border-slate-600">
+                <button className="glassmorphism hover:bg-slate-700/50 text-slate-100 dark:text-slate-100 font-semibold px-8 py-4 rounded-2xl transform transition-all duration-300 hover:scale-105 border-slate-600 dark:border-slate-600">
                   <i className="fas fa-play mr-2"></i>
                   Watch Demo
                 </button>
