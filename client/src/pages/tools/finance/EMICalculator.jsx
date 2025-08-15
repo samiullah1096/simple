@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function EMICalculator() {
-  const tool = getToolBySlug('finance', 'emi-calculator');
+  const tool = TOOLS.finance.find(t => t.slug === 'emi-calculator');
   const [inputs, setInputs] = useState({
     loanAmount: 1000000,
     interestRate: 8.5,
