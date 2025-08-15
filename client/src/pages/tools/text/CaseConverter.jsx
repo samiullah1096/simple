@@ -1,4 +1,6 @@
 import { useState, useCallback } from 'react';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { TOOLS } from '../../../lib/toolsIndex';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
@@ -6,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 
 export default function CaseConverter() {
+  const tool = TOOLS.text.find(t => t.slug === 'case-converter');
   const [inputText, setInputText] = useState('');
   const [results, setResults] = useState({});
   const { toast } = useToast();
@@ -190,8 +193,63 @@ export default function CaseConverter() {
     }
   ];
 
+  const faqs = [
+    {
+      question: 'What text case formats are supported?',
+      answer: 'Our case converter supports 14 different formats including camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, Title Case, UPPERCASE, lowercase, Sentence case, and more specialized formats.'
+    },
+    {
+      question: 'How does camelCase differ from PascalCase?',
+      answer: 'camelCase starts with a lowercase letter (firstName), while PascalCase starts with an uppercase letter (FirstName). Both join words without spaces and capitalize subsequent words.'
+    },
+    {
+      question: 'When should I use snake_case vs kebab-case?',
+      answer: 'snake_case uses underscores and is common in Python, databases, and file names. kebab-case uses hyphens and is popular in URLs, CSS classes, and HTML attributes.'
+    },
+    {
+      question: 'What is CONSTANT_CASE used for?',
+      answer: 'CONSTANT_CASE (all uppercase with underscores) is used for constants in programming, environment variables, and configuration settings. It follows naming conventions in many programming languages.'
+    },
+    {
+      question: 'Can I convert multiple lines of text at once?',
+      answer: 'Yes, the converter handles multi-line text and applies the selected case transformation to the entire input while preserving line breaks and structure.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Enter Text', description: 'Type or paste your text into the input area' },
+    { title: 'View Conversions', description: 'See your text automatically converted to 14 different case formats' },
+    { title: 'Copy Results', description: 'Click the copy button next to any format to copy it to clipboard' },
+    { title: 'Use in Projects', description: 'Apply the converted text in your code, documents, or websites' }
+  ];
+
+  const benefits = [
+    'Convert between 14 different text case formats',
+    'Real-time conversion as you type',
+    'One-click copy to clipboard functionality',
+    'Support for programming naming conventions',
+    'Handle multi-line text and special characters',
+    'Perfect for developers and content creators'
+  ];
+
+  const useCases = [
+    'Convert variable names for different programming languages',
+    'Format text for URLs and file names',
+    'Create consistent naming in databases',
+    'Standardize text for documentation',
+    'Prepare content for different platforms',
+    'Convert between writing and coding styles'
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-4xl mx-auto space-y-8">
       {/* Header */}
       <div className="text-center space-y-4">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-500/10 mb-6">
@@ -327,6 +385,7 @@ export default function CaseConverter() {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+    </ToolShell>
   );
 }

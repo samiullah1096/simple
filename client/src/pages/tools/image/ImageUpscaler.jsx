@@ -1,4 +1,6 @@
 import React, { useState, useCallback } from 'react';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { TOOLS } from '../../../lib/toolsIndex';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -9,6 +11,7 @@ import { useToast } from '@/hooks/use-toast';
 import { saveAs } from 'file-saver';
 
 export default function ImageUpscaler() {
+  const tool = TOOLS.image.find(t => t.slug === 'upscale');
   const [image, setImage] = useState(null);
   const [upscaling, setUpscaling] = useState(false);
   const [upscaledImage, setUpscaledImage] = useState(null);
@@ -243,8 +246,63 @@ export default function ImageUpscaler() {
     return formatFileSize(estimatedBytes);
   };
 
+  const faqs = [
+    {
+      question: 'What is image upscaling and how does it work?',
+      answer: 'Image upscaling uses advanced algorithms to increase image resolution while preserving or enhancing details. Our tool offers multiple algorithms like bicubic, lanczos, and bilinear for different image types.'
+    },
+    {
+      question: 'Which upscaling algorithm should I choose?',
+      answer: 'Use Lanczos for photos and detailed images, Bicubic for general purposes, Bilinear for smooth gradients, and Nearest Neighbor for pixel art. Each algorithm optimizes different image characteristics.'
+    },
+    {
+      question: 'What is the maximum upscaling factor supported?',
+      answer: 'You can upscale images up to 4x their original size. The final dimensions are limited to 8192x8192 pixels for optimal performance and processing speed.'
+    },
+    {
+      question: 'Will upscaling improve image quality?',
+      answer: 'Upscaling can improve perceived quality by increasing resolution, but it cannot add detail that wasn\'t in the original. Best results come from high-quality, clear source images.'
+    },
+    {
+      question: 'What file formats are supported for upscaling?',
+      answer: 'Our upscaler supports JPEG, PNG, WebP, and most common image formats. The output is provided in high-quality PNG format to preserve all details.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload Image', description: 'Select a clear, high-quality image file from your device' },
+    { title: 'Choose Scale Factor', description: 'Select 2x, 3x, or 4x scaling based on your needs' },
+    { title: 'Select Algorithm', description: 'Pick the best upscaling algorithm for your image type' },
+    { title: 'Upscale & Download', description: 'Process the image and download your high-resolution result' }
+  ];
+
+  const benefits = [
+    'Increase image resolution up to 4x original size',
+    'Multiple professional upscaling algorithms',
+    'Preserve image quality with smart interpolation',
+    'Support for all major image formats',
+    'Real-time preview and comparison',
+    'High-quality PNG output format'
+  ];
+
+  const useCases = [
+    'Enlarge photos for printing and posters',
+    'Upscale artwork and digital illustrations',
+    'Enhance low-resolution images for web use',
+    'Prepare images for high-DPI displays',
+    'Restore old photos with better resolution',
+    'Create high-quality thumbnails and previews'
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-4xl mx-auto space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -565,6 +623,7 @@ export default function ImageUpscaler() {
           </div>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </ToolShell>
   );
 }

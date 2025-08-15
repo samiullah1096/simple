@@ -1,4 +1,6 @@
 import React, { useState, useCallback, useRef } from 'react';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { TOOLS } from '../../../lib/toolsIndex';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,6 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 import { saveAs } from 'file-saver';
 
 export default function ImageWatermark() {
+  const tool = TOOLS.image.find(t => t.slug === 'watermark');
   const [images, setImages] = useState([]);
   const [processing, setProcessing] = useState(false);
   const [watermarkType, setWatermarkType] = useState('text');
@@ -90,19 +93,7 @@ export default function ImageWatermark() {
     });
   }, [toast]);
 
-  const removeImage = (id) => {
-    setImages(prev => {
-      const filtered = prev.filter(img => img.id !== id);
-      const imageToRemove = prev.find(img => img.id === id);
-      if (imageToRemove) {
-        URL.revokeObjectURL(imageToRemove.url);
-        if (imageToRemove.watermarked) {
-          URL.revokeObjectURL(imageToRemove.watermarked);
-        }
-      }
-      return filtered;
-    });
-  };
+
 
   const applyWatermark = async (imageData) => {
     return new Promise((resolve, reject) => {
@@ -316,8 +307,63 @@ export default function ImageWatermark() {
     setImages([]);
   };
 
+  const faqs = [
+    {
+      question: 'How do image watermarks protect my photos?',
+      answer: 'Watermarks add visible copyright information to your images, making it difficult to use them without permission. They serve as a deterrent against unauthorized use and help identify the original creator.'
+    },
+    {
+      question: 'Can I use both text and image watermarks?',
+      answer: 'Yes, you can choose between text watermarks (copyright text, your name) or image watermarks (logos, signatures). Each type offers different customization options for optimal protection.'
+    },
+    {
+      question: 'Will watermarks reduce my image quality?',
+      answer: 'Our watermarking process preserves original image quality while adding protection. The output is provided in high-quality PNG format to maintain all details and colors.'
+    },
+    {
+      question: 'Can I control watermark transparency and position?',
+      answer: 'Yes, you can adjust opacity (10-100%), position (9 preset locations), rotation (0-360°), and offset coordinates to customize the watermark appearance perfectly.'
+    },
+    {
+      question: 'Can I batch watermark multiple images at once?',
+      answer: 'Absolutely! Upload multiple images and apply the same watermark settings to all of them simultaneously, then download them individually or all at once.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload Images', description: 'Select multiple images you want to protect with watermarks' },
+    { title: 'Choose Watermark Type', description: 'Select text watermark or upload your logo/signature image' },
+    { title: 'Customize Settings', description: 'Adjust position, opacity, size, and other visual properties' },
+    { title: 'Apply & Download', description: 'Process all images and download your protected content' }
+  ];
+
+  const benefits = [
+    'Protect images with visible copyright watermarks',
+    'Support for both text and image watermarks',
+    'Batch processing for multiple images',
+    'Full control over position and transparency',
+    'High-quality PNG output preservation',
+    'Professional copyright protection'
+  ];
+
+  const useCases = [
+    'Protect photography portfolios online',
+    'Add copyright to digital artwork',
+    'Brand images with company logos',
+    'Watermark stock photos for preview',
+    'Protect social media content',
+    'Add signatures to digital documents'
+  ];
+
   return (
-    <div className="max-w-6xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-6xl mx-auto space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -710,6 +756,7 @@ export default function ImageWatermark() {
           </div>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </ToolShell>
   );
 }
