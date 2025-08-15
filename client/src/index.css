@@ -108,8 +108,18 @@
     border: 1px solid rgba(148, 163, 184, 0.1);
   }
   
+  .light .glassmorphism-dark {
+    background: rgba(241, 245, 249, 0.8);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+  }
+  
   .glass-nav {
     background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(20px);
+  }
+  
+  .light .glass-nav {
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(20px);
   }
   

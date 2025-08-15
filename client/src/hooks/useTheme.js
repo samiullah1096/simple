@@ -10,11 +10,8 @@ export function useTheme() {
     
     // Apply theme to document
     const html = document.documentElement;
-    if (savedTheme === 'light') {
-      html.classList.add('light');
-    } else {
-      html.classList.remove('light');
-    }
+    html.classList.remove('light', 'dark');
+    html.classList.add(savedTheme);
   }, []);
 
   const toggleTheme = () => {
@@ -23,11 +20,8 @@ export function useTheme() {
     localStorage.setItem('theme', newTheme);
     
     const html = document.documentElement;
-    if (newTheme === 'light') {
-      html.classList.add('light');
-    } else {
-      html.classList.remove('light');
-    }
+    html.classList.remove('light', 'dark');
+    html.classList.add(newTheme);
   };
 
   return { theme, toggleTheme };
