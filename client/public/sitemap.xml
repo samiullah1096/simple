@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <!-- Homepage - Highest Priority -->
+  <!-- Homepage - Ultra-High AEO Priority -->
   <url>
     <loc>https://toolsuniverse.com/</loc>
-    <lastmod>2024-08-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <!-- AEO Enhancement: Answer Engine Optimization -->
+    <news:news>
+      <news:publication>
+        <news:name>ToolsUniverse</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-15</news:publication_date>
+      <news:title>Free Online Tools - Complete AEO Optimized Platform</news:title>
+      <news:keywords>free online tools, AEO optimized, answer engine optimization, voice search ready</news:keywords>
+    </news:news>
     <image:image>
       <image:loc>https://toolsuniverse.com/images/og-home.jpg</image:loc>
       <image:title>ToolsUniverse - 60+ Free Online Tools</image:title>
@@ -19,9 +30,9 @@
   <!-- Category Pages - High Priority -->
   <url>
     <loc>https://toolsuniverse.com/pdf</loc>
-    <lastmod>2024-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
     <image:image>
       <image:loc>https://toolsuniverse.com/images/categories/pdf-tools.jpg</image:loc>
       <image:title>Free PDF Tools Online</image:title>
@@ -31,9 +42,9 @@
 
   <url>
     <loc>https://toolsuniverse.com/image</loc>
-    <lastmod>2024-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
     <image:image>
       <image:loc>https://toolsuniverse.com/images/categories/image-tools.jpg</image:loc>
       <image:title>Free Image Tools Online</image:title>
@@ -43,9 +54,9 @@
 
   <url>
     <loc>https://toolsuniverse.com/audio</loc>
-    <lastmod>2024-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
     <image:image>
       <image:loc>https://toolsuniverse.com/images/categories/audio-tools.jpg</image:loc>
       <image:title>Free Audio Tools Online</image:title>
@@ -55,9 +66,9 @@
 
   <url>
     <loc>https://toolsuniverse.com/text</loc>
-    <lastmod>2024-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
     <image:image>
       <image:loc>https://toolsuniverse.com/images/categories/text-tools.jpg</image:loc>
       <image:title>Free Text Tools Online</image:title>
@@ -67,9 +78,9 @@
 
   <url>
     <loc>https://toolsuniverse.com/productivity</loc>
-    <lastmod>2024-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
     <image:image>
       <image:loc>https://toolsuniverse.com/images/categories/productivity-tools.jpg</image:loc>
       <image:title>Free Productivity Tools Online</image:title>
@@ -79,9 +90,9 @@
 
   <url>
     <loc>https://toolsuniverse.com/finance</loc>
-    <lastmod>2024-08-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
     <image:image>
       <image:loc>https://toolsuniverse.com/images/categories/finance-tools.jpg</image:loc>
       <image:title>Free Finance Tools Online</image:title>

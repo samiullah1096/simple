@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import { SEO_DEFAULTS } from '../../lib/constants';
 
 /**
- * Enhanced Meta component for comprehensive SEO optimization
- * Supports all modern SEO best practices for Google Page 1 ranking
+ * Ultra-Enhanced Meta component for comprehensive AEO (Answer Engine Optimization)
+ * Optimized for AI-powered search results, featured snippets, and answer engines
+ * Targets ChatGPT, Google AI Overviews, Bing AI, and voice search optimization
  */
 export default function Meta({ 
   title, 
@@ -23,7 +24,24 @@ export default function Meta({
   alternateLanguages = {},
   breadcrumbs = [],
   priority = '0.8',
-  changeFreq = 'weekly'
+  changeFreq = 'weekly',
+  // AEO-specific props
+  answerSnippet,
+  questionKeywords = [],
+  entityMentions = [],
+  topicClusters = [],
+  userIntent = 'informational',
+  contentDepth = 'comprehensive',
+  expertiseLevel = 'professional',
+  targetAudience = 'general',
+  voiceSearchQueries = [],
+  competitorKeywords = [],
+  semanticKeywords = [],
+  longTailKeywords = [],
+  featuredSnippetTarget = false,
+  knowledgeGraphData = {},
+  faqOptimized = false,
+  answerBoxTarget = false
 }) {
   useEffect(() => {
     // Enhanced meta tag updater with validation
@@ -77,15 +95,62 @@ export default function Meta({
       updateMeta('title', title);
     }
 
-    // Essential meta tags for SEO
+    // Essential meta tags for AEO optimization
     updateMeta('description', description, true);
     updateMeta('keywords', keywords);
     updateMeta('author', author || SEO_DEFAULTS.author);
     updateMeta('publisher', SEO_DEFAULTS.publisher);
-    updateMeta('robots', robots || SEO_DEFAULTS.robots);
+    updateMeta('robots', robots || 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
     updateMeta('viewport', SEO_DEFAULTS.viewport);
     updateMeta('theme-color', SEO_DEFAULTS.themeColor);
     updateMeta('color-scheme', SEO_DEFAULTS.colorScheme);
+    
+    // AEO-specific meta tags for answer engines
+    if (answerSnippet) {
+      updateMeta('answer-snippet', answerSnippet);
+      updateMeta('featured-snippet-target', 'true');
+    }
+    
+    // Question-focused optimization
+    if (questionKeywords.length > 0) {
+      updateMeta('question-keywords', questionKeywords.join(', '));
+      updateMeta('search-intent', userIntent);
+    }
+    
+    // Entity and semantic optimization
+    if (entityMentions.length > 0) {
+      updateMeta('entity-mentions', entityMentions.join(', '));
+    }
+    if (semanticKeywords.length > 0) {
+      updateMeta('semantic-keywords', semanticKeywords.join(', '));
+    }
+    if (longTailKeywords.length > 0) {
+      updateMeta('long-tail-keywords', longTailKeywords.join(', '));
+    }
+    
+    // Voice search optimization
+    if (voiceSearchQueries.length > 0) {
+      updateMeta('voice-search-queries', voiceSearchQueries.join(' | '));
+      updateMeta('conversational-keywords', voiceSearchQueries.map(q => q.toLowerCase()).join(', '));
+    }
+    
+    // Content depth and expertise signals
+    updateMeta('content-depth', contentDepth);
+    updateMeta('expertise-level', expertiseLevel);
+    updateMeta('target-audience', targetAudience);
+    updateMeta('content-type', ogType === 'article' ? 'how-to-guide' : 'tool-page');
+    
+    // Answer box optimization
+    if (answerBoxTarget) {
+      updateMeta('answer-box-target', 'true');
+      updateMeta('direct-answer', answerSnippet || description?.split('.')[0] + '.');
+    }
+    
+    // FAQ optimization signals
+    if (faqOptimized) {
+      updateMeta('faq-optimized', 'true');
+      updateMeta('qa-format', 'structured');
+    }
     
     // Content categorization
     if (category) updateMeta('article:section', category);
@@ -160,10 +225,24 @@ export default function Meta({
     // Manifest for PWA
     updateLink('manifest', '/manifest.json');
     
-    // Favicon variations
-    updateLink('icon', '/favicon.ico', { sizes: 'any' });
-    updateLink('icon', '/favicon.svg', { type: 'image/svg+xml' });
-    updateLink('apple-touch-icon', '/apple-touch-icon.png');
+    // Enhanced favicon system for AEO
+    updateLink('icon', '/favicon.ico', { sizes: 'any', type: 'image/x-icon' });
+    updateLink('icon', '/icons/icon-16x16.png', { sizes: '16x16', type: 'image/png' });
+    updateLink('icon', '/icons/icon-32x32.png', { sizes: '32x32', type: 'image/png' });
+    updateLink('icon', '/icons/icon-48x48.png', { sizes: '48x48', type: 'image/png' });
+    updateLink('icon', '/icons/icon-96x96.png', { sizes: '96x96', type: 'image/png' });
+    updateLink('icon', '/icons/icon-192x192.png', { sizes: '192x192', type: 'image/png' });
+    updateLink('apple-touch-icon', '/icons/apple-touch-icon.png', { sizes: '180x180' });
+    updateLink('apple-touch-icon', '/icons/apple-touch-icon-152x152.png', { sizes: '152x152' });
+    updateLink('apple-touch-icon', '/icons/apple-touch-icon-180x180.png', { sizes: '180x180' });
+    
+    // Mask icon for Safari
+    updateLink('mask-icon', '/icons/safari-pinned-tab.svg', { color: '#0891b2' });
+    
+    // Microsoft tile configuration
+    updateMeta('msapplication-TileColor', '#0891b2');
+    updateMeta('msapplication-TileImage', '/icons/icon-144x144.png');
+    updateMeta('msapplication-config', '/browserconfig.xml');
 
     // Remove old/outdated meta tags that might hurt SEO
     const removeOutdatedMeta = () => {
@@ -182,7 +261,7 @@ export default function Meta({
     
     removeOutdatedMeta();
     
-  }, [title, description, keywords, canonical, ogImage, ogType, author, publishDate, modifiedDate, category, tags, lang, robots, alternateLanguages]);
+  }, [title, description, keywords, canonical, ogImage, ogType, author, publishDate, modifiedDate, category, tags, lang, robots, alternateLanguages, answerSnippet, questionKeywords, entityMentions, topicClusters, userIntent, contentDepth, expertiseLevel, targetAudience, voiceSearchQueries, competitorKeywords, semanticKeywords, longTailKeywords, featuredSnippetTarget, knowledgeGraphData, faqOptimized, answerBoxTarget]);
 
   return null;
 }

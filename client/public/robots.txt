@@ -1,5 +1,6 @@
-# ToolsUniverse - Free Online Tools Platform
-# Robots.txt - Optimized for maximum search engine crawling
+# ToolsUniverse - AEO Optimized Online Tools Platform
+# Robots.txt - Ultra-Enhanced for Answer Engine Optimization (AEO)
+# Optimized for AI-powered search results, featured snippets, and voice search
 
 User-agent: *
 Allow: /
@@ -32,8 +33,28 @@ Disallow: /*?utm_*
 Disallow: /*?ref=*
 Disallow: /*?source=*
 
-# Sitemap location for search engines
+# Enhanced sitemap references for AEO
 Sitemap: https://toolsuniverse.com/sitemap.xml
+Sitemap: https://toolsuniverse.com/sitemap-images.xml
+Sitemap: https://toolsuniverse.com/sitemap-videos.xml
 
-# Crawl delay (optional - helps with server load)
-Crawl-delay: 1
+# AEO-optimized crawl settings
+Crawl-delay: 0.5
+
+# Support for AI crawlers and answer engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Enhanced directive for answer engines
+Allow: /*?featured-snippet=true
+Allow: /*?voice-search=true
+Allow: /*?answer-box=true
