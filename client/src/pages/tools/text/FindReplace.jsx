@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function FindReplace() {
-  const tool = getToolBySlug('text', 'find-replace');
+  const tool = TOOLS.text.find(t => t.slug === 'find-replace');
   const [inputText, setInputText] = useState('');
   const [findText, setFindText] = useState('');
   const [replaceText, setReplaceText] = useState('');

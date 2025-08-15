@@ -1,10 +1,10 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function BackgroundRemover() {
-  const tool = getToolBySlug('image', 'remove-background');
+  const tool = TOOLS.image.find(t => t.slug === 'remove-background');
   const [originalImage, setOriginalImage] = useState(null);
   const [processedImage, setProcessedImage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);

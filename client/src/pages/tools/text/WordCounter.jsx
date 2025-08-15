@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function WordCounter() {
-  const tool = getToolBySlug('text', 'word-counter');
+  const tool = TOOLS.text.find(t => t.slug === 'word-counter');
   const [text, setText] = useState('');
   const [stats, setStats] = useState({
     words: 0,

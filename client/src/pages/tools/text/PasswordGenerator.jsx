@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function PasswordGenerator() {
-  const tool = getToolBySlug('text', 'password-generator');
+  const tool = TOOLS.text.find(t => t.slug === 'password-generator');
   const [password, setPassword] = useState('');
   const [length, setLength] = useState(12);
   const [options, setOptions] = useState({

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function JSONFormatter() {
-  const tool = getToolBySlug('text', 'json-formatter');
+  const tool = TOOLS.text.find(t => t.slug === 'json-formatter');
   const [inputText, setInputText] = useState('');
   const [outputText, setOutputText] = useState('');
   const [mode, setMode] = useState('format'); // 'format', 'minify', 'validate'

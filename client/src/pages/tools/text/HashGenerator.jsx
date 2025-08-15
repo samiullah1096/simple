@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function HashGenerator() {
-  const tool = getToolBySlug('text', 'hash-generator');
+  const tool = TOOLS.text.find(t => t.slug === 'hash-generator');
   const [inputText, setInputText] = useState('');
   const [hashes, setHashes] = useState({});
   const [selectedAlgorithms, setSelectedAlgorithms] = useState({

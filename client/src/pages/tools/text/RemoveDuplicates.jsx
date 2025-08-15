@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function RemoveDuplicates() {
-  const tool = getToolBySlug('text', 'remove-duplicates');
+  const tool = TOOLS.text.find(t => t.slug === 'remove-duplicates');
   const [inputText, setInputText] = useState('');
   const [outputText, setOutputText] = useState('');
   const [caseSensitive, setCaseSensitive] = useState(true);

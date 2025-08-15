@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function HTMLEncoder() {
-  const tool = getToolBySlug('text', 'html-encoder');
+  const tool = TOOLS.text.find(t => t.slug === 'html-encoder');
   const [inputText, setInputText] = useState('');
   const [outputText, setOutputText] = useState('');
   const [mode, setMode] = useState('encode'); // 'encode' or 'decode'
