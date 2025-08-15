@@ -1348,6 +1348,9 @@ export const TOOLS_REGISTRY = {
   ]
 };
 
+// Export TOOLS as an alias for backward compatibility
+export const TOOLS = TOOLS_REGISTRY;
+
 // Get all tools as flat array
 export function getAllTools() {
   return Object.values(TOOLS_REGISTRY).flat();
