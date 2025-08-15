@@ -187,8 +187,63 @@ export default function JPGToPDF() {
     }
   };
 
+  const faqs = [
+    {
+      question: 'How do I convert JPG to PDF online for free?',
+      answer: 'Upload your JPG images, arrange them in the desired order, configure page settings like size and orientation, then click "Create PDF" to combine all images into a single PDF document.'
+    },
+    {
+      question: 'Can I convert multiple images to one PDF?',
+      answer: 'Yes! Upload multiple JPG, PNG, WebP, or other image files and they will be combined into a single PDF document. You can reorder them before conversion.'
+    },
+    {
+      question: 'What image formats are supported?',
+      answer: 'We support all major image formats including JPG, JPEG, PNG, WebP, GIF, BMP, and TIFF. All images will be converted and combined into a high-quality PDF.'
+    },
+    {
+      question: 'Will the image quality be preserved?',
+      answer: 'Yes, our converter maintains the original image quality. You can also adjust compression settings to balance between file size and image quality.'
+    },
+    {
+      question: 'Can I choose different page sizes for my PDF?',
+      answer: 'Absolutely! Choose from standard sizes like A4, A3, Letter, Legal, or custom dimensions. You can also set orientation and margins for optimal layout.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload Images', description: 'Select multiple images from your device' },
+    { title: 'Configure Settings', description: 'Choose page size, orientation, and image fitting options' },
+    { title: 'Arrange Order', description: 'Reorder images as they should appear in the PDF' },
+    { title: 'Download PDF', description: 'Get your combined PDF document with all images' }
+  ];
+
+  const benefits = [
+    'Combine multiple images into one PDF',
+    'Support for all major image formats',
+    'Customizable page sizes and orientation',
+    'Maintain original image quality',
+    'Drag-and-drop image reordering',
+    'Completely offline processing'
+  ];
+
+  const useCases = [
+    'Create PDF portfolios from image collections',
+    'Convert scanned documents to PDF format',
+    'Combine photos into a single PDF album',
+    'Convert screenshots to PDF documentation',
+    'Create PDF presentations from images',
+    'Archive images in PDF format for easy sharing'
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-4xl mx-auto space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -431,6 +486,7 @@ export default function JPGToPDF() {
           </div>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </ToolShell>
   );
 }

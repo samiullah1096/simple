@@ -215,8 +215,63 @@ export default function PDFPasswordProtector() {
 
   const passwordStrength = getPasswordStrength(password);
 
+  const faqs = [
+    {
+      question: 'How do I add password protection to a PDF?',
+      answer: 'Upload your PDF file, set a strong password, configure document permissions like printing and copying, then click "Protect PDF with Password" to download your secured document.'
+    },
+    {
+      question: 'Is it safe to protect PDFs online?',
+      answer: 'Yes, completely safe. All PDF protection happens locally in your browser using client-side JavaScript. Your files and passwords never leave your device or get uploaded to any servers.'
+    },
+    {
+      question: 'What is the difference between encryption levels?',
+      answer: 'Standard encryption uses 128-bit security, while High Security uses 256-bit encryption. Higher security provides better protection but may not be compatible with very old PDF viewers.'
+    },
+    {
+      question: 'Can I set different permissions for the PDF?',
+      answer: 'Yes! You can control printing, document modification, text copying, and annotation permissions. This allows you to restrict certain actions while allowing others.'
+    },
+    {
+      question: 'What makes a strong password?',
+      answer: 'Strong passwords have at least 8 characters with a mix of uppercase, lowercase, numbers, and symbols. Use our password generator for optimal security.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload PDF File', description: 'Select the PDF document you want to protect' },
+    { title: 'Set Password', description: 'Create a strong password or generate one automatically' },
+    { title: 'Configure Permissions', description: 'Set document permissions for printing, copying, and editing' },
+    { title: 'Download Protected PDF', description: 'Get your password-protected PDF document' }
+  ];
+
+  const benefits = [
+    'Secure PDFs with strong encryption',
+    'Control document permissions',
+    'Generate strong passwords automatically',
+    'Support for 128-bit and 256-bit encryption',
+    'Completely offline processing',
+    'Compatible with all PDF viewers'
+  ];
+
+  const useCases = [
+    'Protect confidential business documents',
+    'Secure contracts and agreements',
+    'Control access to sensitive reports',
+    'Prevent unauthorized copying of content',
+    'Restrict editing of final documents',
+    'Add security to personal documents'
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-4xl mx-auto space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -522,6 +577,7 @@ export default function PDFPasswordProtector() {
           </p>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </ToolShell>
   );
 }

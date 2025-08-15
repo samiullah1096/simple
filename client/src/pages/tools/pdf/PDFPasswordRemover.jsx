@@ -165,8 +165,63 @@ export default function PDFPasswordRemover() {
     }
   };
 
+  const faqs = [
+    {
+      question: 'How do I remove password from PDF online for free?',
+      answer: 'Upload your password-protected PDF file, enter the current password if prompted, then click "Remove Password" to download an unlocked version. All processing happens in your browser.'
+    },
+    {
+      question: 'Is it safe to remove PDF passwords online?',
+      answer: 'Yes, completely safe. All PDF processing happens locally in your browser using client-side JavaScript. Your files and passwords never leave your device or get uploaded to any servers.'
+    },
+    {
+      question: 'Can I remove password from any encrypted PDF?',
+      answer: 'You can remove passwords from PDFs where you know the current password. Some enterprise-level encryption may not be removable due to advanced security measures.'
+    },
+    {
+      question: 'Do I need to know the current password?',
+      answer: 'Yes, you need the current password to unlock and remove protection from a PDF. This tool cannot crack or guess passwords - it requires legitimate access.'
+    },
+    {
+      question: 'Will the PDF content be changed after removing password?',
+      answer: 'No, only the password protection is removed. All content, formatting, images, and metadata remain exactly the same as the original PDF.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload PDF File', description: 'Select your password-protected PDF document' },
+    { title: 'Enter Password', description: 'If required, enter the current password to unlock the PDF' },
+    { title: 'Remove Protection', description: 'Click to remove password protection from the PDF' },
+    { title: 'Download Unlocked PDF', description: 'Get your PDF file without password protection' }
+  ];
+
+  const benefits = [
+    'Remove password protection instantly',
+    'Maintain original PDF quality',
+    'Process files completely offline',
+    'Support for various encryption types',
+    'No file size limits',
+    'Preserve all content and metadata'
+  ];
+
+  const useCases = [
+    'Remove passwords from old archived PDFs',
+    'Unlock PDFs for easier sharing',
+    'Prepare PDFs for automated processing',
+    'Remove restrictions for editing or printing',
+    'Unlock PDFs for digital signatures',
+    'Simplify document workflows'
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-4xl mx-auto space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -357,6 +412,7 @@ export default function PDFPasswordRemover() {
           </p>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </ToolShell>
   );
 }

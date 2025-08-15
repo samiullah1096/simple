@@ -159,8 +159,63 @@ export default function PDFToJPG() {
     setPages(prev => prev.map(page => ({ ...page, selected: false })));
   };
 
+  const faqs = [
+    {
+      question: 'How do I convert PDF to JPG online for free?',
+      answer: 'Upload your PDF file, select which pages to convert, choose quality and format settings, then click "Convert & Download" to get individual JPG images or a ZIP file with all converted pages.'
+    },
+    {
+      question: 'Can I convert specific pages from a PDF?',
+      answer: 'Yes! After uploading your PDF, you can select exactly which pages you want to convert to JPG images. Use "Select All" or "Deselect All" buttons for convenience.'
+    },
+    {
+      question: 'What image formats are supported for output?',
+      answer: 'We support JPEG and PNG output formats. JPEG is ideal for photos and complex images, while PNG is better for images with text or transparency.'
+    },
+    {
+      question: 'Can I control the image quality and resolution?',
+      answer: 'Absolutely! Choose from different DPI settings (72, 150, 300, 600) and adjust JPEG quality from 10% to 100% to balance file size and image quality.'
+    },
+    {
+      question: 'Will high-resolution images take longer to process?',
+      answer: 'Higher resolution settings will produce larger, more detailed images but may take slightly longer to process. 150 DPI is recommended for most uses.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload PDF File', description: 'Select your PDF document from your device' },
+    { title: 'Choose Settings', description: 'Select format, resolution, and quality preferences' },
+    { title: 'Select Pages', description: 'Choose which pages to convert to images' },
+    { title: 'Download Images', description: 'Get individual images or a ZIP file with all converted pages' }
+  ];
+
+  const benefits = [
+    'Convert PDF pages to high-quality images',
+    'Select specific pages or convert all pages',
+    'Multiple output formats (JPEG, PNG)',
+    'Adjustable resolution and quality settings',
+    'Batch download as ZIP file',
+    'Completely offline processing'
+  ];
+
+  const useCases = [
+    'Extract images from PDF presentations',
+    'Convert PDF pages for web use',
+    'Create thumbnails from PDF documents',
+    'Extract diagrams and charts from reports',
+    'Convert PDF pages for social media sharing',
+    'Create image backups of important documents'
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-4xl mx-auto space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -377,6 +432,7 @@ export default function PDFToJPG() {
           </div>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </ToolShell>
   );
 }

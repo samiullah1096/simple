@@ -153,8 +153,63 @@ export default function PDFToWord() {
     }
   };
 
+  const faqs = [
+    {
+      question: 'How do I convert PDF to Word online for free?',
+      answer: 'Upload your PDF file, choose your output format (Word or Text), click "Extract Text from PDF", then download your converted document. All processing happens in your browser for complete privacy.'
+    },
+    {
+      question: 'Is it safe to convert PDF to Word online?',
+      answer: 'Yes, completely safe. All PDF processing happens locally in your browser using client-side JavaScript. Your files never leave your device or get uploaded to any servers.'
+    },
+    {
+      question: 'What types of PDFs work best for conversion?',
+      answer: 'Text-based PDFs work best. Scanned documents or image-based PDFs may have limited conversion quality without OCR (Optical Character Recognition).'
+    },
+    {
+      question: 'Will formatting be preserved when converting PDF to Word?',
+      answer: 'Basic text content is extracted accurately, but complex formatting, tables, and layouts may be simplified. The tool focuses on extracting readable text content.'
+    },
+    {
+      question: 'Can I convert password-protected PDFs?',
+      answer: 'Password-protected PDFs cannot be converted directly. Please remove the password protection first using our PDF Password Remover tool, then convert to Word.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload PDF File', description: 'Select the PDF document you want to convert to Word format' },
+    { title: 'Choose Output Format', description: 'Select between Word document (.doc) or plain text (.txt) format' },
+    { title: 'Extract Text', description: 'Click to extract all text content from the PDF document' },
+    { title: 'Preview & Download', description: 'Review the extracted text and download your converted file' }
+  ];
+
+  const benefits = [
+    'Convert PDF to editable Word documents',
+    'Extract text from multi-page PDFs',
+    'Support for both Word and text formats',
+    'Preview extracted content before download',
+    'Copy text directly to clipboard',
+    'Completely offline processing'
+  ];
+
+  const useCases = [
+    'Convert PDF reports to editable Word documents',
+    'Extract text from research papers and articles',
+    'Convert PDF forms to editable Word templates',
+    'Extract quotes and content for presentations',
+    'Convert PDF manuals to Word for editing',
+    'Extract text from PDF invoices and contracts'
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-4xl mx-auto space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -367,6 +422,7 @@ export default function PDFToWord() {
           </p>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </ToolShell>
   );
 }
