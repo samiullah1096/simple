@@ -1,4 +1,6 @@
 import { useState, useCallback } from 'react';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { TOOLS } from '../../../lib/toolsIndex';
 import { PDFDocument, PDFForm } from 'pdf-lib';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,6 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 import { saveAs } from 'file-saver';
 
 export default function PDFFormFiller() {
+  const tool = TOOLS.pdf.find(t => t.slug === 'form-filler');
   const [file, setFile] = useState(null);
   const [formFields, setFormFields] = useState([]);
   const [fieldValues, setFieldValues] = useState({});

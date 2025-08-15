@@ -1,4 +1,6 @@
 import React, { useState, useCallback } from 'react';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { TOOLS } from '../../../lib/toolsIndex';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -10,6 +12,7 @@ import { PDFDocument, rgb } from 'pdf-lib';
 import { saveAs } from 'file-saver';
 
 export default function JPGToPDF() {
+  const tool = TOOLS.pdf.find(t => t.slug === 'jpg-to-pdf');
   const [images, setImages] = useState([]);
   const [converting, setConverting] = useState(false);
   const [pageSize, setPageSize] = useState('A4');

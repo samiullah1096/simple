@@ -6,10 +6,10 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function PDFSplitter() {
-  const tool = getToolBySlug('pdf', 'split');
+  const tool = TOOLS.pdf.find(t => t.slug === 'split');
   const [file, setFile] = useState(null);
   const [splitType, setSplitType] = useState('pages'); // 'pages' or 'ranges'
   const [pageRanges, setPageRanges] = useState('');

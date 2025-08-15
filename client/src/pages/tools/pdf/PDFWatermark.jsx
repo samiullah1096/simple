@@ -1,4 +1,6 @@
 import React, { useState, useCallback } from 'react';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { TOOLS } from '../../../lib/toolsIndex';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -12,6 +14,7 @@ import { PDFDocument, rgb, degrees } from 'pdf-lib';
 import { saveAs } from 'file-saver';
 
 export default function PDFWatermark() {
+  const tool = TOOLS.pdf.find(t => t.slug === 'watermark');
   const [file, setFile] = useState(null);
   const [processing, setProcessing] = useState(false);
   const [watermarkType, setWatermarkType] = useState('text');

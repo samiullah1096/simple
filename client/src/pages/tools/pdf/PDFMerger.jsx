@@ -1,10 +1,10 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function PDFMerger() {
-  const tool = getToolBySlug('pdf', 'merge');
+  const tool = TOOLS.pdf.find(t => t.slug === 'merge');
   const [files, setFiles] = useState([]);
   const [isProcessing, setIsProcessing] = useState(false);
   const [outputFile, setOutputFile] = useState(null);

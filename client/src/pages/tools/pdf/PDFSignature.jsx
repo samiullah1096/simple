@@ -1,4 +1,6 @@
 import { useState, useRef, useCallback } from 'react';
+import ToolShell from '../../../components/Tools/ToolShell';
+import { TOOLS } from '../../../lib/toolsIndex';
 import { PDFDocument, rgb } from 'pdf-lib';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,6 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 import { saveAs } from 'file-saver';
 
 export default function PDFSignature() {
+  const tool = TOOLS.pdf.find(t => t.slug === 'signature');
   const [file, setFile] = useState(null);
   const [signatureType, setSignatureType] = useState('draw');
   const [drawnSignature, setDrawnSignature] = useState(null);

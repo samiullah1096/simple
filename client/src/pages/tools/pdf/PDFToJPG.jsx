@@ -10,13 +10,13 @@ import * as pdfjsLib from 'pdfjs-dist';
 import { saveAs } from 'file-saver';
 import JSZip from 'jszip';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 // Configure PDF.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js`;
 
 export default function PDFToJPG() {
-  const tool = getToolBySlug('pdf', 'to-jpg');
+  const tool = TOOLS.pdf.find(t => t.slug === 'to-jpg');
   const [file, setFile] = useState(null);
   const [converting, setConverting] = useState(false);
   const [pages, setPages] = useState([]);

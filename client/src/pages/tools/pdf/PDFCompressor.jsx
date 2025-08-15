@@ -7,10 +7,10 @@ import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { getToolBySlug } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function PDFCompressor() {
-  const tool = getToolBySlug('pdf', 'compress');
+  const tool = TOOLS.pdf.find(t => t.slug === 'compress');
   const [file, setFile] = useState(null);
   const [quality, setQuality] = useState('medium');
   const [processing, setProcessing] = useState(false);
