@@ -1,0 +1,81 @@
+{
+  "name": "ToolsUniverse - Free Online Tools",
+  "short_name": "ToolsUniverse",
+  "description": "60+ professional online tools for PDF, image, audio, text, and finance operations. Free, secure, and privacy-focused.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0891b2",
+  "background_color": "#0f172a",
+  "categories": ["productivity", "utilities", "education", "business"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/icons/icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/images/screenshots/mobile-tools.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "PDF Tools",
+      "url": "/pdf",
+      "description": "Access PDF editing and conversion tools"
+    },
+    {
+      "name": "Image Tools", 
+      "url": "/image",
+      "description": "Access image processing and editing tools"
+    },
+    {
+      "name": "Popular Tools",
+      "url": "/?featured=true",
+      "description": "Most popular and frequently used tools"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://toolsuniverse.com/</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/og-home.jpg</image:loc>
+      <image:title>ToolsUniverse - 60+ Free Online Tools</image:title>
+      <image:caption>Professional online tools for PDF, image, audio, text and finance operations</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Category Pages - High Priority -->
+  <url>
+    <loc>https://toolsuniverse.com/pdf</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/categories/pdf-tools.jpg</image:loc>
+      <image:title>Free PDF Tools Online</image:title>
+      <image:caption>15+ professional PDF editing, merging, and conversion tools</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/image</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/categories/image-tools.jpg</image:loc>
+      <image:title>Free Image Tools Online</image:title>
+      <image:caption>17+ professional image processing and editing tools</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/audio</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/categories/audio-tools.jpg</image:loc>
+      <image:title>Free Audio Tools Online</image:title>
+      <image:caption>20+ professional audio editing and conversion tools</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/text</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/categories/text-tools.jpg</image:loc>
+      <image:title>Free Text Tools Online</image:title>
+      <image:caption>15+ professional text processing and formatting tools</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/productivity</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/categories/productivity-tools.jpg</image:loc>
+      <image:title>Free Productivity Tools Online</image:title>
+      <image:caption>20+ essential calculators and utility tools</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/finance</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/categories/finance-tools.jpg</image:loc>
+      <image:title>Free Finance Tools Online</image:title>
+      <image:caption>10+ accurate financial calculators and planning tools</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Popular Tool Pages - Medium-High Priority -->
+  <url>
+    <loc>https://toolsuniverse.com/pdf/merge</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/tools/pdf-merger.jpg</image:loc>
+      <image:title>Free PDF Merger Tool</image:title>
+      <image:caption>Combine multiple PDF files into one document online</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/pdf/split</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/tools/pdf-splitter.jpg</image:loc>
+      <image:title>Free PDF Splitter Tool</image:title>
+      <image:caption>Split PDF files into individual pages or custom ranges</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/image/remove-background</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/tools/background-remover.jpg</image:loc>
+      <image:title>Free Background Remover Tool</image:title>
+      <image:caption>Remove image backgrounds automatically with AI precision</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/image/compress</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/tools/image-compressor.jpg</image:loc>
+      <image:title>Free Image Compressor Tool</image:title>
+      <image:caption>Compress images without quality loss for web optimization</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/finance/emi-calculator</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://toolsuniverse.com/images/tools/emi-calculator.jpg</image:loc>
+      <image:title>Free EMI Calculator Tool</image:title>
+      <image:caption>Calculate loan EMI with accurate interest rates and schedules</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About and Legal Pages - Medium Priority -->
+  <url>
+    <loc>https://toolsuniverse.com/about</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/legal/privacy</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/legal/terms</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://toolsuniverse.com/legal/disclaimer</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://toolsuniverse.com/contact</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

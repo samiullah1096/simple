@@ -1,0 +1,39 @@
+# ToolsUniverse - Free Online Tools Platform
+# Robots.txt - Optimized for maximum search engine crawling
+
+User-agent: *
+Allow: /
+
+# Prioritize important pages for crawlers
+Allow: /pdf
+Allow: /image
+Allow: /audio
+Allow: /text
+Allow: /productivity
+Allow: /finance
+
+# Tool-specific pages
+Allow: /pdf/*
+Allow: /image/*
+Allow: /audio/*
+Allow: /text/*
+Allow: /productivity/*
+Allow: /finance/*
+
+# SEO-important pages
+Allow: /about
+Allow: /legal/*
+
+# Block unnecessary pages that don't add SEO value
+Disallow: /api/*
+Disallow: /admin/*
+Disallow: /*.json$
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?source=*
+
+# Sitemap location for search engines
+Sitemap: https://toolsuniverse.com/sitemap.xml
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1

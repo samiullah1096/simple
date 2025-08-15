@@ -5,9 +5,47 @@ import ToolCard from '../components/Tools/ToolCard';
 import { getFeaturedTools, CATEGORIES } from '../lib/toolsIndex';
 import Meta from '../components/SEO/Meta';
 import JsonLd from '../components/SEO/JsonLd';
+import { SEO_DEFAULTS, TOOL_CATEGORIES, APP_NAME, APP_URL } from '../lib/constants';
 
 export default function Home() {
   const featuredTools = getFeaturedTools();
+  
+  // Enhanced SEO data for homepage
+  const seoData = {
+    title: SEO_DEFAULTS.defaultTitle,
+    description: SEO_DEFAULTS.description,
+    keywords: [
+      ...SEO_DEFAULTS.keywords.split(', '),
+      ...SEO_DEFAULTS.longTailKeywords,
+      ...SEO_DEFAULTS.semanticKeywords
+    ].join(', '),
+    canonical: '/',
+    ogImage: '/og-home.jpg'
+  };
+  
+  // FAQ data for rich snippets
+  const homepageFAQs = [
+    {
+      question: 'What is ToolsUniverse and how does it work?',
+      answer: 'ToolsUniverse is a comprehensive online platform offering 60+ professional tools for PDF editing, image processing, audio conversion, text manipulation, and financial calculations. All tools work directly in your browser with no registration required and complete privacy protection.'
+    },
+    {
+      question: 'Are ToolsUniverse tools really free to use?',
+      answer: 'Yes, all 60+ tools on ToolsUniverse are completely free to use with no hidden fees, subscription requirements, or usage limits. You can access all features immediately without creating an account.'
+    },
+    {
+      question: 'How does ToolsUniverse protect my privacy and data security?',
+      answer: 'ToolsUniverse uses client-side processing, meaning all file operations happen directly in your browser. Your files never leave your device, are not uploaded to servers, and are never transmitted over the internet, ensuring complete privacy and security.'
+    },
+    {
+      question: 'Which file formats are supported by ToolsUniverse tools?',
+      answer: 'ToolsUniverse supports all major file formats including PDF, JPEG, PNG, WebP, MP3, WAV, MP4, TXT, CSV, JSON, DOCX, and many more. Each tool specifies its supported formats and works with industry-standard file types.'
+    },
+    {
+      question: 'Can I use ToolsUniverse tools offline or without internet?',
+      answer: 'Yes, once loaded, most ToolsUniverse tools can work offline since processing happens in your browser. However, an initial internet connection is required to load the tool interface and scripts.'
+    }
+  ];
 
   const stats = [
     { number: '60+', label: 'Tools Available', icon: 'fas fa-tools' },
@@ -59,23 +97,85 @@ export default function Home() {
   return (
     <>
       <Meta 
-        title="ToolsUniverse - All-in-One Online Tools | Fast, Free, Secure"
-        description="60+ professional online tools for PDF, Image, Audio, Text, and Finance. Fully client-side processing, privacy-focused, and production-ready. Free forever."
-        keywords="online tools, PDF tools, image converter, audio editor, text tools, finance calculator, free tools, productivity"
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonical={seoData.canonical}
+        ogImage={seoData.ogImage}
+        author="ToolsUniverse Team"
+        category="Online Tools Platform"
+        tags={['free tools', 'online converter', 'productivity suite', 'file processing', 'web applications', 'privacy-focused', 'no registration required']}
+        robots="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        publishDate={new Date('2024-01-01').toISOString()}
+        modifiedDate={new Date().toISOString()}
       />
       
+      {/* Enhanced Organization Schema */}
+      <JsonLd type="Organization" data={SEO_DEFAULTS.organizationSchema} />
+      
+      {/* Enhanced Website Schema */}
       <JsonLd 
         type="WebSite"
         data={{
-          name: "ToolsUniverse",
-          url: window.location.origin,
-          description: "Professional online tools for PDF, Image, Audio, Text, and Finance operations",
+          name: APP_NAME,
+          alternateName: "ToolsUniverse Online Tools",
+          url: APP_URL,
+          description: SEO_DEFAULTS.description,
+          keywords: seoData.keywords,
+          inLanguage: "en",
+          isAccessibleForFree: true,
+          creator: {
+            "@type": "Organization",
+            name: "ToolsUniverse Team"
+          },
           potentialAction: {
             "@type": "SearchAction",
-            target: `${window.location.origin}/search?q={search_term_string}`,
+            target: `${APP_URL}/search?q={search_term_string}`,
             "query-input": "required name=search_term_string"
+          },
+          mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: Object.values(TOOL_CATEGORIES).reduce((sum, cat) => sum + cat.limit, 0),
+            itemListElement: Object.entries(TOOL_CATEGORIES).map(([key, category], index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: category.name,
+              description: category.description,
+              url: `${APP_URL}/${key}`,
+              image: `${APP_URL}/images/categories/${key}-icon.png`
+            }))
           }
         }}
+      />
+      
+      {/* FAQ Rich Snippets for Featured Snippets */}
+      <JsonLd 
+        type="FAQPage" 
+        data={{
+          mainEntity: homepageFAQs.map(faq => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer
+            }
+          }))
+        }} 
+      />
+      
+      {/* Breadcrumb Navigation Schema */}
+      <JsonLd 
+        type="BreadcrumbList" 
+        data={{
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: APP_URL
+            }
+          ]
+        }} 
       />
 
       <div className="pt-16">
