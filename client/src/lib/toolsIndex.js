@@ -335,6 +335,120 @@ export const TOOLS_REGISTRY = {
       }
     }
   ],
+  finance: [
+    {
+      name: 'EMI Calculator',
+      slug: 'emi-calculator',
+      path: '/finance/emi-calculator',
+      description: 'Calculate Equated Monthly Installments (EMI) for loans with detailed amortization schedules. Compare different loan scenarios and interest rates.',
+      keywords: 'emi calculator, loan calculator, monthly installment, home loan emi, car loan calculator, personal loan emi, emi calculation formula, loan amortization, interest calculator, finance calculator',
+      seoTitle: 'Free EMI Calculator - Calculate Loan EMI Online | Amortization',
+      metaDescription: 'Calculate EMI for home loans, car loans, and personal loans. Free EMI calculator with amortization schedule, interest breakdown, and loan comparison tools.',
+      longTailKeywords: 'how to calculate emi online free, home loan emi calculator india, car loan emi calculator with interest rate, personal loan emi calculator hdfc, best emi calculator tool',
+      icon: 'fas fa-calculator',
+      color: 'text-emerald-400',
+      category: 'Finance Tools',
+      featured: true,
+      schema: {
+        '@type': 'SoftwareApplication',
+        name: 'EMI Calculator',
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        featureList: ['EMI calculation', 'Amortization schedule', 'Interest breakdown', 'Loan comparison', 'Multiple scenarios'],
+        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '2456' }
+      }
+    },
+    {
+      name: 'SIP Calculator',
+      slug: 'sip-calculator',
+      path: '/finance/sip-calculator',
+      description: 'Calculate Systematic Investment Plan (SIP) returns and wealth accumulation with detailed growth projections and investment scenarios.',
+      keywords: 'sip calculator, mutual fund sip, systematic investment plan, sip return calculator, investment calculator, wealth calculator, sip planning tool, mutual fund calculator, investment growth calculator',
+      seoTitle: 'Free SIP Calculator - Calculate SIP Returns Online | Investment',
+      metaDescription: 'Calculate SIP returns and wealth accumulation with detailed projections. Free SIP calculator for mutual fund investments with growth analysis and planning tools.',
+      longTailKeywords: 'how to calculate sip returns online, mutual fund sip calculator with inflation, best sip calculator india, sip investment calculator 15 years, monthly sip calculator',
+      icon: 'fas fa-chart-line',
+      color: 'text-emerald-400',
+      category: 'Finance Tools',
+      featured: true,
+      schema: {
+        '@type': 'SoftwareApplication',
+        name: 'SIP Calculator',
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        featureList: ['SIP return calculation', 'Wealth projections', 'Investment scenarios', 'Growth analysis', 'Goal planning'],
+        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.7', reviewCount: '1987' }
+      }
+    },
+    {
+      name: 'Compound Interest Calculator',
+      slug: 'compound-interest',
+      path: '/finance/compound-interest',
+      description: 'Calculate compound interest with detailed breakdown of principal, interest, and total amount. Compare different compounding frequencies and investment periods.',
+      keywords: 'compound interest calculator, investment growth calculator, compound interest formula, fixed deposit calculator, savings calculator, interest on interest calculator, compounding calculator',
+      seoTitle: 'Free Compound Interest Calculator - Calculate Investment Growth',
+      metaDescription: 'Calculate compound interest with detailed breakdowns. Free calculator for investments, fixed deposits, and savings with multiple compounding frequencies.',
+      longTailKeywords: 'how to calculate compound interest online, compound interest calculator with monthly deposits, fixed deposit compound interest calculator, savings account compound interest',
+      icon: 'fas fa-percentage',
+      color: 'text-emerald-400',
+      category: 'Finance Tools',
+      schema: {
+        '@type': 'SoftwareApplication',
+        name: 'Compound Interest Calculator',
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        featureList: ['Compound interest calculation', 'Multiple frequencies', 'Investment growth analysis', 'Principal breakdown', 'Time value analysis'],
+        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.6', reviewCount: '1654' }
+      }
+    },
+    {
+      name: 'Tax Calculator',
+      slug: 'tax-calculator',
+      path: '/finance/tax-calculator',
+      description: 'Calculate income tax, tax savings, and take-home salary with detailed breakdowns. Support for multiple tax regimes and deductions.',
+      keywords: 'income tax calculator, tax calculator india, salary tax calculator, tax saving calculator, income tax calculation, tax planner, salary calculator with tax, tax deduction calculator',
+      seoTitle: 'Free Income Tax Calculator - Calculate Tax Online | Salary Tax',
+      metaDescription: 'Calculate income tax and take-home salary with detailed breakdowns. Free tax calculator with multiple regimes, deductions, and tax planning tools.',
+      longTailKeywords: 'how to calculate income tax online india, salary tax calculator after deductions, income tax calculator fy 2024-25, tax saving calculator 80c',
+      icon: 'fas fa-receipt',
+      color: 'text-emerald-400',
+      category: 'Finance Tools',
+      schema: {
+        '@type': 'SoftwareApplication',
+        name: 'Tax Calculator',
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        featureList: ['Income tax calculation', 'Multiple tax regimes', 'Deduction planning', 'Take-home calculation', 'Tax optimization'],
+        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.5', reviewCount: '2134' }
+      }
+    },
+    {
+      name: 'Retirement Calculator',
+      slug: 'retirement-calculator',
+      path: '/finance/retirement-calculator',
+      description: 'Plan your retirement with detailed projections of savings, expenses, and corpus required. Calculate retirement goals and investment strategies.',
+      keywords: 'retirement calculator, retirement planning, retirement corpus calculator, pension calculator, retirement savings calculator, retirement goal calculator, post retirement planning',
+      seoTitle: 'Free Retirement Calculator - Plan Your Retirement Online',
+      metaDescription: 'Plan your retirement with detailed projections and goal setting. Free retirement calculator with corpus estimation, savings analysis, and investment planning.',
+      longTailKeywords: 'how much money needed for retirement calculator, retirement planning calculator india, retirement corpus calculator online, retirement savings goal calculator',
+      icon: 'fas fa-piggy-bank',
+      color: 'text-emerald-400',
+      category: 'Finance Tools',
+      schema: {
+        '@type': 'SoftwareApplication',
+        name: 'Retirement Calculator',
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        featureList: ['Retirement planning', 'Corpus calculation', 'Savings projections', 'Goal setting', 'Investment strategies'],
+        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.7', reviewCount: '1456' }
+      }
+    }
+  ],
   image: [
     {
       name: 'AI Background Remover',

@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ToolShell from '../../../components/Tools/ToolShell';
-import { toolsIndex } from '../../../lib/toolsIndex';
+import { TOOLS } from '../../../lib/toolsIndex';
 
 export default function WordToPDF() {
   const [files, setFiles] = useState([]);
   const [isProcessing, setIsProcessing] = useState(false);
   const [processedFiles, setProcessedFiles] = useState([]);
 
-  const tool = toolsIndex.pdf.find(t => t.slug === 'word-to-pdf');
+  const tool = TOOLS.pdf.find(t => t.slug === 'word-to-pdf');
 
   const handleFileUpload = (event) => {
     const uploadedFiles = Array.from(event.target.files);
