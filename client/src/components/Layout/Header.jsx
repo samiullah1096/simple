@@ -1,14 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { useSearch } from '../../hooks/useSearch';
-import { useTheme } from '../../hooks/useTheme';
 
 export default function Header() {
   const [location] = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { searchQuery, setSearchQuery, searchResults, isSearching } = useSearch();
-  const { theme, toggleTheme } = useTheme();
   const searchRef = useRef(null);
 
   // Close search when clicking outside
@@ -42,7 +40,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-slate-700/50 dark:border-slate-700/50 light:border-slate-300/50">
+    <header className="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -147,15 +145,6 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Theme Toggle */}
-            <button 
-              onClick={toggleTheme}
-              className="p-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200"
-              aria-label="Toggle theme"
-              data-testid="button-theme-toggle"
-            >
-              <i className={`fas ${theme === 'dark' ? 'fa-sun' : 'fa-moon'} text-lg`}></i>
-            </button>
 
             {/* Mobile Menu Button */}
             <button 

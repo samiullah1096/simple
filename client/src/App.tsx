@@ -63,16 +63,16 @@ function Router() {
 }
 
 function App() {
-  const { theme } = useTheme(); // Initialize theme management
+  useTheme(); // Initialize dark theme
 
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 dark:text-slate-100 light:from-slate-50 light:via-slate-100 light:to-slate-50 light:text-slate-900">
+        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100">
           <AutoAdsScript />
           
           {/* Skip to main content for accessibility */}
-          <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-400 text-slate-900 dark:bg-cyan-400 dark:text-slate-900 light:bg-cyan-600 light:text-white px-4 py-2 rounded-lg font-medium z-50">
+          <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-lg font-medium z-50">
             Skip to main content
           </a>
           
