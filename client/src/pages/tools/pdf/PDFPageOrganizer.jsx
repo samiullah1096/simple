@@ -259,8 +259,63 @@ export default function PDFPageOrganizer() {
     }
   };
 
+  const faqs = [
+    {
+      question: 'How do I reorder PDF pages online for free?',
+      answer: 'Upload your PDF file, use drag-and-drop to reorder pages in the visual preview, select/deselect pages as needed, then save your organized PDF with the new page order.'
+    },
+    {
+      question: 'Can I rotate pages while organizing them?',
+      answer: 'Yes! Each page has rotation controls allowing you to rotate them 90°, 180°, or 270° clockwise while organizing your PDF.'
+    },
+    {
+      question: 'Can I delete unwanted pages from my PDF?',
+      answer: 'Absolutely! Select the pages you want to keep or delete unwanted pages individually. Use "Select All" or "Deselect All" for bulk operations.'
+    },
+    {
+      question: 'Will the page quality be affected after reorganizing?',
+      answer: 'No, page reorganization maintains the original quality. Only the page order is changed - all content, images, and formatting remain exactly the same.'
+    },
+    {
+      question: 'Can I duplicate pages while organizing?',
+      answer: 'Yes, you can duplicate pages by using the duplicate button on each page. This is useful for creating copies of important pages or templates.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload PDF File', description: 'Select the PDF document you want to reorganize' },
+    { title: 'Organize Pages', description: 'Drag and drop to reorder, rotate, duplicate, or delete pages' },
+    { title: 'Select and Manage', description: 'Use selection tools for bulk operations on multiple pages' },
+    { title: 'Save Result', description: 'Download your organized PDF with the new page order' }
+  ];
+
+  const benefits = [
+    'Reorder pages with drag-and-drop interface',
+    'Rotate pages to correct orientation',
+    'Delete unwanted or blank pages',
+    'Duplicate important pages',
+    'Visual page thumbnails for easy management',
+    'Completely offline processing'
+  ];
+
+  const useCases = [
+    'Reorder presentation slides',
+    'Remove blank or unwanted pages',
+    'Correct page orientation in scanned documents',
+    'Reorganize report sections',
+    'Create custom page sequences',
+    'Duplicate pages for forms or templates'
+  ];
+
   return (
-    <div className="max-w-6xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-6xl mx-auto space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -556,6 +611,7 @@ export default function PDFPageOrganizer() {
           </div>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </ToolShell>
   );
 }

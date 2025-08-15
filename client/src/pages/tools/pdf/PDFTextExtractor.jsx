@@ -241,8 +241,63 @@ export default function PDFTextExtractor() {
 
   const stats = getTextStatistics();
 
+  const faqs = [
+    {
+      question: 'How do I extract text from PDF online for free?',
+      answer: 'Upload your PDF file, choose extraction format and page range, click "Extract Text" to process the document, then copy, edit, or download the extracted text content.'
+    },
+    {
+      question: 'What types of PDFs work best for text extraction?',
+      answer: 'Text-based PDFs work best. Scanned documents or image-based PDFs may have limited extraction quality without OCR (Optical Character Recognition).'
+    },
+    {
+      question: 'Can I extract text from specific pages only?',
+      answer: 'Yes! You can extract from all pages or specify a custom page range (e.g., "1-5" or "1,3,7") to process only the pages you need.'
+    },
+    {
+      question: 'Will formatting be preserved when extracting text?',
+      answer: 'Basic text content is extracted accurately, but complex formatting, tables, and layouts may be simplified. The tool focuses on extracting readable text content.'
+    },
+    {
+      question: 'What output formats are available?',
+      answer: 'You can extract text in plain text format for editing, or structured format that preserves basic paragraph breaks and page separations.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload PDF File', description: 'Select the PDF document containing text you want to extract' },
+    { title: 'Configure Settings', description: 'Choose extraction format and specify which pages to process' },
+    { title: 'Extract Text', description: 'Click extract to process the PDF and retrieve all text content' },
+    { title: 'Use Extracted Text', description: 'Edit, copy, or download the text in various formats' }
+  ];
+
+  const benefits = [
+    'Extract text from any PDF document',
+    'Choose specific pages or extract all',
+    'Multiple output formats available',
+    'Edit extracted text before download',
+    'Copy text directly to clipboard',
+    'Completely offline processing'
+  ];
+
+  const useCases = [
+    'Extract quotes from research papers',
+    'Convert PDF articles to editable text',
+    'Extract data from PDF reports',
+    'Copy text from PDF forms',
+    'Convert PDF content for translation',
+    'Extract text for content analysis'
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-4xl mx-auto space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -557,6 +612,7 @@ export default function PDFTextExtractor() {
           </p>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </ToolShell>
   );
 }

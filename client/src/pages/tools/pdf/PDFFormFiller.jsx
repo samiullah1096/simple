@@ -237,8 +237,63 @@ export default function PDFFormFiller() {
     }
   };
 
+  const faqs = [
+    {
+      question: 'How do I fill PDF forms online for free?',
+      answer: 'Upload your PDF form, and our tool will detect all fillable fields. Enter text, check boxes, or select options, then download your completed form. All processing happens in your browser.'
+    },
+    {
+      question: 'What types of form fields are supported?',
+      answer: 'We support text fields, checkboxes, radio buttons, and dropdown menus. Our tool automatically detects and displays all fillable form elements in your PDF.'
+    },
+    {
+      question: 'Is it safe to fill forms online?',
+      answer: 'Yes, completely safe. All form filling happens locally in your browser using client-side JavaScript. Your data never leaves your device or gets uploaded to any servers.'
+    },
+    {
+      question: 'Can I save partially filled forms?',
+      answer: 'You can clear all fields and start over using the "Clear All" button, or fill out all fields and download the completed form. The tool preserves your entered data during the session.'
+    },
+    {
+      question: 'What if my PDF has no fillable fields?',
+      answer: 'If your PDF contains no fillable form fields, our tool will notify you. You may need to use a different PDF that was created with form fields, or convert your document to a fillable form first.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload PDF Form', description: 'Select a PDF file containing fillable form fields' },
+    { title: 'Fill Out Fields', description: 'Enter text, check boxes, and select options in detected form fields' },
+    { title: 'Review Data', description: 'Check all filled information for accuracy and completeness' },
+    { title: 'Download Completed Form', description: 'Get your filled PDF form ready for submission' }
+  ];
+
+  const benefits = [
+    'Fill PDF forms without printing',
+    'Support for all common field types',
+    'Automatically detect form fields',
+    'Clear and restart functionality',
+    'Completely offline processing',
+    'Professional form completion'
+  ];
+
+  const useCases = [
+    'Complete job application forms',
+    'Fill out tax and government forms',
+    'Submit insurance claim forms',
+    'Complete registration and enrollment forms',
+    'Fill contract and agreement forms',
+    'Process survey and feedback forms'
+  ];
+
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="pt-16 min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
@@ -333,6 +388,7 @@ export default function PDFFormFiller() {
           </Card>
         </div>
       </div>
-    </div>
+      </div>
+    </ToolShell>
   );
 }

@@ -256,8 +256,63 @@ export default function PDFWatermark() {
     }
   };
 
+  const faqs = [
+    {
+      question: 'How do I add watermark to PDF online for free?',
+      answer: 'Upload your PDF file, choose between text or image watermark, customize settings like position, opacity, and rotation, then click "Add Watermark" to download your watermarked PDF.'
+    },
+    {
+      question: 'Can I add both text and image watermarks?',
+      answer: 'Yes! You can add either text watermarks (like "CONFIDENTIAL" or company names) or image watermarks (like logos or stamps) to your PDF documents.'
+    },
+    {
+      question: 'Will watermarks affect the original PDF content?',
+      answer: 'No, watermarks are added as overlay elements that do not modify the original content. The underlying text and images remain unchanged and searchable.'
+    },
+    {
+      question: 'Can I control which pages get the watermark?',
+      answer: 'Absolutely! You can apply watermarks to all pages or specify a custom page range (e.g., "1-5" or "1,3,5") to watermark only selected pages.'
+    },
+    {
+      question: 'What image formats are supported for watermarks?',
+      answer: 'We support PNG and JPG image formats for watermarks. PNG is recommended for logos with transparent backgrounds.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload PDF File', description: 'Select the PDF document you want to watermark' },
+    { title: 'Choose Watermark Type', description: 'Select between text or image watermark options' },
+    { title: 'Customize Settings', description: 'Adjust position, opacity, size, and rotation settings' },
+    { title: 'Apply & Download', description: 'Add watermark and download your protected PDF' }
+  ];
+
+  const benefits = [
+    'Add professional text or image watermarks',
+    'Protect documents with custom branding',
+    'Control position, opacity, and rotation',
+    'Apply to specific pages or all pages',
+    'Support for PNG and JPG watermarks',
+    'Completely offline processing'
+  ];
+
+  const useCases = [
+    'Brand company documents with logos',
+    'Mark confidential documents',
+    'Add copyright notices to PDFs',
+    'Protect intellectual property',
+    'Create draft or sample markings',
+    'Add company stamps to official documents'
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="max-w-4xl mx-auto space-y-8">
       {/* File Upload */}
       <Card>
         <CardHeader>
@@ -564,6 +619,7 @@ export default function PDFWatermark() {
           </div>
         </CardContent>
       </Card>
-    </div>
+      </div>
+    </ToolShell>
   );
 }

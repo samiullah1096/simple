@@ -161,8 +161,63 @@ export default function PDFSignature() {
     }
   };
 
+  const faqs = [
+    {
+      question: 'How do I sign PDF documents online for free?',
+      answer: 'Upload your PDF file, create your signature by drawing, typing, or uploading an image, position it where needed, and download your signed document. All processing happens securely in your browser.'
+    },
+    {
+      question: 'What signature methods are available?',
+      answer: 'You can draw your signature with a mouse or touch device, type your name in a signature font, or upload an image of your handwritten signature. All methods create legally acceptable digital signatures.'
+    },
+    {
+      question: 'Is my signature secure when signing online?',
+      answer: 'Yes, completely secure. All signature creation and PDF signing happens locally in your browser. Your signature and documents never leave your device or get uploaded to any servers.'
+    },
+    {
+      question: 'Can I position my signature exactly where I want?',
+      answer: 'Absolutely! You can specify exact X and Y coordinates for signature placement, or use the default position and adjust as needed. This ensures your signature appears exactly where required.'
+    },
+    {
+      question: 'Are digitally signed PDFs legally valid?',
+      answer: 'Digital signatures created with our tool are widely accepted for most business and personal documents. However, some specialized legal or government documents may require specific certification methods.'
+    }
+  ];
+
+  const howToSteps = [
+    { title: 'Upload PDF Document', description: 'Select the PDF file you need to sign' },
+    { title: 'Create Your Signature', description: 'Draw, type, or upload your signature using the preferred method' },
+    { title: 'Position Signature', description: 'Set the exact coordinates where your signature should appear' },
+    { title: 'Sign & Download', description: 'Apply your signature to the PDF and download the signed document' }
+  ];
+
+  const benefits = [
+    'Multiple signature creation methods',
+    'Precise signature positioning',
+    'Draw signatures with mouse or touch',
+    'Type signatures in professional fonts',
+    'Upload signature images',
+    'Completely offline processing'
+  ];
+
+  const useCases = [
+    'Sign contracts and agreements',
+    'Authorize business documents',
+    'Complete legal forms',
+    'Sign employment documents',
+    'Approve financial paperwork',
+    'Sign personal correspondence'
+  ];
+
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <ToolShell 
+      tool={tool} 
+      faqs={faqs}
+      howToSteps={howToSteps}
+      benefits={benefits}
+      useCases={useCases}
+    >
+      <div className="pt-16 min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
@@ -348,6 +403,7 @@ export default function PDFSignature() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </ToolShell>
   );
 }
