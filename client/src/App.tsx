@@ -51,22 +51,22 @@ function Router() {
       <Route path="/productivity" component={() => <CategoryPage category="productivity" />} />
       <Route path="/finance" component={() => <CategoryPage category="finance" />} />
       
-      {/* Individual Tool Pages */}
-      <Route path="/pdf/merge" component={PDFMerger} />
-      <Route path="/text/word-counter" component={WordCounter} />
-      <Route path="/image/remove-background" component={BackgroundRemover} />
-      <Route path="/finance/emi-calculator" component={EMICalculator} />
-      
-      {/* Dynamic tool routes */}
-      <Route path="/:category/:tool" component={ToolPage} />
-      
-      {/* Legal Pages */}
+      {/* Legal Pages - Must come before dynamic routes */}
       <Route path="/legal/privacy" component={() => <LegalPage type="privacy" />} />
       <Route path="/legal/terms" component={() => <LegalPage type="terms" />} />
       <Route path="/legal/cookies" component={() => <LegalPage type="cookies" />} />
       <Route path="/legal/disclaimer" component={() => <LegalPage type="disclaimer" />} />
       <Route path="/about" component={() => <LegalPage type="about" />} />
       <Route path="/contact" component={() => <LegalPage type="contact" />} />
+      
+      {/* Individual Tool Pages */}
+      <Route path="/pdf/merge" component={PDFMerger} />
+      <Route path="/text/word-counter" component={WordCounter} />
+      <Route path="/image/remove-background" component={BackgroundRemover} />
+      <Route path="/finance/emi-calculator" component={EMICalculator} />
+      
+      {/* Dynamic tool routes - Must come after specific routes */}
+      <Route path="/:category/:tool" component={ToolPage} />
       
       {/* Support Pages */}
       <Route path="/help" component={() => <SupportPage type="help" />} />
