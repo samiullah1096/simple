@@ -541,3 +541,47 @@
     transition: none;
   }
 }
+
+/* High Traffic Performance Optimizations */
+.high-traffic-mode * {
+  animation-duration: 0s !important;
+  transition-duration: 0.1s !important;
+}
+
+.high-traffic-mode .glassmorphism {
+  backdrop-filter: none !important;
+  background: rgba(30, 41, 59, 0.8) !important;
+}
+
+/* GPU acceleration for critical elements */
+.animated-button,
+.glassmorphism,
+.gradient-text {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Memory-efficient scrolling */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  contain: layout style paint;
+}
+
+/* Performance optimizations for high load */
+@media (max-width: 768px) {
+  .glassmorphism {
+    backdrop-filter: blur(8px) !important;
+  }
+  
+  .animated-button {
+    animation-duration: 0.2s !important;
+  }
+}
+
+/* Critical resource hints */
+.preload-critical {
+  font-display: swap;
+}
