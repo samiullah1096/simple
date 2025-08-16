@@ -112,21 +112,21 @@ export default function Home() {
   const testimonials = [
     {
       name: 'Sarah Johnson',
-      role: 'Marketing Manager',
+      role: 'Marketing Manager', 
       content: 'ToolsUniverse has revolutionized my workflow. The PDF tools alone save me hours every week. Fast, reliable, and completely secure.',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b13c?w=150&h=150&fit=crop&crop=face'
+      avatar: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiByeD0iNzUiIGZpbGw9IiNmMGY5ZmYiLz4KPGNpcmNsZSBjeD0iNzUiIGN5PSI2MCIgcj0iMjUiIGZpbGw9IiM2MzY2ZjEiLz4KPHBhdGggZD0iTTMwIDEzMGMwLTI1IDE1LTQ1IDQ1LTQ1czczMCAyMCA0NSAwIDQ1IDQ1IiBmaWxsPSIjNjM2NmYxIi8+Cjx0ZXh0IHg9Ijc1IiB5PSIxNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2MzY2ZjEiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiPkNsaWVudDwvdGV4dD4KPC9zdmc+'
     },
     {
       name: 'Michael Chen',
       role: 'Freelance Designer',
       content: 'As a freelance designer, I need reliable tools that work anywhere. These image and PDF tools are exactly what I needed - professional quality, no installation required.',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+      avatar: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiByeD0iNzUiIGZpbGw9IiNlY2ZkZjUiLz4KPGNpcmNsZSBjeD0iNzUiIGN5PSI2MCIgcj0iMjUiIGZpbGw9IiMxZjI5MzciLz4KPHBhdGggZD0iTTMwIDEzMGMwLTI1IDE1LTQ1IDQ1LTQ1czQ1IDIwIDQ1IDQ1IiBmaWxsPSIjMWYyOTM3Ii8+Cjx0ZXh0IHg9Ijc1IiB5PSIxNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxZjI5MzciIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiPkNsaWVudDwvdGV4dD4KPC9zdmc+'
     },
     {
       name: 'Emily Rodriguez',
       role: 'Financial Advisor',
       content: 'The financial calculators are incredibly accurate and easy to use. I use the EMI calculator regularly for client consultations. Highly recommended!',
-      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face'
+      avatar: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiByeD0iNzUiIGZpbGw9IiNmZWY3ZmYiLz4KPGNpcmNsZSBjeD0iNzUiIGN5PSI2MCIgcj0iMjUiIGZpbGw9IiM4YjVjZjYiLz4KPHBhdGggZD0iTTMwIDEzMGMwLTI1IDE1LTQ1IDQ1LTQ1czQ1IDIwIDQ1IDQ1IiBmaWxsPSIjOGI1Y2Y2Ii8+Cjx0ZXh0IHg9Ijc1IiB5PSIxNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM4YjVjZjYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiPkNsaWVudDwvdGV4dD4KPC9zdmc+'
     }
   ];
 
@@ -297,7 +297,27 @@ export default function Home() {
                     Explore All Tools
                   </button>
                 </Link>
-                <button className="glassmorphism hover:bg-slate-700/50 text-slate-100 dark:text-slate-100 font-semibold px-8 py-4 rounded-2xl transform transition-all duration-300 hover:scale-105 border-slate-600 dark:border-slate-600">
+                <button 
+                  onClick={() => {
+                    // Scroll to featured tools section to show demo
+                    document.getElementById('featured-tools')?.scrollIntoView({ 
+                      behavior: 'smooth', 
+                      block: 'start' 
+                    });
+                    // Add a visual highlight effect
+                    setTimeout(() => {
+                      const toolsSection = document.getElementById('featured-tools');
+                      if (toolsSection) {
+                        toolsSection.style.transform = 'scale(1.02)';
+                        toolsSection.style.transition = 'transform 0.3s ease';
+                        setTimeout(() => {
+                          toolsSection.style.transform = 'scale(1)';
+                        }, 300);
+                      }
+                    }, 500);
+                  }}
+                  className="glassmorphism hover:bg-slate-700/50 text-slate-100 dark:text-slate-100 font-semibold px-8 py-4 rounded-2xl transform transition-all duration-300 hover:scale-105 border-slate-600 dark:border-slate-600 cursor-pointer"
+                >
                   <i className="fas fa-play mr-2"></i>
                   Watch Demo
                 </button>
