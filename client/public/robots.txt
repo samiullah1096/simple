@@ -1,11 +1,22 @@
-# ToolsUniverse - AEO Optimized Online Tools Platform
-# Robots.txt - Ultra-Enhanced for Answer Engine Optimization (AEO)
-# Optimized for AI-powered search results, featured snippets, and voice search
+# ToolsUniverse - Google AdSense Optimized Online Tools Platform
+# Robots.txt - Enhanced for Search Engine and AdSense Optimization
+# Optimized for high-quality content indexing and ad placement approval
 
 User-agent: *
 Allow: /
 
-# Prioritize important pages for crawlers
+# Google AdSense Bot - Allow full access for ad placement optimization
+User-agent: Mediapartners-Google
+Allow: /
+
+# Google AdSense optimization - Allow all advertising bots
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# Prioritize high-value content pages for crawlers
 Allow: /pdf
 Allow: /image
 Allow: /audio
@@ -13,7 +24,7 @@ Allow: /text
 Allow: /productivity
 Allow: /finance
 
-# Tool-specific pages
+# Tool-specific pages - High ad revenue potential
 Allow: /pdf/*
 Allow: /image/*
 Allow: /audio/*
@@ -21,27 +32,31 @@ Allow: /text/*
 Allow: /productivity/*
 Allow: /finance/*
 
-# SEO-important pages
+# SEO-important pages for site authority
 Allow: /about
+Allow: /contact
 Allow: /legal/*
 
-# Block unnecessary pages that don't add SEO value
+# Block pages that could affect AdSense approval
 Disallow: /api/*
 Disallow: /admin/*
 Disallow: /*.json$
 Disallow: /*?utm_*
 Disallow: /*?ref=*
 Disallow: /*?source=*
+Disallow: /*test*
+Disallow: /*debug*
+Disallow: /*dev*
 
-# Enhanced sitemap references for AEO
-Sitemap: https://toolsuniverse.com/sitemap.xml
-Sitemap: https://toolsuniverse.com/sitemap-images.xml
-Sitemap: https://toolsuniverse.com/sitemap-videos.xml
+# Enhanced sitemap references for comprehensive indexing
+Sitemap: https://toolsuniverse.app/sitemap.xml
+Sitemap: https://toolsuniverse.app/sitemap-images.xml
+Sitemap: https://toolsuniverse.app/sitemap-tools.xml
 
-# AEO-optimized crawl settings
+# Optimized crawl settings for high-quality content indexing
 Crawl-delay: 0.5
 
-# Support for AI crawlers and answer engines
+# Support for AI crawlers and search bots
 User-agent: GPTBot
 Allow: /
 
@@ -54,7 +69,26 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Enhanced directive for answer engines
-Allow: /*?featured-snippet=true
-Allow: /*?voice-search=true
-Allow: /*?answer-box=true
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# AdSense quality guidelines compliance
+Host: toolsuniverse.app

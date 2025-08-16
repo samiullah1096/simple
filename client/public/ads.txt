@@ -1,0 +1,15 @@
+# Google AdSense Ads.txt file for ToolsUniverse
+# This file is required for Google AdSense approval and ad serving
+# Format: google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+google.com, pub-8235343370386318, DIRECT, f08c47fec0942fa0
+
+# This ads.txt file ensures:
+# 1. Authorized ad serving through Google AdSense
+# 2. Protection against ad fraud
+# 3. Compliance with Google AdSense policies
+# 4. Higher ad revenue potential
+# 5. Trust signals for advertisers
+
+# Additional authorized sellers can be added here
+# Contact: admin@toolsuniverse.app for ad partnership inquiries

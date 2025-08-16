@@ -8,6 +8,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
 import CookieBanner from "./components/Layout/CookieBanner";
+import ScrollToTop from "./components/Layout/ScrollToTop";
+import PageTransition from "./components/Layout/PageTransition";
 import AutoAdsScript from "./components/Ads/AutoAdsScript";
 
 // Pages
@@ -25,6 +27,7 @@ import EMICalculator from "./pages/tools/finance/EMICalculator";
 
 // Hooks
 import { useTheme } from "./hooks/useTheme";
+import { useScrollToTop } from "./hooks/useScrollToTop";
 
 function Router() {
   return (
@@ -64,6 +67,7 @@ function Router() {
 
 function App() {
   useTheme(); // Initialize dark theme
+  useScrollToTop(); // Auto scroll to top on route changes
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -79,11 +83,14 @@ function App() {
           <Header />
           
           <main id="main-content">
-            <Router />
+            <PageTransition>
+              <Router />
+            </PageTransition>
           </main>
           
           <Footer />
           <CookieBanner />
+          <ScrollToTop />
           <Toaster />
         </div>
       </TooltipProvider>

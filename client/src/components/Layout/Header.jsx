@@ -40,15 +40,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-slate-700/50">
+    <header className="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-slate-700/50 fade-in">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center shadow-lg">
-              <i className="fas fa-tools text-white text-lg"></i>
+          <Link href="/" className="flex items-center space-x-3 group animated-button">
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-all duration-500 pulse-glow">
+              <i className="fas fa-tools text-white text-lg group-hover:scale-110 transition-transform duration-300"></i>
             </div>
-            <span className="text-xl font-bold gradient-text">ToolsUniverse</span>
+            <span className="text-xl font-bold gradient-text group-hover:scale-105 transition-transform duration-300 animated-gradient">ToolsUniverse</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,20 +57,20 @@ export default function Header() {
               <div key={item.name} className="relative group">
                 {item.submenu ? (
                   <>
-                    <button className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-1">
+                    <button className="text-slate-300 hover:text-cyan-400 transition-all duration-300 font-medium flex items-center space-x-1 interactive-hover">
                       <span>{item.name}</span>
-                      <i className="fas fa-chevron-down text-xs"></i>
+                      <i className="fas fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
                     </button>
                     {/* Dropdown */}
-                    <div className="absolute top-full left-0 mt-2 w-64 glassmorphism-dark rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2">
+                    <div className="absolute top-full left-0 mt-2 w-64 glassmorphism-dark rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 scale-95 group-hover:scale-100 p-2">
                       {item.submenu.map((subItem) => (
                         <Link 
                           key={subItem.name}
                           href={subItem.href} 
-                          className="flex items-center space-x-3 px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-colors"
+                          className="flex items-center space-x-3 px-4 py-3 hover:bg-slate-700/50 rounded-xl transition-all duration-300 interactive-hover group/item"
                         >
-                          <i className={`${subItem.icon} ${subItem.color}`}></i>
-                          <span className="text-slate-300 hover:text-white">{subItem.name}</span>
+                          <i className={`${subItem.icon} ${subItem.color} group-hover/item:scale-110 transition-transform duration-200`}></i>
+                          <span className="text-slate-300 hover:text-white transition-colors duration-200">{subItem.name}</span>
                         </Link>
                       ))}
                     </div>
