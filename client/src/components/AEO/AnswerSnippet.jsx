@@ -1,149 +1,133 @@
-import { useEffect } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-/**
- * AEO-optimized Answer Snippet component for featured snippets and answer boxes
- * Designed to capture position 0 in search results and AI-powered answers
- */
-export default function AnswerSnippet({ 
+const AnswerSnippet = ({ 
   question, 
   answer, 
   shortAnswer, 
-  steps = [], 
-  relatedQuestions = [], 
-  context,
-  className = '',
-  schema = true 
-}) {
-  useEffect(() => {
-    if (schema) {
-      // Enhanced JSON-LD for Q&A optimization
-      const qaSchema = {
-        '@context': 'https://schema.org',
-        '@type': 'Question',
-        name: question,
-        text: question,
-        answerCount: 1,
-        upvoteCount: 247,
-        dateCreated: new Date().toISOString(),
-        author: {
-          '@type': 'Organization',
-          name: 'ToolsUniverse'
-        },
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: answer,
-          upvoteCount: 189,
-          url: window.location.href,
-          author: {
-            '@type': 'Organization',
-            name: 'ToolsUniverse'
-          }
-        },
-        suggestedAnswer: relatedQuestions.map(q => ({
-          '@type': 'Answer',
-          text: q.answer || `Learn more about ${q.question.toLowerCase()}`,
-          author: {
-            '@type': 'Organization',
-            name: 'ToolsUniverse'
-          }
-        }))
-      };
-
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(qaSchema);
-      script.id = 'answer-snippet-schema';
-      
-      // Remove existing script
-      const existing = document.getElementById(script.id);
-      if (existing) existing.remove();
-      
-      document.head.appendChild(script);
-
-      return () => {
-        const scriptToRemove = document.getElementById(script.id);
-        if (scriptToRemove) scriptToRemove.remove();
-      };
+  type = 'definition',
+  priority = 'high',
+  relatedKeywords = [],
+  category = 'General'
+}) => {
+  const snippetTypes = {
+    definition: {
+      icon: 'fas fa-lightbulb',
+      bgColor: 'from-blue-500/20 to-cyan-500/20',
+      borderColor: 'border-blue-500/30'
+    },
+    howto: {
+      icon: 'fas fa-list-ol',
+      bgColor: 'from-green-500/20 to-emerald-500/20',
+      borderColor: 'border-green-500/30'
+    },
+    comparison: {
+      icon: 'fas fa-balance-scale',
+      bgColor: 'from-purple-500/20 to-pink-500/20',
+      borderColor: 'border-purple-500/30'
+    },
+    factual: {
+      icon: 'fas fa-check-circle',
+      bgColor: 'from-orange-500/20 to-yellow-500/20',
+      borderColor: 'border-orange-500/30'
     }
-  }, [question, answer, relatedQuestions, schema]);
+  };
+
+  const currentType = snippetTypes[type] || snippetTypes.definition;
 
   return (
-    <div className={`answer-snippet bg-gradient-to-r from-cyan-50/10 to-purple-50/10 border border-cyan-200/20 rounded-2xl p-6 mb-8 ${className}`}>
-      {/* Direct Answer for Voice Search & AI */}
-      <div className="direct-answer mb-4">
-        <h3 className="text-xl font-semibold text-white mb-3 flex items-start">
-          <i className="fas fa-lightbulb text-yellow-400 mr-3 mt-1 flex-shrink-0"></i>
-          <span>{question}</span>
-        </h3>
-        
-        {shortAnswer && (
-          <div className="short-answer bg-cyan-400/10 border-l-4 border-cyan-400 pl-4 py-2 mb-4 rounded-r-lg">
-            <p className="text-cyan-100 font-medium text-lg">{shortAnswer}</p>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${currentType.bgColor} border ${currentType.borderColor} p-6 mb-8`}
+      itemScope 
+      itemType="https://schema.org/Question"
+    >
+      {/* Priority indicator */}
+      {priority === 'high' && (
+        <div className="absolute top-4 right-4">
+          <span className="bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded-full">
+            Featured
+          </span>
+        </div>
+      )}
+
+      {/* Question */}
+      <div className="flex items-start space-x-4 mb-4">
+        <div className="flex-shrink-0">
+          <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">
+            <i className={`${currentType.icon} text-white text-lg`}></i>
           </div>
-        )}
-        
-        <div className="detailed-answer text-slate-300 leading-relaxed">
-          <p>{answer}</p>
+        </div>
+        <div className="flex-1">
+          <h3 
+            className="text-xl font-semibold text-white mb-2 leading-tight"
+            itemProp="name"
+          >
+            {question}
+          </h3>
+          <div className="flex items-center space-x-3 text-sm text-slate-300">
+            <span className="bg-slate-700/50 px-2 py-1 rounded-md">{category}</span>
+            <span>•</span>
+            <span className="capitalize">{type}</span>
+          </div>
         </div>
       </div>
 
-      {/* Step-by-step for How-to queries */}
-      {steps.length > 0 && (
-        <div className="steps-container mt-6">
-          <h4 className="text-lg font-semibold text-cyan-400 mb-4 flex items-center">
-            <i className="fas fa-list-ol mr-2"></i>
-            Step-by-Step Instructions:
-          </h4>
-          <ol className="space-y-3">
-            {steps.map((step, index) => (
-              <li key={index} className="flex items-start">
-                <span className="bg-cyan-400 text-slate-900 font-bold rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1 flex-shrink-0 text-sm">
-                  {index + 1}
-                </span>
-                <div className="text-slate-300">
-                  <p className="leading-relaxed">{step.description}</p>
-                  {step.tip && (
-                    <div className="mt-2 text-sm text-cyan-200 bg-cyan-400/5 rounded-lg px-3 py-2">
-                      <i className="fas fa-info-circle mr-1"></i>
-                      <strong>Tip:</strong> {step.tip}
-                    </div>
-                  )}
-                </div>
-              </li>
-            ))}
-          </ol>
+      {/* Short Answer for Voice Search */}
+      <div 
+        className="bg-slate-800/50 rounded-xl p-4 mb-4 border-l-4 border-cyan-400"
+        itemProp="acceptedAnswer"
+        itemScope
+        itemType="https://schema.org/Answer"
+      >
+        <div className="flex items-center space-x-2 mb-2">
+          <i className="fas fa-microphone text-cyan-400 text-sm"></i>
+          <span className="text-cyan-400 text-sm font-medium">Quick Answer</span>
         </div>
-      )}
+        <p 
+          className="text-white font-medium leading-relaxed"
+          itemProp="text"
+          data-speakable="true"
+        >
+          {shortAnswer}
+        </p>
+      </div>
 
-      {/* Related Questions for People Also Ask */}
-      {relatedQuestions.length > 0 && (
-        <div className="related-questions mt-6 pt-6 border-t border-slate-600">
-          <h4 className="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-            <i className="fas fa-question-circle mr-2"></i>
-            People Also Ask:
-          </h4>
-          <div className="grid gap-3">
-            {relatedQuestions.map((rq, index) => (
-              <details key={index} className="bg-slate-700/30 rounded-lg p-4 group cursor-pointer">
-                <summary className="text-slate-200 font-medium flex items-center justify-between list-none">
-                  <span>{rq.question}</span>
-                  <i className="fas fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
-                </summary>
-                <div className="mt-3 text-slate-300 text-sm leading-relaxed">
-                  <p>{rq.answer}</p>
-                </div>
-              </details>
+      {/* Detailed Answer */}
+      <div className="text-slate-200 leading-relaxed mb-4">
+        <p>{answer}</p>
+      </div>
+
+      {/* Related Keywords */}
+      {relatedKeywords.length > 0 && (
+        <div className="border-t border-slate-700/50 pt-4">
+          <h4 className="text-sm font-medium text-slate-300 mb-2">Related Topics:</h4>
+          <div className="flex flex-wrap gap-2">
+            {relatedKeywords.map((keyword, index) => (
+              <span 
+                key={index}
+                className="bg-slate-700/30 text-slate-300 text-xs px-2 py-1 rounded-md"
+              >
+                {keyword}
+              </span>
             ))}
           </div>
         </div>
       )}
 
-      {/* Context for AI Understanding */}
-      {context && (
-        <div className="context-info mt-4 text-xs text-slate-400 bg-slate-800/30 rounded-lg p-3">
-          <strong>Context:</strong> {context}
-        </div>
-      )}
-    </div>
+      {/* AEO Structured Data Attributes */}
+      <div className="hidden" itemProp="additionalProperty">
+        <span itemProp="name">answerType</span>
+        <span itemProp="value">{type}</span>
+      </div>
+      <div className="hidden" itemProp="additionalProperty">
+        <span itemProp="name">priority</span>
+        <span itemProp="value">{priority}</span>
+      </div>
+    </motion.div>
   );
-}
+};
+
+export default AnswerSnippet;

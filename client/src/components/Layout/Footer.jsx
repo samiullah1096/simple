@@ -27,14 +27,14 @@ export default function Footer() {
       ]
     },
     {
-      title: 'Resources',
+      title: 'Support',
       links: [
-        { name: 'Getting Started', href: '/getting-started' },
-        { name: 'API Documentation', href: '/api-docs' },
-        { name: 'Tutorials', href: '/tutorials' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Changelog', href: '/changelog' },
-        { name: 'Status Page', href: '/status' }
+        { name: 'Help Center', href: '/help' },
+        { name: 'User Guide', href: '/guide' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Report Issue', href: '/report' },
+        { name: 'Feature Request', href: '/request' },
+        { name: 'Updates', href: '/updates' }
       ]
     },
     {
@@ -42,7 +42,7 @@ export default function Footer() {
       links: [
         { name: 'Privacy Policy', href: '/legal/privacy' },
         { name: 'Terms of Service', href: '/legal/terms' },
-        { name: 'Cookie Policy', href: '/legal/cookies' },
+
         { name: 'Disclaimer', href: '/legal/disclaimer' },
         { name: 'Contact', href: '/contact' },
         { name: 'About Us', href: '/about' }

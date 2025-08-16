@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Meta from '../components/SEO/Meta';
-import Breadcrumbs from '../components/SEO/Breadcrumbs';
 
 const LEGAL_CONTENT = {
   privacy: {
@@ -159,30 +158,46 @@ export default function LegalPage({ type }) {
             transition={{ duration: 0.8 }}
             className="glassmorphism rounded-3xl p-8 md:p-12"
           >
-            <Breadcrumbs items={breadcrumbItems} />
+            {/* Breadcrumbs */}
+            <nav className="flex mb-6" aria-label="Breadcrumb">
+              <ol className="flex items-center space-x-4">
+                {breadcrumbItems.map((item, index) => (
+                  <li key={item.name} className="flex items-center">
+                    {index > 0 && <i className="fas fa-chevron-right text-slate-500 text-sm mr-4"></i>}
+                    {index === breadcrumbItems.length - 1 ? (
+                      <span className="text-slate-400 text-sm">{item.name}</span>
+                    ) : (
+                      <a href={item.href} className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                        {item.name}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </nav>
             
             <header className="mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 {content.title}
               </h1>
-              <p className="text-slate-400">
+              <p className="text-slate-300 text-lg">
                 Last updated: {content.lastUpdated}
               </p>
             </header>
 
-            <div className="prose prose-slate max-w-none">
+            <div className="space-y-8">
               {content.content.map((section, index) => (
                 <motion.section
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="mb-8"
+                  className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50"
                 >
-                  <h2 className="text-2xl font-semibold text-slate-100 mb-4">
+                  <h2 className="text-2xl font-semibold text-white mb-4">
                     {section.section}
                   </h2>
-                  <p className="text-slate-300 leading-relaxed">
+                  <p className="text-slate-200 leading-relaxed text-base">
                     {section.content}
                   </p>
                 </motion.section>
@@ -196,34 +211,34 @@ export default function LegalPage({ type }) {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="mt-12 p-8 glassmorphism rounded-2xl"
               >
-                <h3 className="text-xl font-semibold text-slate-100 mb-6">Contact Information</h3>
+                <h3 className="text-xl font-semibold text-white mb-6">Contact Information</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="flex items-center space-x-3">
                     <i className="fas fa-envelope text-cyan-400 text-xl"></i>
                     <div>
-                      <div className="font-medium text-slate-100">Email</div>
-                      <div className="text-slate-400">contact@toolsuniverse.com</div>
+                      <div className="font-medium text-white">Email</div>
+                      <div className="text-slate-200">contact@toolsuniverse.com</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <i className="fab fa-github text-cyan-400 text-xl"></i>
                     <div>
-                      <div className="font-medium text-slate-100">GitHub</div>
-                      <div className="text-slate-400">github.com/toolsuniverse</div>
+                      <div className="font-medium text-white">GitHub</div>
+                      <div className="text-slate-200">github.com/toolsuniverse</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <i className="fab fa-twitter text-cyan-400 text-xl"></i>
                     <div>
-                      <div className="font-medium text-slate-100">Twitter</div>
-                      <div className="text-slate-400">@toolsuniverse</div>
+                      <div className="font-medium text-white">Twitter</div>
+                      <div className="text-slate-200">@toolsuniverse</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <i className="fas fa-clock text-cyan-400 text-xl"></i>
                     <div>
-                      <div className="font-medium text-slate-100">Response Time</div>
-                      <div className="text-slate-400">Within 24 hours</div>
+                      <div className="font-medium text-white">Response Time</div>
+                      <div className="text-slate-200">Within 24 hours</div>
                     </div>
                   </div>
                 </div>
@@ -238,7 +253,7 @@ export default function LegalPage({ type }) {
             >
               <button 
                 onClick={() => window.history.back()}
-                className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-2xl font-semibold transition-colors"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl animated-button"
                 data-testid="button-go-back"
               >
                 <i className="fas fa-arrow-left mr-2"></i>

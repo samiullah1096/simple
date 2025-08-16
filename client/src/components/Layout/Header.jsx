@@ -45,10 +45,10 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group animated-button">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-all duration-500 pulse-glow">
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-all duration-300">
               <i className="fas fa-tools text-white text-lg group-hover:scale-110 transition-transform duration-300"></i>
             </div>
-            <span className="text-xl font-bold gradient-text group-hover:scale-105 transition-transform duration-300 animated-gradient">ToolsUniverse</span>
+            <span className="text-xl font-bold text-slate-100 group-hover:text-cyan-400 group-hover:scale-105 transition-all duration-300">ToolsUniverse</span>
           </Link>
 
           {/* Desktop Navigation */}

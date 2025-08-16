@@ -59,6 +59,14 @@ function Router() {
       <Route path="/about" component={() => <LegalPage type="about" />} />
       <Route path="/contact" component={() => <LegalPage type="contact" />} />
       
+      {/* Support Pages - Redirect to relevant sections */}
+      <Route path="/help" component={() => <LegalPage type="about" />} />
+      <Route path="/guide" component={() => <LegalPage type="about" />} />
+      <Route path="/faq" component={() => <LegalPage type="about" />} />
+      <Route path="/report" component={() => <LegalPage type="contact" />} />
+      <Route path="/request" component={() => <LegalPage type="contact" />} />
+      <Route path="/updates" component={() => <LegalPage type="about" />} />
+      
       {/* 404 */}
       <Route component={NotFound} />
     </Switch>
