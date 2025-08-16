@@ -103,9 +103,9 @@ function App() {
     // Performance monitoring for high traffic
     const monitorPerformance = () => {
       if ('memory' in performance) {
-        const memory = performance.memory;
-        const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
-        const limitMB = Math.round(memory.jsHeapSizeLimit / 1048576);
+        const memory = (performance as any).memory;
+        const usedMB = Math.round((memory as any).usedJSHeapSize / 1048576);
+        const limitMB = Math.round((memory as any).jsHeapSizeLimit / 1048576);
         
         if (usedMB > limitMB * 0.8) {
           console.warn(`High memory usage: ${usedMB}MB / ${limitMB}MB`);
@@ -116,7 +116,9 @@ function App() {
     const performanceInterval = setInterval(monitorPerformance, 30000);
     
     return () => {
-      cleanup();
+      if (cleanup && typeof cleanup.cleanup === 'function') {
+        cleanup.cleanup();
+      }
       clearInterval(performanceInterval);
     };
   }, []);
