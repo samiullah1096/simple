@@ -58,11 +58,10 @@ export default function WordToPDF() {
   ];
 
   const howToSteps = [
-    'Select your Word document (DOC, DOCX, or ODT)',
-    'Click "Convert to PDF" to start the process',
-    'Wait for the conversion to complete',
-    'Download your converted PDF file',
-    'Enjoy your professionally formatted PDF document'
+    { title: 'Select Document', description: 'Choose your Word document file (DOC, DOCX, or ODT format)' },
+    { title: 'Convert to PDF', description: 'Click "Convert to PDF" button to start the conversion process' },
+    { title: 'Processing', description: 'Wait for the conversion to complete - this usually takes just a few seconds' },
+    { title: 'Download Result', description: 'Download your professionally formatted PDF file to your device' }
   ];
 
   const benefits = [

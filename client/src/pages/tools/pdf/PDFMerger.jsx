@@ -126,11 +126,22 @@ export default function PDFMerger() {
   ];
 
   const howToSteps = [
-    'Click "Choose Files" or drag PDF files into the upload area',
-    'Select 2 or more PDF files from your device',
-    'Arrange the files in your desired order using the arrow buttons',
-    'Click "Merge PDFs" to combine all files into one document',
-    'Download your merged PDF file when processing is complete'
+    {
+      title: 'Upload PDF Files',
+      description: 'Click "Choose Files" or drag PDF files into the upload area. Select 2 or more PDF files from your device.'
+    },
+    {
+      title: 'Arrange File Order',
+      description: 'Use the arrow buttons next to each file to arrange them in your desired order for the final merged document.'
+    },
+    {
+      title: 'Merge Documents',
+      description: 'Click "Merge PDFs" to combine all files into one document. The process happens instantly in your browser.'
+    },
+    {
+      title: 'Download Result',
+      description: 'Once processing is complete, download your merged PDF file directly to your device.'
+    }
   ];
 
   const benefits = [

@@ -90,11 +90,11 @@ export default function PDFMetadataEditor() {
   ];
 
   const howToSteps = [
-    'Upload your PDF document',
-    'Review the current metadata fields',
-    'Edit the metadata properties as needed',
-    'Click "Update Metadata" to apply changes',
-    'Download your PDF with updated metadata'
+    { title: 'Upload PDF Document', description: 'Select the PDF file whose metadata you want to edit' },
+    { title: 'Review Metadata', description: 'View the current metadata fields including title, author, subject, and keywords' },
+    { title: 'Edit Properties', description: 'Modify the metadata properties according to your requirements' },
+    { title: 'Apply Changes', description: 'Click "Update Metadata" to apply the changes to your document' },
+    { title: 'Download Updated PDF', description: 'Download your PDF with the new metadata information' }
   ];
 
   const benefits = [
