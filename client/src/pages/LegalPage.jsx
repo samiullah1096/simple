@@ -127,6 +127,32 @@ const LEGAL_CONTENT = {
         content: 'If you encounter any issues or bugs while using our tools, please report them to us with as much detail as possible. Include information about your browser, operating system, and the specific steps that led to the issue.'
       }
     ]
+  },
+  cookies: {
+    title: 'Cookie Policy', 
+    lastUpdated: 'January 2024',
+    content: [
+      {
+        section: 'What Are Cookies',
+        content: 'Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and analyzing how you use our site.'
+      },
+      {
+        section: 'How We Use Cookies',
+        content: 'We use cookies for essential website functionality, analytics to understand how visitors use our site, and advertising purposes. These cookies help us improve our services and provide relevant content.'
+      },
+      {
+        section: 'Types of Cookies We Use',
+        content: 'Essential cookies are necessary for the website to function properly. Analytics cookies help us understand visitor behavior. Advertising cookies may be used to show relevant ads and measure their effectiveness.'
+      },
+      {
+        section: 'Managing Cookies',
+        content: 'You can control cookies through your browser settings. You can choose to block or delete cookies, though this may affect some website functionality. Our cookie banner also allows you to manage cookie preferences.'
+      },
+      {
+        section: 'Third-Party Cookies',
+        content: 'We may use third-party services like Google Analytics and advertising providers that set their own cookies. Please refer to their privacy policies for information about their cookie practices.'
+      }
+    ]
   }
 };
 

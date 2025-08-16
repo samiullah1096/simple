@@ -42,7 +42,7 @@ export default function Footer() {
       links: [
         { name: 'Privacy Policy', href: '/legal/privacy' },
         { name: 'Terms of Service', href: '/legal/terms' },
-
+        { name: 'Cookie Policy', href: '/legal/cookies' },
         { name: 'Disclaimer', href: '/legal/disclaimer' },
         { name: 'Contact', href: '/contact' },
         { name: 'About Us', href: '/about' }

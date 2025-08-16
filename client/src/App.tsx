@@ -17,6 +17,7 @@ import Home from "./pages/Home";
 import CategoryPage from "./pages/CategoryPage";
 import ToolPage from "./pages/ToolPage";
 import LegalPage from "./pages/LegalPage";
+import SupportPage from "./pages/SupportPage";
 import NotFound from "./pages/not-found";
 
 // Tool Pages
@@ -55,17 +56,18 @@ function Router() {
       {/* Legal Pages */}
       <Route path="/legal/privacy" component={() => <LegalPage type="privacy" />} />
       <Route path="/legal/terms" component={() => <LegalPage type="terms" />} />
+      <Route path="/legal/cookies" component={() => <LegalPage type="cookies" />} />
       <Route path="/legal/disclaimer" component={() => <LegalPage type="disclaimer" />} />
       <Route path="/about" component={() => <LegalPage type="about" />} />
       <Route path="/contact" component={() => <LegalPage type="contact" />} />
       
-      {/* Support Pages - Redirect to relevant sections */}
-      <Route path="/help" component={() => <LegalPage type="about" />} />
-      <Route path="/guide" component={() => <LegalPage type="about" />} />
-      <Route path="/faq" component={() => <LegalPage type="about" />} />
+      {/* Support Pages */}
+      <Route path="/help" component={() => <SupportPage type="help" />} />
+      <Route path="/guide" component={() => <SupportPage type="guide" />} />
+      <Route path="/faq" component={() => <SupportPage type="faq" />} />
       <Route path="/report" component={() => <LegalPage type="contact" />} />
       <Route path="/request" component={() => <LegalPage type="contact" />} />
-      <Route path="/updates" component={() => <LegalPage type="about" />} />
+      <Route path="/updates" component={() => <SupportPage type="help" />} />
       
       {/* 404 */}
       <Route component={NotFound} />
